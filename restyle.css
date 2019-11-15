@@ -1,0 +1,34 @@
+#main {
+width: 500px;
+margin: 0 auto;
+}
+
+#center {
+overflow: hidden;
+width: 80%;
+height: auto;
+padding: 5px;
+margin: 20px auto;
+background-color: #f9f7f4;
+text-align: center;
+}
+
+#name {
+background-color:#c6c6c6;
+font-size: xx-small;
+}
+
+#mid {
+padding-left: 52px;
+}
+
+#bottom {
+padding-left: 60px;
+height: 1000px;
+font-size: small;
+}
+
+#footer{
+  position: fixed;
+  bottom: 0;
+}
