@@ -1,0 +1,106 @@
+p, nav, table, section, null, input, img, td, button
+
+/*
+	 :not(p){}  --p제외한 모든 문서
+        
+
+*/
+*{
+	font-family: NanumSquare;
+    border-color:#f60024;
+}
+
+table {
+    overflow: hidden;
+    color: #f60024;
+    border: 2px solid;
+    margin: auto;
+    margin-bottom: 15%;
+    width: 85%;
+    height: 30%;
+    border-radius: 20px;
+}
+td {
+	text-align:center;
+}
+img{
+    border:0px;
+}
+
+
+#app_info_section {
+    width: 75%;
+    margin: auto;
+    margin-top:10%;
+    padding: 5%;
+    background-color: #f9f7f4;
+    border-radius: 10px;
+}
+
+#search {
+	width:70%;
+	height:4%;
+	padding:2%;
+    border-radius:100px;
+    font-size:70%;
+    margin-top:3%;
+}
+
+
+#app_info {
+	width:90%;
+	margin: 0 auto;
+}
+
+#login_button{
+    border:0px;
+    background-color:#ffffff;
+	float:right;
+	height:100%;
+	width:13%;
+    padding:2%;
+}
+
+.center_align_section {
+	text-align: center;
+}
+.img_button {
+    overflow: hidden;
+    border:0px;
+    margin:0px;
+    background-color:white;
+    font-size:70%;
+}
+/*box-sizing:padding-box;*/
+
+#top_bar {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background-color: #ffffff;
+}
+
+#bottom_bar {
+    margin: 0px;
+    padding: 1.5%;
+    overflow: hidden;
+    border-top: 0.5px solid #999999;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+    background-color: #ffffff;
+}
+.bottom_bar_button {
+    border: 0px;
+    background-color: #ffffff;
+}
+#category_icon {
+    float: left;
+}
+#myPage_icon {
+    float: right;
+}
