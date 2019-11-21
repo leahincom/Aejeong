@@ -5,7 +5,6 @@ section, p, body, button, img, h1, input, a
 * {
     border: 0px;
     font-family: NanumSquare;
-    color: #ff0058;
 }
 body{                               /*페이지 중앙에 나타나게*/
     margin:auto;
@@ -25,9 +24,10 @@ body{                               /*페이지 중앙에 나타나게*/
 }
 
 
-h1 {                            /*'로그인' 글자 -- 페이지 설명*/
+h1 { /*'로그인' 글자 -- 페이지 설명*/
     font-size: 200%;
     margin-top: 25%;
+    color: #ff0058;
 }
 p{                          /*아이디, 비밀번호 등 글자*/
 font-size:100%;
@@ -65,7 +65,7 @@ a {                         /*'아직 아이디가 없으신가요?' 회원가입 링크*/
 }
 
 
-/*회원가입*/
+/*회원가입 & 개인정보 수정*/
 .id_nick_input{                 /*아이디, 닉네임 텍스트필드*/
     width:58%;
 }
@@ -87,7 +87,57 @@ select{                         /*성별 선택*/
 .callNum_input{             /*휴대폰 번호 입력 텍스트 필드*/
     width:10%;
 }
-#signup_button{
-    font-size:90%;
+#email_input{               /*email 입력받기*/
+    width:77%;
+}
 
+article{                    /*동물 종류*/
+    overflow:auto;
+}
+#animalType_text {
+    float: left;
+}
+#animalType_div{
+    float:left;
+}
+.animal_count{          /*몇 마리인지 선택*/
+    width:30%;
+}
+.other_animal_input{        /*기타 동물 종류 입력 받기*/
+    width:20%;
+    border-radius:0%;
+}
+
+#signup_button {                /*'가입하기' 버튼*/
+    font-size: 90%;
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+
+
+/*개인정보 수정*/
+.cancel_store_button {
+    margin: 3%;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    font-size: 100%;
+}
+#password_change_button{
+    float: none;
+    font-size:100%;
+    padding:0%;
+}
+#password_change_article{
+    margin-left:10%;
+    width:90%;
+    color:#cfcfcf;
+}
+#password_change_article input {
+    border-color: #cfcfcf;
+}
+#password_change_input{
+    width:70%;
+}
+#passwordCheck_change_input{
+    width:60%;
 }
