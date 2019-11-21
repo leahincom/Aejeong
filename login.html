@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="loginStyle.css">
 </head>
 <body>
+    <section id="logo_section">
+        <img id="logo_img" src="picture\logo2.jpg">
+    </section>
     <section>
         <h1>로그인</h1>
-    </section>
-    <section>
         <article>
             <form method="get" action="test_login.php">
-                <p> 아이디 &nbsp &nbsp  <input type="text" /></p>
-                <p> 비밀번호  <input type="password" /></p>
+                <p> 아이디 &nbsp &nbsp  <input class="login_input" type="text" /></p>
+                <p> 비밀번호  <input class="login_input" type="password" /></p>
             </form>
-            <button>로그인 하기</button>
+            <button id="login_button">로그인 하기</button>
         </article>
     </section>
-    <section id="sing_up">
+    <section id="singup_section">
         <a href="test_signup.html">아직 아이디가 없으신가요? </a>
     </section>
 </body>
