@@ -177,3 +177,21 @@ h2{
     margin:4%;
     margin-top:15%;
 }
+.like_product_article {                 /*좋아요한 상품 각각*/
+    margin-bottom: 20%;
+    padding: 5%;
+    padding-left: 12%;
+    padding-bottom: 10%;
+    background-image: url("picture\\border3.png" );
+    background-size: 100% 100%;
+}
+    .like_product_article button{
+        float:left;
+    }
+    .like_product_article div {
+        float: left;
+        margin-left:4%;
+    }
+    .like_product_article h1{
+        font-size:90%;
+    }
