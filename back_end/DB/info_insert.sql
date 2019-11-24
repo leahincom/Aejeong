@@ -59,8 +59,8 @@ INSERT INTO Items VALUES
   ('shampoo', 'Dog', 'shampoo.png', 'Mineral Oil', 'Lah');
 
 INSERT INTO Reviews VALUES
-  ('Lah', 'shampoo', '2019-11-24', 3.5, '³¿»õ°¡ ÁÁ¾Æ¿ä.', '°ÅÇ°ÀÌ Àß ¾È ³ª¿ä.', 'Æ¯º°ÇÑ Á¡ÀÌ ¾ø¾î¿ä.'),
-  ( 'Hong', 'drug1', '2019-11-24', 3.0 , '¾ÈÁ¤¼ºÀÌ ³ô¾Æ¿ä.', 'ÀÏ½ÃÀû Å»¸ð ºÎÀÛ¿ë' , 'µüÈ÷ ¾ø½À´Ï´Ù.');
+  ('Lah', 'shampoo', '2019-11-24', 3.5, 'ëƒ„ìƒˆê°€ ì¢‹ì•„ìš”.', 'ê±°í’ˆì´ ìž˜ ì•ˆ ë‚˜ìš”.', 'íŠ¹ë³„í•œ ì ì´ ì—†ì–´ìš”.'),
+  ( 'Hong', 'drug1', '2019-11-24', 3.0 , 'ì•ˆì •ì„±ì´ ë†’ì•„ìš”.', 'ì¼ì‹œì  íƒˆëª¨ ë¶€ìž‘ìš©' , 'ë”±ížˆ ì—†ìŠµë‹ˆë‹¤.');
 
 INSERT INTO Likes VALUES
   ('Lah', 'shampoo', 'shampoo.png'),
