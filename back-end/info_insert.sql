@@ -1,10 +1,3 @@
-----------------"info_insert.sql" begins------------------
-USE aejeong; 
-
-INSERT INTO Components VALUESCREATE TABLE item_category
-( category_id INT AUTO_INCREMENT PRIMARY KEY, 
-name VARCHAR(20) NOT NULL, 
-parent INT DEFAULT NULL ); 
 
 INSERT INTO item_category VALUES
 (1,'ITEMS',NULL),
@@ -12,7 +5,7 @@ INSERT INTO item_category VALUES
 (3,'CARE',1),
 (4,'HEALTH',1), 
 (5,'NUTRITION',4),
-(6,'MEDICATION',4)
+(6,'MEDICATION',4),
 (7,'SAND',1),
 (8,'SHAMPOO',2),
 (9,'CONDITIONER',2),
@@ -48,45 +41,31 @@ INSERT INTO item_category VALUES
 (39,'BENTONITE',7),
 (40,'SOLID',7),
 (41,'SILICAGEL',7), 
-(42,'ABSORB',7)
+(42,'ABSORB',7),
 (43,'STERILIZER',7);
- // 나 카페가 닫는대서….. 일단 갈게ㅠㅠㅠ 남은 건 집 가서 나도 수정할게!!!!!!!!!
-//응응! 난 그럼 일단 앞에 파일 고쳐보고 있을게 ㅠㅠ!
-INSERT INTO Users VALUES
-  (1, 'Julie Smith', '25 Oak Street', 'Airport West'),
-  (2, 'Alan Wong', '1/47 Haines Avenue', 'Box Hill'),
-  (3, 'Michelle Arthur', '357 North Road', 'Yarraville');
-
-INSERT INTO Items VALUES
-  ('0-672-31697-8', 'Michael Morgan', 
-   'Java 2 for Professional Developers', 34.99),
-  ('0-672-31745-1', 'Thomas Down', 'Installing Debian GNU/Linux', 24.99),
-  ('0-672-31509-2', 'Pruitt, et al.', 'Teach Yourself GIMP in 24 Hours', 24.99),
-  ('0-672-31769-9', 'Thomas Schenk', 
-   'Caldera OpenLinux System Administration Unleashed', 49.99);
-
-INSERT INTO Reviews VALUES
-  (NULL, 3, 69.98, '2007-04-02'),
-  (NULL, 1, 49.99, '2007-04-15'),
-  (NULL, 2, 74.98, '2007-04-19'),
-  (NULL, 3, 24.99, '2007-05-01');
-
-INSERT INTO Likes VALUES
-  (1, '0-672-31697-8', 2),
-  (2, '0-672-31769-9', 1),
-  (3, '0-672-31769-9', 1),
-  (3, '0-672-31509-2', 1),
-  (4, '0-672-31745-1', 3);
-
-INSERT INTO Recent VALUES
-  ('0-672-31697-8', 'The Morgan book is clearly written and goes well beyond
-                     most of the basic Java books out there.');
 
 INSERT INTO Components VALUES
-  (1, '0-672-31697-8', 2),
-  (2, '0-672-31769-9', 1),
-  (3, '0-672-31769-9', 1),
-  (3, '0-672-31509-2', 1),
-  (4, '0-672-31745-1', 3);
+  ( 'selamectin', 3, 'drug component'),
+  ( 'Mineral Oil', 1, 'shampoo component');
 
-----------------"item_insert.sql" ends------------------
+INSERT INTO Users VALUES
+   ('yesyoumay', 'Lah', 'skwjdgus', 981003, 'female', '01000000000', 'skwjdgus1003@ewhain.net', 1, 1, 0, 0),
+  ('KM', 'Lee', 'dlrudals', 980101, 'female' , '01011111111', 'jully0425@ewhain.net' , 2, 0, 0, 0 ),  
+  ('KR', 'Hong', 'ghdwodnjs', 010101, 'female', '01000000000', 'ghdwodnjs@ewhain.net',0,0,1,0),
+  ('HaJ', 'LHJ', 'dlgkwjd', 990101, 'female', '01000000000', 'dlgkwjd@ewhain.net',0,0,2,2);
+
+INSERT INTO Items VALUES
+  ('drug1', 'Cat',  'drug1.png', 'selamectin', 'Lee'),
+  ('shampoo', 'Dog', 'shampoo.png', 'Mineral Oil', 'Lah');
+
+INSERT INTO Reviews VALUES
+  ('Lah', 'shampoo', '2019-11-24', 3.5, '냄새가 좋아요.', '거품이 잘 안 나요.', '특별한 점이 없어요.'),
+  ( 'Hong', 'drug1', '2019-11-24', 3.0 , '안정성이 높아요.', '일시적 탈모 부작용' , '딱히 없습니다.');
+
+INSERT INTO Likes VALUES
+  ('Lah', 'shampoo', 'shampoo.png'),
+  ('Hong', 'drug1', 'drug1.png');
+
+INSERT INTO Recent VALUES
+('Lah', 'shampoo', 'shampoo.png', '2019-11-24'),
+( 'Hong', 'drug1','drug1.png' ,'2019-11-24');
