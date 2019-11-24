@@ -62,3 +62,8 @@ PRIMARY KEY (Nickname, ItemName, Picture),
 FOREIGN KEY (Nickname) REFERENCES Users(Nickname),
 FOREIGN KEY (ItemName, Picture) REFERENCES Items(ItemName, Picture)
 );
+
+CREATE TABLE item_category
+( category_id INT AUTO_INCREMENT PRIMARY KEY, 
+name VARCHAR(20) NOT NULL, 
+parent INT DEFAULT NULL ); 
