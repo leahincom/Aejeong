@@ -1,89 +1,36 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-<title> Login </title>
-</head>
-
-<body>
-	<?php
-		$id=$_POST['id'];
-		$nick=$_POST['nick'];
-		$password=$_POST['password'];
-		$passwordCheck=$_POST['passwordCheck'];
-		$birth=(int)($_POST['year'].$_POST['month'].$_POST['day']);
-		$gender=$_POST['gender'];
-		$phone=$_POST['phone'];
-		$email=$_POST['email'];
-		$dog=(int)($_POST['dog']);
-		$cat=(int)($_POST['cat']);
-		$etc1Name=$_Post['ext1name'];
-		$etc1=(int)($_POST['etc1']);
-		$etc2Name=$_Post['ext2name'];
-		$etc2=(int)($_POST['etc2']);
-
-
-		if($password!=$passwordCheck){
-			echo "ºñ¹Ğ¹øÈ£°¡ ´Ù¸¨´Ï´Ù.";
-			echo "<a herf=signup.html>back page</a>;
-			exit();
-		}
-		else{
-			$password=md5($_POST['password']);
-		}
-
-		if($id==NULL || $ncik==NULL || $password==NULL || $birth==NULL || $phone==NULL || $email==NULL){
-			echo "ºóÄ­À» ¸ğµÎ Ã¤¿öÁÖ¼¼¿ä.";
-			echo "<a herf=signup.html>back page</a>;
-			exit();
-		}
-
-
-		$db=new mysqli('localhost', 'aejeong', 'aejeong123', 'aejeong');
-		if(mysqli_connect_errno()){
-			echo '<p>Error: Could not connect to database. <br/>Please try again later.</p>;
-			exit();
-		}
-
-		$check_id="SELECT *from Users WHERE UserID='$id'";
+ FROM Users WHERE UserID='$id'";
 		$result_id=$db->query($check_id);
 		if($result_id->num_rows==1){
-			echo "Áßº¹µÈ ¾ÆÀÌµğÀÔ´Ï´Ù.";
-			echo "<a herf=singup.html>back page</a>;
+			echo "ì¤‘ë³µëœ ì•„ì´ë””ì…ë‹ˆë‹¤.";
+			echo "<a herf=singup.html>back page</a>";
 			exit();
 		}
 		else {
-			echo "»ç¿ë °¡´ÉÇÑ ¾ÆÀÌµğÀÔ´Ï´Ù.";
+			echo "ì‚¬ìš© ê°€ëŠ¥í•œ ì•„ì´ë””ì…ë‹ˆë‹¤.";
 		}
-
-		$check_nick="SELECT *from Users WHERE Nickname='$nick'";
+		$check_nick="SELECT * FROM Users WHERE Nickname='$nick'";
 		$result_nick=$db->query($check_nick);
 		if($result_id->num_rows==2){
-			echo "Áßº¹µÈ ´Ğ³×ÀÓÀÔ´Ï´Ù.";
-			echo "<a herf=singup.html>back page</a>;
+			echo "ì¤‘ë³µëœ ë‹‰ë„¤ì„ì…ë‹ˆë‹¤.";
+			echo "<a herf=singup.html>back page</a>";
 			exit();
 		}
 		else {
-			echo "»ç¿ë °¡´ÉÇÑ ´Ğ³×ÀÓÀÔ´Ï´Ù.";
+			echo "ì‚¬ìš© ê°€ëŠ¥í•œ ë‹‰ë„¤ì„ì…ë‹ˆë‹¤.";
 		}
-
 		$checkEmail=filter_var($email,FILTER_VALIDATE_EMAIL);
 		if($checkEmail!=true){
-			echo "ÀÌ¸ŞÀÏ ÁÖ¼Ò¸¦ ´Ù½Ã ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.";
+			echo "ì´ë©”ì¼ ì£¼ì†Œë¥¼ ë‹¤ì‹œ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.";
 			exit();
 		}
-
-
-		$sql="INSERT INTO Users(UserID, Nickname, Password, Birth, Gender, PhoneNumber, Email, Dog, Cat, etc1Name, etc1, etc2Name, etc2);
-		$sql=$sql."values('$id','$nick','$password','$birth','$gender','$phone','$email','$dog','$cat','$ etc1name','$etc1','$ etc2name','$etc2');
+		$sql="INSERT INTO Users(UserID, Nickname, Password, Birth, Gender, PhoneNumber, Email, Dog, Cat, etc1Name, etc1, etc2Name, etc2)";
+		$sql=$sql." VALUES ('$id','$nick','$password','$birth','$gender','$phone','$email','$dog','$cat','$ etc1name','$etc1','$ etc2name','$etc2')";
 		if($mysqli->query($sql)){
-			echo "È¸¿ø°¡ÀÔ¿¡ ¼º°øÇÏ¼Ì½À´Ï´Ù.";
+			echo "íšŒì›ê°€ì…ì— ì„±ê³µí•˜ì…¨ìŠµë‹ˆë‹¤.";
 		}
 		else {
-			echo "È¸¿ø°¡ÀÔ¿¡ ½ÇÆĞÇÏ¼Ì½À´Ï´Ù.";
+			echo "íšŒì›ê°€ì…ì— ì‹¤íŒ¨í•˜ì…¨ìŠµë‹ˆë‹¤.";
 		}
-
 	?>
 </body>
-
 </html>
