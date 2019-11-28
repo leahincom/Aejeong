@@ -15,7 +15,9 @@ PhoneNumber CHAR(20) NOT NULL,
 Email CHAR(20) NOT NULL,
 Dog INT(4),
 Cat INT(4),
-etc1 INT(4),  
+etc1Name CHAR(50),
+etc1 INT(4),
+etc2Name CHAR(50),  
 etc2 INT(4),
 PRIMARY KEY (Nickname, UserID)
 );
