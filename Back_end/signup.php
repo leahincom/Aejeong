@@ -51,7 +51,7 @@
 		}
 		$check_nick="SELECT * FROM Users WHERE Nickname='$nick'";
 		$result_nick=$db->query($check_nick);
-		if($result_id->num_rows==1){
+		if($result_nick->num_rows==1){
 			echo "중복된 닉네임입니다.";
 			echo "<a herf=singup.html>back page</a>";
 			exit();
