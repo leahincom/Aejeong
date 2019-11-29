@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title> my page </title>
+    <title> 애정 : 마이페이지 </title>
     <link rel="stylesheet" href="myPageStyle.css">
 </head>
 <body>
@@ -41,8 +41,9 @@
         </article>
 
     </section>
+
     <section id="myReview_section">
-        <h1> 내가 쓴 리뷰 </h1>
+        <button><h1> 내가 쓴 리뷰 </h1></button>
         <article>
             <p>바란스 하이포알러지 강아지 샴푸 503ml</p>
             <p>2018.09.24 작성</p>
@@ -51,24 +52,31 @@
                 <br /><img src="picture\review_face2.jpg" width="20" height="20">
                 <br /><img src="picture\review_option.png" width="20" height="20">
             </p>
+            <a class="more_link" href="test_category.html"> 더보기 </a>
         </article>
-        <a class="more_link" href="test_category.html"> 더보기 </a>
+        
     </section>
 
     <section id="likeProduct_section">
-        <h1> 좋아요 한 상품 </h1>
+        <button id="like_product_tag"><h1> 좋아요 한 상품 </h1></button>
         <article>
-            <button class="like_product_button">
-                 <img class="like_product_img" src="picture\product1.jpg">
-                 <figcaption>Can-C Eye Drop 캔씨 백내장 강아지 안약 5ml 2개입</figcaption>
-            </button>
-            <button class="like_product_button">
-                <img class="like_product_img" src="picture\product2.png">
-                <figcaption>바란스 하이포알러지 강아지 샴푸 503ml</figcaption>
-            </button>
+            <div>
+                <button class="like_product_button">
+                    <img class="like_product_img" src="picture\product1.jpg">
+                    <figcaption>Can-C Eye Drop 캔씨 백내장 강아지 안약 5ml 2개입</figcaption>
+                </button>
+                <button class="like_product_button">
+                    <img class="like_product_img" src="picture\product2.png">
+                    <figcaption>바란스 하이포알러지 강아지 샴푸 503ml</figcaption>
+                </button>
+            </div>
+            <a class="more_link" href="test_category.html"> 더보기 </a>
         </article>
-        <a class="more_link" href="test_category.html"> 더보기 </a>
+        
     </section>
+
+
+    #아래 바
     <section id="bottom_bar">
         <button class="bottom_bar_button" id="category_icon"><img src="picture\category_icon.png" height="35" width="35"></button>
         <button class="bottom_bar_button" id="home_icon"><img src="picture\home_icon.png" height="35" width="70"></button>

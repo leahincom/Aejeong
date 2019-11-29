@@ -1,15 +1,14 @@
 section, a, figcaption, figure, article, img, button
 
 * {
-    
-	font-family: NanumSquare;
+    font-family: NanumSquare;
 }
 
-button{
-    border:0px;
-    background:#ffffff;
-    padding:0px;
-    margin:0px;
+button {
+    border: 0px;
+    background: #ffffff;
+    padding: 0px;
+    margin: 0px;
 }
 
 
@@ -20,12 +19,12 @@ section {
 
 article {
     overflow: hidden;
-    padding:3%;
+    padding: 3%;
 }
 
-h1{
-    font-size :120%;
-    font-family:NanumGothic;
+h1 {
+    font-size: 120%;
+    font-family: NanumGothic;
 }
 
 figure {
@@ -37,19 +36,21 @@ figure {
     margin: 10%;
 }
 
-#back_button{
-	background:#ffffff;
-	margin:0px;
-	padding:1%;
-	border:0px;
-	float:left;
+#back_button {
+    background: #ffffff;
+    margin: 0px;
+    padding: 1%;
+    border: 0px;
+    float: left;
 }
+
 #myInfo_text {
     font-size: 130%;
     float: left;
     padding: 1%;
-    font-family:NanumGothic;
+    font-family: NanumGothic;
 }
+
 #myPage_appBar {
     margin: 0px;
     overflow: hidden;
@@ -62,6 +63,7 @@ figure {
     left: 0px;
     right: 0px;
 }
+
 #revise_button {
     float: right;
     width: 10%;
@@ -72,29 +74,33 @@ figure {
 
 
 #user_info_section {
-    margin:0%;
+    margin: 0%;
     margin-top: 10%;
-    padding:4%;
+    padding: 4%;
     border-bottom: 5px solid;
     border-color: #cdcdcd;
 }
+
 #profile_image {
     float: left;
-    margin-top:3%;
-    margin-right:4%;
-    width:30%;
-}
-#user_info {
-    float: left;
-    font-size:100%;
-}
-#nickname_text{
-    font-size:150%;
+    margin-top: 3%;
+    margin-right: 4%;
+    width: 30%;
 }
 
-#recent_items_text{
-    float:left;
+#user_info {
+    float: left;
+    font-size: 100%;
 }
+
+#nickname_text {
+    font-size: 150%;
+}
+
+#recent_items_text {
+    float: left;
+}
+
 .recent_item_button {
     float: left;
     width: 13%;
@@ -102,44 +108,55 @@ figure {
     margin: 3%;
     font-size: 60%;
 }
-.recent_item_image{
-    width:100%;
-    height:100%;
+
+.recent_item_image {
+    width: 100%;
+    height: 100%;
 }
 
 
 
 
-.more_link{                 /*내가 쓴 리뷰, 좋아요 한 상품 더보기*/
-	float:right;
-    text-decoration-line:none;
-    color:black;
+.more_link { /*내가 쓴 리뷰, 좋아요 한 상품 더보기*/
+    float: right;
+    text-decoration-line: none;
+    color: black;
 }
 
-#myReview_section { /*내가 쓴 리뷰*/
-    background-image: url("picture\\border3.png" );
-    background-size: 100% 100%;
-    padding: 5%;
-    padding-left: 12%;
-    padding-bottom: 10%;
+
+#myReview_section button { /*내가 쓴 리뷰*/
+    background-color: #f60024;
+    color: #ffffff;
+    width: 30%;
+    border-radius: 0px 10px 0px 0px;
+}
+#myReview_section article {
+    border: 1px solid;
+    border-color: #f60024;
 }
 
 #likeProduct_section { /*좋아요한 상품, 마지막 세션*/
     margin-bottom: 20%;
-    padding: 5%;
-    padding-left:12%;
-    padding-bottom:10%;
-    background-image: url("picture\\border3.png" );
-    background-size: 100% 100%;
+}
+#like_product_tag {
+    background-color: #f60024;
+    color: #ffffff;
+    width: 30%;
+    border-radius: 0px 10px 0px 0px;
+}
+#likeProduct_section article {
+    border: 1px solid;
+    border-color: #f60024;
 }
 .like_product_button {
-    width: 30%;
-    height:auto;
+    width: 20%;
+    height: auto;
     overflow: hidden;
+    margin:4%;
 }
-.like_product_img{
-    width:100%;
-    height:auto;
+.like_product_img {
+    width: 100%;
+    height: auto;
 }
 
 
@@ -171,27 +188,26 @@ figure {
 
 
 
-
+/*다른 페이지*/
 /*좋아요한 상품*/
-h2{
-    margin:4%;
-    margin-top:15%;
+h2 {
+    margin: 4%;
+    margin-top: 15%;
 }
-.like_product_article {                 /*좋아요한 상품 각각*/
+
+#likeProduct_list_section article { /*좋아요한 상품 각각*/
     margin-bottom: 20%;
-    padding: 5%;
-    padding-left: 12%;
-    padding-bottom: 10%;
-    background-image: url("picture\\border3.png" );
-    background-size: 100% 100%;
 }
-    .like_product_article button{
-        float:left;
+
+    .like_product_article button {
+        float: left;
     }
+
     .like_product_article div {
         float: left;
-        margin-left:4%;
+        margin-left: 4%;
     }
-    .like_product_article h1{
-        font-size:90%;
+
+    .like_product_article h1 {
+        font-size: 90%;
     }
