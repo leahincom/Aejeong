@@ -38,12 +38,14 @@ img{
 }
 
 #search {
-	width:70%;
-	height:4%;
-	padding:2%;
-    border-radius:100px;
-    font-size:70%;
-    margin-top:3%;
+    width: 70%;
+    height: 4%;
+    padding: 2%;
+    border-radius: 100px;
+    font-size: 70%;
+    margin-top: 3%;
+    border: 2px solid;
+    border-color: #f60024;
 }
 
 
