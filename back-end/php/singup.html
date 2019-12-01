@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>애정 : 회원가입</title>
+    <link rel="stylesheet" href="login_signup_Style.css">
+</head>
+
+
+<body>
+    <section id="logo_section">
+        <img id="logo_img" src="picture\logo2.jpg">
+    </section>
+    <section>
+        <h1>회원가입</h1>
+        <p>
+            아이디
+            <input class="id_nick_input" type="text">
+            <button>중복확인</button>
+        </p>
+        <p>
+            닉네임
+            <input class="id_nick_input" type="text">
+            <button>중복확인</button>
+        </p>
+        <p>
+            비밀번호
+            <input id="password_input" type="password">
+        </p>
+        <p>
+            비밀번호 확인
+            <input id="passwordCheck_input" type="password">
+        </p>
+        <p>
+            생년월일
+            <input class="date_inputtext" type="text" placeholder="년">
+            <input class="date_inputtext" type="text" placeholder="월">
+            <input class="date_inputtext" type="text" placeholder="일">
+            성별
+            <select name="gender">
+                <option> 여 </option>
+                <option> 남 </option>
+                <option> 기타 </option>
+            </select>
+        </p>
+        <p>
+            전화 번호
+            &nbsp;&nbsp;
+            010
+            -
+            <input class="callNum_input" type="text">
+            -
+            <input class="callNum_input" type="text">
+        </p>
+        <p>
+            이메일
+            <input id="email_input" type="text">
+        </p>
+        <article>
+            <p id="animalType_text">동물 가족 :</p>
+            <div id="animalType_div">
+                <p>
+                    강아지
+                    <select class="animal_count" name="dog">
+                        <option> 0 </option>
+                        <option> 1 </option>
+                        <option> 2 </option>
+                        <option> 3 </option>
+                        <option> 4~ </option>
+                    </select>
+                    마리
+                </p>
+                <p>
+                    고양이
+                    <select class="animal_count" name="dog">
+                        <option> 0 </option>
+                        <option> 1 </option>
+                        <option> 2 </option>
+                        <option> 3 </option>
+                        <option> 4~ </option>
+                    </select>
+                    마리
+                </p>
+                <p>
+                    <input class="other_animal_input" type="text">
+                    <select class="animal_count" name="dog">
+                        <option> 0 </option>
+                        <option> 1 </option>
+                        <option> 2 </option>
+                        <option> 3 </option>
+                        <option> 4~ </option>
+                    </select>
+                    마리
+                </p>
+                <p>
+                    <input class="other_animal_input" type="text">
+                    <select class="animal_count" name="dog">
+                        <option> 0 </option>
+                        <option> 1 </option>
+                        <option> 2 </option>
+                        <option> 3 </option>
+                        <option> 4~ </option>
+                    </select>
+                    마리
+                </p>
+            </div>
+        </article>
+    </section>
+    <section>
+        <button id="signup_button">가입하기</button>
+    </section>
+</body>
+
+</html>
