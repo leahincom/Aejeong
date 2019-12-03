@@ -4,7 +4,7 @@
     session_start();}
     $id=$_SESSION['UserID'];
     $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-    $result=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
+    $result=mysqli_query($db, "SELECT * FROM reviews WHERE Nickname='$Nickname'");
     $row=mysqli_fetch_assoc($result);
 ?>
 <head>
@@ -27,7 +27,7 @@
 <section> <!--윗부분 정보 섹션. 나에 대한 정보 + 제품 정보 표시-->
   <div id="myProfile_div" align="left"> <!--내 정보 div-->
     <img src="picture/basic_profile.png" align="left" width="45%" style="margin-right:5%;">
-    <p id="Nickname" align="left" style="color:white" ><font size=4%><b>이화연</b></font> <font size=2%>님</font></p>
+    <p name="Nickname" align="left" style="color:white" ><font size=4%><b><?php echo $row['Nickname']; ?></b></font> <font size=2%>님</font></p>
     <p style="font-size:80%; color: white;">구매 상품 32개 <br>내 상품평 17개</p>
   </div>
 
