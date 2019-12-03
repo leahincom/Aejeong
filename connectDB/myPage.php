@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <?php  if (session_status() == PHP_SESSION_NONE) {
     session_start();}
     $id=$_SESSION['UserID'];
@@ -25,7 +25,7 @@
             <div id="user_info_div">
                 <p>
                     <div id="nickname_text"> <?php echo $row['Nickname']; ?> </div>
-                    기르는 동물 : 강아지 <?php echo $row['Dog']; ?>, 고양이 <?php echo $row['Cat']; ?>, <?php echo $row['etx1_name']; ?> <?php echo $row['etc1']; ?>
+                    기르는 동물 : 강아지 <?php echo $row['Dog']; ?>, 고양이 <?php echo $row['Cat']; ?> <?php if($row['etc1']!=0) { echo ','.$row['etc1_name']; } ?> <?php if ($row['etc1']!=0) { echo $row['etc1']; } ?> <?php if ($row['etc2']!=0) { echo ','.$row['etc2_name']; } ?> <?php if ($row['etc2']!=0) { echo $row['etc2']; } ?>
                 </p>
                 <p><br><?php echo $row['Email']; ?></p>
             </div>
