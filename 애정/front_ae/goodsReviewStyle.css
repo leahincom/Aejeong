@@ -6,7 +6,17 @@ p, nav, table, section, null, input, img, td, button
 	font-family: NanumSquare;
     border-color:#f60024;
 }
-
+#login_button {
+  background-color:#f60024;
+  color: #ffffff;
+  border: none;
+	height:auto;
+  float:right;
+	border: 0px;
+	margin-right:5%;
+	height:auto;
+	font-size:120%;
+}
 #back_bar {
 	top:0; left:0;
   margin: 0; padding: 0;
