@@ -1,0 +1,26 @@
+/*class 하면 . id하면 #*/
+
+p, nav, table, section, null, input, img, td, button
+*{
+	font-family: NanumSquare;
+    border-color:#f60024;
+}
+
+.rankingButton{
+  width: 80%;
+  border:none;
+  background-color:white;
+}
+
+.buttonDiv{padding:5%;}
+
+.numbP{
+  font-size:300%; float:left;
+}
+.nameP{
+  font-size:150%;
+}
+.infoP{
+  font-size:100%;
+  color:gray;
+}
