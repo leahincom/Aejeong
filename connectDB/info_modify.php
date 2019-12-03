@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -23,6 +23,7 @@
 		$etc1Name=$_POST['etc1_name'];
 		$etc1=(int)($_POST['etc1']);
 		$etc2Name=".";
+		$etc2Name=$_POST['etc2_name'];
 		$etc2=(int)($_POST['etc2']);
 
 		$db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
@@ -95,9 +96,9 @@
 				mysqli_query($db,"UPDATE Users SET Email='$email' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET Dog='$dog' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET Cat='$cat' WHERE UserID='$id'");
-				mysqli_query($db,"UPDATE Users SET etx1_name='$etc1Name' WHERE UserID='$id'");
+				mysqli_query($db,"UPDATE Users SET etc1_name='$etc1Name' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET etc1='$etc1' WHERE UserID='$id'");
-				mysqli_query($db,"UPDATE Users SET etx2_name='$etc2Name' WHERE UserID='$id'");
+				mysqli_query($db,"UPDATE Users SET etc2_name='$etc2Name' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET etc2='$etc2' WHERE UserID='$id'");
 				$state=1;
 			}
@@ -109,9 +110,9 @@
 				mysqli_query($db,"UPDATE Users SET Email='$email' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET Dog='$dog' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET Cat='$cat' WHERE UserID='$id'");
-				mysqli_query($db,"UPDATE Users SET etx1_name='$etc1Name' WHERE UserID='$id'");
+				mysqli_query($db,"UPDATE Users SET etc1_name='$etc1Name' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET etc1='$etc1' WHERE UserID='$id'");
-				mysqli_query($db,"UPDATE Users SET etx2_name='$etc2Name' WHERE UserID='$id'");
+				mysqli_query($db,"UPDATE Users SET etc2_name='$etc2Name' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET etc2='$etc2' WHERE UserID='$id'");
 				$state=1;
 			}
