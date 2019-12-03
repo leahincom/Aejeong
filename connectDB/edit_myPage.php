@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <?php  if (session_status() == PHP_SESSION_NONE) {
     session_start();}
@@ -36,7 +36,7 @@
             </p>
             <p>
                 비밀번호 확인
-                <input id="passwordCheck_change_input" type="password">
+                <input id="passwordCheck_change_input" type="password" name="passwordCheck">
             </p>
         </article>
         <p>
