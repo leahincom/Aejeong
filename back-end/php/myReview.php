@@ -1,13 +1,13 @@
-
 <!DOCTYPE html>
 <html>
 <?php  if (session_status() == PHP_SESSION_NONE) {
     session_start();}
     $id=$_SESSION['UserID'];
-    $db=mysqli_connect('localhost', 'root', 'skwjdgus', 'aejeong');
-    $result=mysqli_query($db, "SELECT * FROM Reviews WHERE UserID='$id'");
+    $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
+    $result=mysqli_query($db, "SELECT * FROM reviews WHERE Nickname='$Nickname'");
     $row=mysqli_fetch_assoc($result);
 ?>
+
 <head><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href= "myReviewstyle.css"></head>
 
@@ -55,21 +55,20 @@
   <p class="noneline_for_space"></p>   <!-- 구분-->
 
   <input type="button" id="more_button" value="+ 더보기">
-  <?php
+
   <p>평점<!--별 사진 5개 연결-->
   </p>
-  while($row=mysqli_fetch_assoc($result)) {
+    <?php while($row=mysqli_fetch_assoc($result)) { ?>
   <p style="color:#6699ff;">장점 <img src="picture/smile.png" width="3%"></p>
-  echo $row['Adavantage'];
+  <?php echo $row['Adavantage']; ?>
   <p style="color:#ff3366;">단점 <img src="picture/bad.png" width="3%"></p>
-  echo $row['Weakness'];
+  <?php echo $row['Weakness']; ?>
   <p style="color:#888888;">기타<img src="picture/soso.png" width="3%"></p>
-  echo $row['Etc'];
+  <?php echo $row['Etc']; } ?>
   <p style="color:#888888;"> 사진</p>
   <img src="picture/product2.png" width="7%" style="padding-left:5%;">
   <p class="noneline_for_space"></p>
-}
-?>
+
 
   <a href="edit_review.php"> <button id="edit_button"><img src="picture/feather.png" style="background-color:#f60024;" width="100%"></button>
   </form>
