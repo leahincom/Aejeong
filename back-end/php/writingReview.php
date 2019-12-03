@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php  if (session_status() == PHP_SESSION_NONE) {
+    session_start();}
+    $id=$_SESSION['UserID'];
+    $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
+    $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
+    $row=mysqli_fetch_assoc($result);
+?>
 <html>
 <head>
   <meta charset="utf-8">
@@ -20,15 +27,17 @@
 <section> <!--윗부분 정보 섹션. 나에 대한 정보 + 제품 정보 표시-->
   <div id="myProfile_div" align="left"> <!--내 정보 div-->
     <img src="picture/basic_profile.png" align="left" width="45%" style="margin-right:5%;">
-    <p id="Nickname" align="left" style="color:white" ><font size=4%><b>이화연</b></font> <font size=2%>님</font></p>
+    <p name="Nickname" align="left" style="color:white" ><font size=4%><b><?php echo $row['Nickname']; ?></b></font> <font size=2%>님</font></p>
+    // DB Users에서 불러오기
     <p style="font-size:80%; color: white;">구매 상품 32개 <br>내 상품평 17개</p>
   </div>
 
   <article id="profile_article"><!--제품 div-->
     <div id="goods_div">
       <img src="picture/product1.jpg" align="left">
-      <p id="ItemName" style="font-size:150%"><b>제품명</b></p>
-      <p id="Date" style="font-size:80%">제품 구매날짜<p>
+      //DB에서 가져오기
+      <p name="ItemName" style="font-size:150%"><b><?php echo $row['ItemName']; ?></b></p>
+      <p name="Date" style="font-size:80%"><?php echo $row['Date']; ?><p>
     </div>
   </article>
 </section>
@@ -41,11 +50,11 @@
   <article> <!--text 자동 줄바꿈-->
       <p style="padding-right: 1%;">평점<input type="range" id="star_range" min="0" max="5"></p>
       <p style="color:#6699ff;">장점 <img src="picture/smile.png" width="3%"></p>
-      <input type="text" class="writing_text" id="Advantage">
+      <input type="text" class="writing_text" name="Advantage">
       <p style="color:#ff3366;">단점 <img src="picture/bad.png" width="3%"></p>
-      <input type="text" class="writing_text" id="Weakness">
+      <input type="text" class="writing_text" name="Weakness">
       <p style="color:#888888;">기타<img src="picture/soso.png" width="3%"></p>
-      <input type="text" class="writing_text" id="Etc">
+      <input type="text" class="writing_text" name="Etc">
       <p style="color:#888888;"> 사진 추가</p>
       <input type="button" id="addPicture_button" value="+">
   </article>
