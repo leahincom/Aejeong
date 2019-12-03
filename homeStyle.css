@@ -1,14 +1,60 @@
 p, nav, table, section, null, input, img, td, button
 
 /*
-	 :not(p){}  --pÁ¦¿ÜÇÑ ¸ğµç ¹®¼­
-        
+	 :not(p){}  --pÃÂ¦Â¿ÃœÃ‡Ã‘ Â¸Ã°ÂµÃ§ Â¹Â®Â¼Â­
 
 */
 *{
 	font-family: NanumSquare;
     border-color:#f60024;
 }
+
+#search_bar {
+  margin: 0; padding: 0;
+  width: 100%;
+  height: auto;
+  padding: 0%;
+  border-top: 0.5px;
+  border-bottom:0px;
+  position: fixed;
+  text-align:center;
+	top:0;
+	left:0;
+  background: #f60024;
+}
+
+.search_bar_button {
+  border: 0px;
+  height:auto;
+}
+#logo_icon {
+    float: left;
+		background:#f60024;
+		width:10%;
+		margin-right:20%;
+}
+#search_text{
+  border-radius: 20px;
+  border: solid;
+  border-color: #f60024;
+  width:40%;
+	padding:1%;
+	margin-top:0%;
+
+}
+#micro_icon{
+  background-color:#f60024;
+  padding-top:0.5%;
+	width:7%;
+}
+#login_button {
+  background-color:#f60024;
+  color: #ffffff;
+  border: none;
+	height:auto;
+  margin-right:5%;
+}
+
 
 table {
     overflow: hidden;
@@ -55,12 +101,12 @@ img{
 }
 
 #login_button{
-    border:0px;
-    background-color:#ffffff;
+  border:0px;
+  background-color:#f60024;
 	float:right;
 	height:100%;
 	width:13%;
-    padding:2%;
+  padding:2%;
 }
 
 .center_align_section {
