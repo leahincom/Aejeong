@@ -3,6 +3,7 @@
     session_start();}
     $id=$_SESSION['UserID'];
     $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
+    $Nickname=mysqli_query($db, "SELECT Nickname FROM Users WHERE UserID='$UserID'");
     $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
     $row=mysqli_fetch_assoc($result);
 ?>
@@ -28,7 +29,7 @@
   <div id="myProfile_div" align="left"> <!--내 정보 div-->
     <img src="picture/basic_profile.png" align="left" width="45%" style="margin-right:5%;">
     <p name="Nickname" align="left" style="color:white" ><font size=4%><b><?php echo $row['Nickname']; ?></b></font> <font size=2%>님</font></p>
-    // DB Users에서 불러오기
+    <!-- DB Users에서 불러오기 -->
     <p style="font-size:80%; color: white;">구매 상품 32개 <br>내 상품평 17개</p>
   </div>
 
