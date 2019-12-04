@@ -4,7 +4,8 @@
     session_start();}
     $id=$_SESSION['UserID'];
     $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-    $result=mysqli_query($db, "SELECT * FROM reviews WHERE Nickname='$Nickname'");
+    $Nickname=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$UserID'");
+    $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
     $row=mysqli_fetch_assoc($result);
 ?>
 <head>
@@ -34,8 +35,8 @@
   <article id="profile_article"><!--제품 div-->
     <div id="goods_div">
       <img src="picture/product1.jpg" align="left">
-      <p id="ItemName" style="font-size:150%"><b>제품명</b></p>
-      <p id="Date" style="font-size:80%">제품 구매날짜<p>
+      <p name="ItemName" style="font-size:150%"><b><?php echo $row['ItemName']; ?></b></p>
+      <p name="Date" style="font-size:80%"><?php echo $row['Date']; ?><p>
     </div>
   </article>
 </section>
@@ -48,11 +49,11 @@
   <article> <!--text 자동 줄바꿈-->
       <p style="padding-right: 1%;">평점<input type="range" id="star_range" min="0" max="5"></p>
       <p style="color:#6699ff;">장점 <img src="picture/smile.png" width="3%"></p>
-      <input type="text" class="writing_text" id="Advantage">
+      <input type="text" class="writing_text" name="Advantage">
       <p style="color:#ff3366;">단점 <img src="picture/bad.png" width="3%"></p>
-      <input type="text" class="writing_text" id="Weakness">
+      <input type="text" class="writing_text" name="Weakness">
       <p style="color:#888888;">기타<img src="picture/soso.png" width="3%"></p>
-      <input type="text" class="writing_text" id="Etc">
+      <input type="text" class="writing_text" name="Etc">
       <p style="color:#888888;"> 사진 추가</p>
       <input type="button" id="addPicture_button" value="+">
   </article>
