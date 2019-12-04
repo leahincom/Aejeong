@@ -120,7 +120,13 @@ body{					/*��ü�� �����*/
 	color: #f60024;
 }
 
-
+#filter_button{
+	border:none;
+	background-color: #cccccc;
+	border-radius: 10px;
+	width:7%;
+	height:auto;
+}
 .rankingButton{
   width: 80%;
   border:none;
