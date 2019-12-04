@@ -4,7 +4,8 @@
     session_start();}
     $id=$_SESSION['UserID'];
     $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-    $result=mysqli_query($db, "SELECT * FROM reviews WHERE Nickname='$Nickname'");
+    $Nickname=mysqli_query($db, "SELECT Nickname FROM Users WHERE UserID='$UserID'");
+    $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
     $row=mysqli_fetch_assoc($result);
 ?>
 
@@ -30,8 +31,8 @@
   <article id="goodsInfo_article">
   <div id="info_div"><!--원래 이름은 first div-->
     <img src="picture\product2.png" align="left" width="15%">
-    <p style="font-size:120%"><b>제품명</b></p>
-    <p style="font-size:80%">제품 구매날짜<p>
+    <p style="font-size:120%"><?php echo $row['ItemName']; ?></p>
+    <p style="font-size:80%"><?php echo $row['Date']; ?><p>
   </div>
   </article>
 </section>
