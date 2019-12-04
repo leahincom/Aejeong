@@ -4,7 +4,7 @@
     session_start();}
     $id=$_SESSION['UserID'];
     $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-    $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
+    $result=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$UserID'");
     $row=mysqli_fetch_assoc($result);
 ?>
 <head>
@@ -14,8 +14,8 @@
 <body>
 	<?php
 $Nickname = $row['Nickname'];
-$ItemName = $row['ItemName'];
-$Date = $row['Date'];
+$ItemName = $_POST['ItemName'];
+$Date = $_POST['Date'];
 $Advantage = $_POST['Advantage'];
 $Weakness  = $_POST['Weakness'];
 $Etc = $_POST['Etc'];
@@ -30,7 +30,7 @@ $Etc = $_POST['Etc'];
 			history.back(-1); </script>";
 			exit;
 		}
-		$sql="INSERT INTO reviews(Nickname, ItemName, Date, Rating, Advantage, Weakness, Etc)
+		$sql="INSERT INTO Reviews(Nickname, ItemName, Date, Rating, Advantage, Weakness, Etc)
 		VALUES ('$Nickname', '$ItemName', '$Date', '$Rating', '$Advantage', '$Weakness', '$Etc')";
 		if(mysqli_query($db, $sql)){
 			echo "<script>alert('리뷰가 작성되었습니다.');
