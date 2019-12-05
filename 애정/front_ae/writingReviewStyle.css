@@ -6,6 +6,7 @@ p, nav, table, section, null, input, img, td, button
 	font-family: NanumSquare;
     border-color:#f60024;
 }
+#backimg{width:50%;}
 #back_bar {
 	top:0; left:0;
   margin: 0; padding: 0;
@@ -32,38 +33,42 @@ p, nav, table, section, null, input, img, td, button
 	font-size:120%;
 }
 
-#bottom_bar {
-  margin: 0px;
-  padding: 1%;
-  overflow: hidden;
-  border-top: 0.5px solid #999999;
-  border-bottom: 0px;
-  position: fixed;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  text-align: center;
-  background-color: #ffffff;
-}
-.bottom_bar_button {
-    border: 0px;
-    width:7%;
-    height:auto;
-    background-color:white;
-}
-#category_icon {
-    float: left;
-    margin-left:5%;
-}
-#myPage_icon {
-    float: right;
-    margin-right:5%;
-}
+  #bottom_bar {
+    margin: 0px;
+    padding: 1%;
+    overflow: hidden;
+    border-top: 0.5px solid #999999;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  .bottom_bar_button {
+      border: 0px;
+      width:7%;
+      height:auto;
+      background-color:white;
+  }
+  #categoryimg{ width:100%;}
+  #category_icon {
+      float: left;
+      margin-left:5%;
+  }
+  #homeimg{width:160%;}
+  #myPageimg{width:110%;}
+  #myPage_icon {
+      float: right;
+      margin-right:5%;
+  }
+
+  .noneline_for_space{padding-bottom: 10%;}
 
 
-.noneline_for_space{padding-bottom: 10%;}
 /* ~~~~~~~~~~~~~~~~~~~~위쪽section 정보~~~~~~~~~~~~~~~~~~ */
-
+#pictureimg{float:left;}
 #review_section article{
 
 	width:80%;
@@ -89,8 +94,10 @@ p, nav, table, section, null, input, img, td, button
 	border-bottom-right-radius: 20px;
 }
 
-
+#nameP{font-size:150%;}
+#infoP{font-size:80%;}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~아래section 정보 제공~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#ratingP{padding-right: 1%;}
 #rating_text{border:solid #f60024; font-size:200%; width:5%; border-radius:10px;}
 
   .writing_text{
@@ -101,6 +108,11 @@ p, nav, table, section, null, input, img, td, button
     line-height: 10px;
     text-overflow:ellipsis; overflow:hidden;
   }
+
+	.proText{color:#6699ff;}
+	.conText{color:#ff3366;}
+	.another{color:#888888;}
+	.faceimg{width:3%;}
 
 #addPicture_button{
   margin-bottom: 5px; margin-left: 5%; margin-bottom: 3%;

@@ -7,7 +7,7 @@ p, nav, table, section, null, input, img, td, button
     border-color:#f60024;
 }
 
-
+#backimg{ width:50%;}
 #back_bar {
 	top:0; left:0;
   margin: 0; padding: 0;
@@ -34,40 +34,44 @@ p, nav, table, section, null, input, img, td, button
 	font-size:120%;
 }
 
-#bottom_bar {
-  margin: 0px;
-  padding: 1%;
-  overflow: hidden;
-  border-top: 0.5px solid #999999;
-  border-bottom: 0px;
-  position: fixed;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  text-align: center;
-  background-color: #ffffff;
-}
-.bottom_bar_button {
-    border: 0px;
-    width:7%;
-    height:auto;
-    background-color:white;
-}
-#category_icon {
-    float: left;
-    margin-left:5%;
-}
-#myPage_icon {
-    float: right;
-    margin-right:5%;
-}
+  #bottom_bar {
+    margin: 0px;
+    padding: 1%;
+    overflow: hidden;
+    border-top: 0.5px solid #999999;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  .bottom_bar_button {
+      border: 0px;
+      width:7%;
+      height:auto;
+      background-color:white;
+  }
+  #categoryimg{ width:100%;}
+  #category_icon {
+      float: left;
+      margin-left:5%;
+  }
+  #homeimg{width:160%;}
+  #myPageimg{width:110%;}
+  #myPage_icon {
+      float: right;
+      margin-right:5%;
+  }
 
-.noneline_for_space{padding-bottom: 7%;}
+  .noneline_for_space{padding-bottom: 10%;}
 
 
 /*~~~~~~~~~~~~윗부분 제품 설명~~~~~~~~~~~~~~*/
+#productimg{float:left; width:65;}
 #info_div{
-  padding-top: 10%; margin-bottom:0;
+  padding-top: 3%; padding-bottom:5%;margin-bottom:0;
   text-align: left;
   background-color: #ffffff;
   width: 100%
@@ -85,6 +89,9 @@ p, nav, table, section, null, input, img, td, button
 	border:#f60024 solid;
 	height:auto;}
 
+	.starimg{width:3%;}
+	.faceimg{width:3%;}
+
 
 /*~~~~~~~~~~~~~~~~중간내용~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -99,8 +106,10 @@ p, nav, table, section, null, input, img, td, button
 
 
 
-
-
+.proText{color:#6699ff;}
+.conText{color:#ff3366;}
+.another{color:#888888;}
+.pictureimg{width:7%;padding-left:5%;}
 
   #more_button{
     border:1px solid white; background-color:#ffffff;
