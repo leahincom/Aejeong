@@ -23,6 +23,8 @@
             }
             makeHeartImg();
         }
+        function showIn() { window.open("ingredient.html", "성분", "width=400, height=300, left=100, top=50"); }
+
     </script>
 </head>
 <body>
@@ -64,7 +66,7 @@
 
         <p  class="border3P"></p>
     <p>
-      <button id="ingredient_button">+ 성분 자세히 보기</button>
+      <button id="ingredient_button" onclick="showIn();">+ 성분 자세히 보기</button>
     </p>
         <p class="ingredient_p">  <!--제품 성분-->
           <img src="picture/bluebar.png" class="barimg">

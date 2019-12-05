@@ -9,6 +9,7 @@
         function sendTest(index) {
             location.href = "productList.html?" + index;
         }
+        function showPopup() { window.open("08_2_popup.html", "a", "width=400, height=300, left=100, top=50"); }
     </script>
 </head>
 <body>
@@ -84,7 +85,7 @@
         <section id="bottom_bar">   <!--아래배너-->
           <button class="bottom_bar_button" id="category_icon" onclick="location.href='productList.html'"><img src="picture/category_icon.png" id="categoryimg"></button>
           <button class="bottom_bar_button" id="home_icon" onclick="location.href='home.html'"><img src="picture/home_icon.png" id="homeimg"></button>
-          <button class="bottom_bar_button" id="myPage_icon"><img src="picture/myPage_icon.png" id="myPageimg"></button>
+          <button class="bottom_bar_button" id="myPage_icon" onclick="showPopup();"><img src="picture/myPage_icon.png" id="myPageimg"></button>
         </section>
 </body>
 </html>

@@ -4,7 +4,11 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="goodsInfoStyle.css">
     <title>애정 : 제품 상세 페이지</title>
+    <script language="javascript">
+    function showPopup() { window.open("popup.html", "안내", "width=400, height=300, left=100, top=50"); }
+    function showIn() { window.open("ingredient.html", "성분", "width=400, height=300, left=100, top=50"); }
 
+    </script>
 </head>
 <body>
 
@@ -44,7 +48,7 @@
 
     <p  class="border3P"></p>
 <p>
-  <button id="ingredient_button">+ 성분 자세히 보기</button>
+  <button id="ingredient_button" onclick="showIn();">+ 성분 자세히 보기</button>
 </p>
     <p class="ingredient_p">  <!--제품 성분-->
       <img src="picture/bluebar.png" class="barimg">
@@ -70,9 +74,9 @@
   <br>
 
   <section>
-    <button id="heart_button"><img src="picture/heart.png" class="buttonimg"></button>
+    <button id="heart_button"><img src="picture/heart.png" onclick="showPopup();" class="buttonimg"></button>
     <button id="review_button" onclick="location.href='goodsReview.html'"><img src="picture/review.png" class="buttonimg"></button>
-    <button id="writing_button"><img src="picture/writing.png" class="buttonimg"></button>
+    <button id="writing_button"><img src="picture/writing.png" onclick="showPopup();" class="buttonimg"></button>
   </section>
 
   <p  class="border3P"></p>
@@ -89,7 +93,7 @@
   <section id="bottom_bar">   <!--아래배너-->
     <button class="bottom_bar_button" id="category_icon" onclick="location.href='productList.html'"><img src="picture/category_icon.png" id="categoryimg"></button>
     <button class="bottom_bar_button" id="home_icon" onclick="location.href='home.html'"><img src="picture/home_icon.png" id="homeimg"></button>
-    <button class="bottom_bar_button" id="myPage_icon"><img src="picture/myPage_icon.png" id="myPageimg"></button>
+    <button class="bottom_bar_button" id="myPage_icon" onclick="showPopup();"><img src="picture/myPage_icon.png" id="myPageimg"></button>
   </section>
 
 </body>
