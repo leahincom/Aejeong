@@ -114,6 +114,8 @@ p, nav, table, section, null, input, img, td, button
 	.another{color:#888888;}
 	.faceimg{width:3%;}
 
+	#ratingSpan{font-size:120%;}
+
 #addPicture_button{
   margin-bottom: 5px; margin-left: 5%; margin-bottom: 3%;
   width:15%; height: 80px;

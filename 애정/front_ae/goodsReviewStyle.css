@@ -47,7 +47,8 @@ p, nav, table, section, null, input, img, td, button
 
 /* ~~~~~~~~~~~~~~~~~~~~위쪽section 정보~~~~~~~~~~~~~~~~~~ */
 
-
+#nameSpan{font-size:150%;}
+#callSpan{font-size:100%;}
 #profile_article{padding:1%; margin-bottom:5%;}
 #goods_div{ text-align:left; margin-bottom:0;}
 
@@ -95,6 +96,8 @@ p, nav, table, section, null, input, img, td, button
 .proText{color:#6699ff;}
 .conText{color:#ff3366;}
 .another{color:#888888;}
+
+.productimages{width:15%;}
 
 
 

@@ -61,6 +61,7 @@ p, nav, table, section, null, input, img, td, button
 
 
 table {
+	padding:10px;
     overflow: hidden;
     color: #f60024;
     border: 2px solid;
@@ -102,6 +103,7 @@ img{
 #app_info {
 	width:90%;
 	margin: 0 auto;
+	border:3px;
 }
 
 #login_button{

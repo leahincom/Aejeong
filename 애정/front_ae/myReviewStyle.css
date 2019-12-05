@@ -89,6 +89,9 @@ p, nav, table, section, null, input, img, td, button
 	border:#f60024 solid;
 	height:auto;}
 
+	#nameP{font-size:120%;}
+	#dateP{font-size:80%;}
+
 	.starimg{width:3%;}
 	.faceimg{width:3%;}
 
