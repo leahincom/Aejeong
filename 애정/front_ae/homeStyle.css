@@ -9,6 +9,7 @@ p, nav, table, section, null, input, img, td, button
     border-color:#f60024;
 }
 
+
 #search_bar {
   margin: 0; padding: 0;
   width: 100%;
@@ -24,9 +25,11 @@ p, nav, table, section, null, input, img, td, button
 }
 
 .search_bar_button {
-  border: 0px;
-  height:auto;
+    border: 0px;
+    background-color: #ffffff;
+    height:auto;
 }
+#whitelogo_id{width:60%;}
 #logo_icon {
     float: left;
 		background:#f60024;
@@ -42,6 +45,7 @@ p, nav, table, section, null, input, img, td, button
 	margin-top:0%;
 
 }
+#micro_id{width:45%;}
 #micro_icon{
   background-color:#f60024;
   padding-top:0.5%;
@@ -129,9 +133,9 @@ img{
     background-color: #ffffff;
 }
 
-#bottom_bar {
+  #bottom_bar {
     margin: 0px;
-    padding: 1.5%;
+    padding: 1%;
     overflow: hidden;
     border-top: 0.5px solid #999999;
     border-bottom: 0px;
@@ -141,14 +145,23 @@ img{
     bottom: 0px;
     text-align: center;
     background-color: #ffffff;
-}
-.bottom_bar_button {
-    border: 0px;
-    background-color: #ffffff;
-}
-#category_icon {
-    float: left;
-}
-#myPage_icon {
-    float: right;
-}
+  }
+  .bottom_bar_button {
+      border: 0px;
+      width:7%;
+      height:auto;
+      background-color:white;
+  }
+  #categoryimg{ width:100%;}
+  #category_icon {
+      float: left;
+      margin-left:5%;
+  }
+  #homeimg{width:160%;}
+  #myPageimg{width:110%;}
+  #myPage_icon {
+      float: right;
+      margin-right:5%;
+  }
+
+  .noneline_for_space{padding-bottom: 10%;}
