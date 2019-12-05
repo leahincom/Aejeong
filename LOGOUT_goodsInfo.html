@@ -7,89 +7,89 @@
 </head>
 <body>
 
-  <section id="search_bar">  <!--윗배너-->
-      <p>
-        <button class="search_bar_button" id="logo_icon" onclick="location.href='LOGOUT_home.html'"><img src="picture/whitelogo.png"  width="60%"></button>
-        <wrapper>
-          <input type="text" id="search_text">
-          <button class="search_bar_button" id="micro_icon"><img src="picture/micro.png" width="45%"></button>
-          <button class="search_bar_button" id="login_button"><b>로그아웃</b></button>
-        </wrapper>
-      </p>
-  </section>
+    <section id="search_bar">  <!--윗배너-->
+        <p>
+          <button class="search_bar_button" id="logo_icon" onclick="location.href='LOGOUT_home.html'"><img src="picture/whitelogo.png"  id="whitelogo_id"></button>
+          <wrapper>
+            <input type="text" id="search_text">
+            <button class="search_bar_button" id="micro_icon"><img src="picture/micro.png" id="micro_id"></button>
+            <button class="search_bar_button" id="login_button"><b>로그아웃</b></button>
+          </wrapper>
+        </p>
+    </section>
 
-  <p class="noneline_for_space"></p>   <!--배너와 section 구분-->
 
-  <section id="information_section">   <!--제품 정보란 (베이지색 칸 내부)-->
-    <div id="pictureInfo">  <!--제품 사진-->
-      <img src="picture/product1.jpg" width="110%">
-    </div>
-    <div id="explain">
-      <p style= "font-size:70%"><span width="50%" style="background:#dddddd; margin-left:5%;">강아지용</span></p>
-      <p style="font-size:130%;"><span style="margin-left:5%;"><b>참! 순한 안약</b></span></p>
-      <p style="font-size:70%;"><span style="margin-left:5%;">브랜드: 멍토피아</span></p>
-      <p style="font-size:70%;"><span style="margin-left:5%;">용량: 30ml</span></p>
-      <p style="font-size:70%;"><span style="margin-left:5%;">가격: 7400원</span></p>
-    </div>
-    <div>
-      <p>
-        <img src="picture/ystar.png" width="5%">
-        <img src="picture/ystar.png" width="5%">
-        <img src="picture/ystar.png" width="5%">
-        <img src="picture/nstar.png" width="5%">
-        <img src="picture/nstar.png" width="5%">
-      </p>
-    </div>
+      <p class="noneline_for_space"></p>   <!--배너와 section 구분-->
 
-    <p style="padding-bottom:3%;"></p>
-<p>
-  <button id="ingredient_button">+ 성분 자세히 보기</button>
-</p>
-    <p align="center">  <!--제품 성분-->
-      <img src="picture/bluebar.png" width="3%">
-      <img src="picture/bluebar.png" width="3%">
-      <img src="picture/bluebar.png" width="3%">
-      <img src="picture/bluebar.png" width="3%">
-      <img src="picture/bluebar.png" width="3%">
-      <img src="picture/bluebar.png" width="3%">
-      <img src="picture/yellowbar.png" width="3%">
-      <img src="picture/yellowbar.png" width="3%">
-      <img src="picture/redbar.png" width="3%">
-      <img src="picture/redbar.png" width="3%">
+      <section id="information_section">   <!--제품 정보란 (베이지색 칸 내부)-->
+        <div id="pictureInfo">  <!--제품 사진-->
+          <img src="picture/product1.jpg" id="product1_id">
+        </div>
+        <div>
+          <p class="explain_p"><span class="explainAnimal_span">강아지용</span></p>
+          <p id="explainName_p"><span class="explain_span"><b>참! 순한 안약</b></span></p>
+          <p class="explain_p"><span class="explain_span">브랜드: 멍토피아</span></p>
+          <p class="explain_p"><span class="explain_span">용량: 30ml</span></p>
+          <p class="explain_p"><span class="explain_span">가격: 7400원</span></p>
+        </div>
+        <div>
+          <p>
+            <img src="picture/ystar.png" class="barimg">
+            <img src="picture/ystar.png" class="barimg">
+            <img src="picture/ystar.png" class="barimg">
+            <img src="picture/nstar.png" class="barimg">
+            <img src="picture/nstar.png" class="barimg">
+          </p>
+        </div>
+
+        <p  class="border3P"></p>
+    <p>
+      <button id="ingredient_button">+ 성분 자세히 보기</button>
     </p>
-    <p style="font-size:80%;" align="center">
+        <p class="ingredient_p">  <!--제품 성분-->
+          <img src="picture/bluebar.png" class="barimg">
+          <img src="picture/bluebar.png" class="barimg">
+          <img src="picture/bluebar.png" class="barimg">
+          <img src="picture/bluebar.png" class="barimg">
+          <img src="picture/bluebar.png" class="barimg">
+          <img src="picture/bluebar.png" class="barimg">
+          <img src="picture/yellowbar.png" class="barimg">
+          <img src="picture/yellowbar.png" class="barimg">
+          <img src="picture/redbar.png" class="barimg">
+          <img src="picture/redbar.png" class="barimg">
+        </p>
+        <p class="ingredient_p">
+          <br>
+          <img src="picture/bluebar.png" class="barimg">1등급: 60% &nbsp
+          <img src="picture/yellowbar.png" class="barimg">2등급: 20% &nbsp
+          <img src="picture/redbar.png" class="barimg">3등급: 20%
+        </p>
+
+      </section>
+
       <br>
-      <img src="picture/bluebar.png" width="2%">1등급: 60% &nbsp
-      <img src="picture/yellowbar.png" width="2%">2등급: 20% &nbsp
-      <img src="picture/redbar.png" width="2%">3등급: 20%
-    </p>
 
-  </section>
+      <section>
+        <button id="heart_button"><img src="picture/heart.png" class="buttonimg"></button>
+        <button id="review_button" onclick="location.href='LOGOUT_goodsReview.html'"><img src="picture/review.png" class="buttonimg"></button>
+        <button id="writing_button" onclick="location.href='myPage.html'"><img src="picture/writing.png" class="buttonimg"></button>
+      </section>
 
-  <br>
+      <p  class="border3P"></p>
 
-  <section>
-    <button id="heart_button"><img src="picture/heart.png"  width="100%" height="auto"></button>
-    <button id="review_button" onclick="location.href='LOGOUT_goodsReview.html'"><img src="picture/review.png" width="100%" height="auto"></button>
-    <button id="writing_button" onclick="location.href='writingReview.html'"><img src="picture/writing.png" width="100%" height="auto"></button>
-  </section>
+      <section id="review_section">
+        <p class="review_p"><b>ghkdus133</b> 그냥 그래요. 무난</p>
+        <p class="review_p"><b>김호롤1로</b> 괜찮은듯? 눈이 반짝반짝</p>
+      </section>
 
-  <p style="padding-bottom:5%;"></p>
-
-  <section id="review_section">
-    <p class="review_p"><b>ghkdus133</b> 그냥 그래요. 무난</p>
-    <p class="review_p"><b>김호롤1로</b> 괜찮은듯? 눈이 반짝반짝</p>
-  </section>
 
 
 
 <p class="noneline_for_space"></p>   <!--배너와 section 구분-->
-
-  <section id="bottom_bar">   <!--아래배너-->
-    <button class="bottom_bar_button" id="category_icon" onclick="location.href='LOGOUT_productList.html'"><img src="picture/category_icon.png"  width="100%"></button>
-    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LOGOUT_home.html'"><img src="picture/home_icon.png" width="160%"></button>
-    <button class="bottom_bar_button" id="myPage_icon" onclick="location.href='myPage.html'"><img src="picture/myPage_icon.png" width="110%"></button>
-  </section>
-
+<section id="bottom_bar">   <!--아래배너-->
+  <button class="bottom_bar_button" id="category_icon" onclick="location.href='LOGOUT_productList.html'"><img src="picture/category_icon.png" id="categoryimg"></button>
+  <button class="bottom_bar_button" id="home_icon" onclick="location.href='LOGOUT_home.html'"><img src="picture/home_icon.png" id="homeimg"></button>
+  <button class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.html'"><img src="picture/myPage_icon.png" id="myPageimg"></button>
+</section>
 </body>
 </html>
