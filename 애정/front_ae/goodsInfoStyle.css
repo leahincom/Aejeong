@@ -26,6 +26,7 @@ p, nav, table, section, null, input, img, td, button
     background-color: #ffffff;
     height:auto;
 }
+#whitelogo_id{width:60%;}
 #logo_icon {
     float: left;
 		background:#f60024;
@@ -41,6 +42,7 @@ p, nav, table, section, null, input, img, td, button
 	margin-top:0%;
 
 }
+#micro_id{width:45%;}
 #micro_icon{
   background-color:#f60024;
   padding-top:0.5%;
@@ -55,36 +57,6 @@ p, nav, table, section, null, input, img, td, button
 }
 
 
-#bottom_bar {
-  margin: 0px;
-  padding: 1%;
-  overflow: hidden;
-  border-top: 0.5px solid #999999;
-  border-bottom: 0px;
-  position: fixed;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  text-align: center;
-  background-color: #ffffff;
-}
-.bottom_bar_button {
-    border: 0px;
-    width:7%;
-    height:auto;
-    background-color:white;
-}
-#category_icon {
-    float: left;
-    margin-left:5%;
-}
-#myPage_icon {
-    float: right;
-    margin-right:5%;
-}
-
-.noneline_for_space{padding-bottom: 10%;}
-
 /*~~~~~~~~~~~~~~~~~~~~~~~제품 정보 내용~~~~~~~~~~~~~~~~~~~~``*/
 #information_section{
   border-radius: 20px;
@@ -94,7 +66,10 @@ p, nav, table, section, null, input, img, td, button
   width: 70%;
 	margin-left:15%;
 }
-
+#product1_id{ width:110%;}
+.explain_p{font-size:70%;}
+#explainName_p{font-size:130%;}
+.explain_span{margin-left:5%;}
 #ingredient_button{
 	width:30%;
 	font-size: 60%;
@@ -102,8 +77,11 @@ p, nav, table, section, null, input, img, td, button
 	border:none;
 	margin-left:70%;
 }
-
+.border3P{padding-bottom:3%;}
+.barimg{width:3%;}
+#ingredient_p{font-size:80%; text-align:center;}
 #pictureInfo{float:left;}
+.buttonimg{ width:100%; height:auto;}
 #heart_button{
 	border: 0px;
   width:5%;
@@ -129,3 +107,38 @@ p, nav, table, section, null, input, img, td, button
 	margin-left:5%;
 }
 .review_p{margin-bottom:4%; margin-left:3%;}
+
+/*~~~~~~~~~~~~~~~~~~아래배너~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#bottom_bar {
+  margin: 0px;
+  padding: 1%;
+  overflow: hidden;
+  border-top: 0.5px solid #999999;
+  border-bottom: 0px;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  text-align: center;
+  background-color: #ffffff;
+}
+.bottom_bar_button {
+    border: 0px;
+    width:7%;
+    height:auto;
+    background-color:white;
+}
+#categoryimg{ width:100%;}
+#category_icon {
+    float: left;
+    margin-left:5%;
+}
+#homeimg{width:160%;}
+#myPageimg{width:110%;}
+#myPage_icon {
+    float: right;
+    margin-right:5%;
+}
+
+.noneline_for_space{padding-bottom: 10%;}
