@@ -113,9 +113,13 @@ img{
   padding:2%;
 }
 
+.border3p{padding-bottom:3%;}
+
 .center_align_section {
 	text-align: center;
 }
+
+.category_images{ height:30px; width:30px;}
 .img_button {
     overflow: hidden;
     border:0px;
