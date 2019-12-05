@@ -1,0 +1,163 @@
+section
+
+*{
+}
+
+body{					/*��ü�� �����*/
+	width: 90%;
+	margin: auto;
+	margin-top:10%;
+}
+
+#search_bar {
+  margin: 0; padding: 0;
+  width: 100%;
+  height: auto;
+  padding: 0%;
+  border-top: 0.5px;
+  border-bottom:0px;
+  position: fixed;
+  text-align:center;
+	top:0;
+	left:0;
+  background: #f60024;
+}
+
+.search_bar_button {
+    border: 0px;
+    background-color: #ffffff;
+    height:auto;
+}
+#whitelogo_id{width:60%;}
+#logo_icon {
+    float: left;
+		background:#f60024;
+		width:10%;
+		margin-right:20%;
+}
+#search_text{
+  border-radius: 20px;
+  border: solid;
+  border-color: #f60024;
+  width:40%;
+	padding:1%;
+	margin-top:0%;
+
+}
+#micro_id{width:45%;}
+#micro_icon{
+  background-color:#f60024;
+  padding-top:0.5%;
+	width:7%;
+}
+#login_button {
+  background-color:#f60024;
+  color: #ffffff;
+  border: none;
+	height:auto;
+  margin-right:5%;
+}
+.noneline_for_space{padding-bottom: 10%;}
+.border3p{padding-bottom: 3%;}
+.border1p{padding-bottom: 1%;}
+
+
+#category_section button{		/*ī�װ��� ��ư �׵θ� ���ֱ�*/
+	border:0px;
+}
+
+#big_category{					/*ū ī�װ���*/
+	overflow:hidden;
+}
+.big_category_button{
+	background-color: #f9f7f4;
+	margin: 0%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	float: left;
+	width: 16.6%;
+	font-size: 80%;
+}
+#big_category_1 {					/*���õ� ū ī�װ���*/
+	background-color: #f60024;
+	color:#ffffff;
+}
+
+#small_category {						/*����ī�װ���*/
+	border: 1px solid;
+	border-color: #f60024;
+	padding:1%;
+}
+.small_category_button {
+	background-color:#ffffff;
+}
+#small_category_1 {
+	color: #f60024;
+}
+
+#filterimg{width:50%;}
+#filter_button{
+	border:none;
+	background-color: #cccccc;
+	border-radius: 10px;
+	width:7%;
+	height:auto;
+	float:right;
+}
+.rankingButton{
+  width: 80%;
+  border:none;
+  background-color:white;
+}
+
+.buttonDiv{padding:1%;}
+
+.numbP{
+  font-size:300%; float:left;
+	margin-right:20%;
+}
+#firstP{color: #ffd966;}
+#secondP{color: #cccccc;}
+#thirdP{color: #6e2e00;}
+.productimg{width:10%; float:left;}
+.nameP{
+  font-size:150%;
+}
+.infoP{
+  font-size:100%;
+  color:gray;
+}
+.starimg{
+	width:3%;
+}
+
+  #bottom_bar {
+    margin: 0px;
+    padding: 1%;
+    overflow: hidden;
+    border-top: 0.5px solid #999999;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  .bottom_bar_button {
+      border: 0px;
+      width:7%;
+      height:auto;
+      background-color:white;
+  }
+  #categoryimg{ width:100%;}
+  #category_icon {
+      float: left;
+      margin-left:5%;
+  }
+  #homeimg{width:160%;}
+  #myPageimg{width:110%;}
+  #myPage_icon {
+      float: right;
+      margin-right:5%;
+  }
