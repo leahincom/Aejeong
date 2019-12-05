@@ -1,0 +1,116 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~위아래 배너~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+p, nav, table, section, null, input, img, td, button
+
+*{
+	font-family: NanumSquare;
+    border-color:#f60024;
+}
+#login_button {
+  background-color:#f60024;
+  color: #ffffff;
+  border: none;
+	height:auto;
+  float:right;
+	border: 0px;
+	margin-right:5%;
+	height:auto;
+	font-size:120%;
+}
+#back_bar {
+	top:0; left:0;
+  margin: 0; padding: 0;
+  width: 100%;
+  height: auto;
+  padding: 1%;
+  position: fixed;
+  text-align:center;
+  background: #f60024;
+}
+
+#back_icon {
+  float: left;
+  border: 0px;
+  width:10%;
+  height:auto;
+  background-color:#f60024;
+}
+
+#explain_label{
+	float: left;
+	padding-top: 1%;
+	color:white;
+	font-size:120%;
+}
+
+
+#bottom_bar {
+  margin: 0px;
+  padding: 1%;
+  overflow: hidden;
+  border-top: 0.5px solid #999999;
+  border-bottom: 0px;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  text-align: center;
+  background-color: #ffffff;
+}
+.bottom_bar_button {
+    border: 0px;
+    width:7%;
+    height:auto;
+    background-color:white;
+}
+#category_icon {
+    float: left;
+    margin-left:5%;
+}
+#myPage_icon {
+    float: right;
+    margin-right:5%;
+}
+
+.noneline_for_space{padding-bottom: 7%;}
+/* ~~~~~~~~~~~~~~~~~~~~위쪽section 정보~~~~~~~~~~~~~~~~~~ */
+
+
+#profile_article{padding:1%; margin-bottom:5%;}
+#goods_div{ text-align:left; margin-bottom:0;}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~아래section 정보 제공~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.profile_article{
+  padding: 2%;
+  height: auto;
+  float:left;
+  border-top-right-radius:20px;  border-top-left-radius:20px;
+  margin-bottom: 0;
+}
+
+.reviewClass_section article{
+	border-top-right-radius:20px;  border-top-left-radius:20px;
+
+	width:80%;
+	text-align:left; margin-bottom:0;
+	padding:5%;
+	border:#f60024 solid;
+	height:auto;
+
+}
+.review_article {
+	border-bottom-right-radius:20px;  border-bottom-left-radius:20px;
+	text-align:left; margin-bottom:0;
+	padding:5%;
+	border:#f60024 solid;
+	height:auto;
+}
+
+  .writing_text{
+    border: 1px solid gray; border-radius: 10px;
+    height: 100px; width: 70%;
+    margin-bottom: 5px; margin-left: 5%; margin-bottom: 3%;
+    word-break: normal;
+    line-height: 10px;
+    text-overflow:ellipsis; overflow:hidden;
+  }
