@@ -9,7 +9,7 @@
 
 <body>
   <section id="back_bar">
-    <button id="back_icon"><img src="picture/back_button.png" width="50%"></button>
+    <button id="back_icon"><img src="picture/back_button.png" id="backimg"></button>
     <label id="explain_label"><b>마이 페이지</b></label>
     <button id="revise_button" onclick="location.href='edit_myPage.html'">수정</button>
   </section>
@@ -48,9 +48,9 @@
       <p>바란스 하이포알러지 강아지 샴푸 503ml</p>
       <p>2018.09.24 작성</p>
       <p>
-        <img src="picture\review_face1.jpg" width="20" height="20">
-        <br /><img src="picture\review_face2.jpg" width="20" height="20">
-        <br /><img src="picture\review_option.png" width="20" height="20">
+        <img src="picture\review_face1.jpg" class="faceimg">
+        <br /><img src="picture\review_face2.jpg" class="faceimg">
+        <br /><img src="picture\review_option.png" class="faceimg">
       </p>
       <a class="more_link" href="myReview.html"> 더보기 </a>
     </article>
@@ -73,10 +73,12 @@
     </article>
   </section>
 
-  <section id="bottom_bar">
-    <button class="bottom_bar_button" id="category_icon" onclick="location.href='LOGOUT_productList.html'"><img src="picture/category_icon.png"  width="100%"></button>
-    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LOGOUT_home.html'"><img src="picture/home_icon.png" width="160%"></button>
-    <button class="bottom_bar_button" id="myPage_icon" onclick="location.href='myPage.html'"><img src="picture/myPage_icon.png" width="110%"></button>
+  <section id="bottom_bar">   <!--아래배너-->
+    <button class="bottom_bar_button" id="category_icon" onclick="location.href='LOGOUT_productList.html'"><img src="picture/category_icon.png" id="categoryimg"></button>
+    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LOGOUT_home.html'"><img src="picture/home_icon.png" id="homeimg"></button>
+    <button class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.html'"><img src="picture/myPage_icon.png" id="myPageimg"></button>
   </section>
+
+
 </body>
 </html>

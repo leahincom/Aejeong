@@ -3,11 +3,18 @@ p, nav, table, section, null, input, img, td, button * {
   border-color: #f60024;
 }
 
+#name_bar{ text-align:center;font-size:150%;}
+
 #first {
   background-color: #eeeeee;
   border: none
   height: 1px;
 }
+
+#ingredient_bar{
+  text-align:center;
+}
+.barimg{width:3%;}
 
 #second {
   background-color: #eeeeee;
@@ -15,13 +22,14 @@ p, nav, table, section, null, input, img, td, button * {
   border: none;
 }
 
-
 .ingredientButton{
   width: 100%;
   border:none;
   background-color:white;
 }
+
 .buttonDiv{padding:1%;}
+.rankingimg{ width:10%; float:left;}
 .nameP{
   font-size:150%;
 }

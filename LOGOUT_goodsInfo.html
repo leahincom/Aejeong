@@ -4,6 +4,28 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="goodsInfoStyle.css">
     <title>애정 : 제품 상세 페이지</title>
+    <script type="text/javascript" charset="urf-8">
+        var liked = 0;                                  //좋아요 선택 여부(나중에 데베 연결)
+        function makeHeartImg() {                           //좋아요 여부 따라 Img 결정
+            var heart_img = document.getElementById("heart_img");
+            if (liked == 1) {
+                heart_img.src = "picture/heart2.png";
+            } else {
+                heart_img.src = "picture/heart1.png";
+            }
+
+        }
+        function heartClick() {                         //버튼 클릭 시 좋아요(나중에 데베 연결)
+            if (liked == 0) {
+                liked = 1;
+            } else {
+                liked = 0;
+            }
+            makeHeartImg();
+        }
+        function showIn() { window.open("ingredient.html", "성분", "width=400, height=300, left=100, top=50"); }
+
+    </script>
 </head>
 <body>
 
@@ -44,7 +66,7 @@
 
         <p  class="border3P"></p>
     <p>
-      <button id="ingredient_button">+ 성분 자세히 보기</button>
+      <button id="ingredient_button" onclick="showIn();">+ 성분 자세히 보기</button>
     </p>
         <p class="ingredient_p">  <!--제품 성분-->
           <img src="picture/bluebar.png" class="barimg">
@@ -70,7 +92,7 @@
       <br>
 
       <section>
-        <button id="heart_button"><img src="picture/heart.png" class="buttonimg"></button>
+        <button type="button" id="heart_button" onclick="heartClick()"><img id="heart_img" src="picture/heart1.png" class="buttonimg"></button>
         <button id="review_button" onclick="location.href='LOGOUT_goodsReview.html'"><img src="picture/review.png" class="buttonimg"></button>
         <button id="writing_button" onclick="location.href='myPage.html'"><img src="picture/writing.png" class="buttonimg"></button>
       </section>
