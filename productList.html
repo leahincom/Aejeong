@@ -4,9 +4,28 @@
 <head>
     <title> 애정 : 제품 목록</title>
     <link rel="stylesheet" href="productListStyle.css">
+
+    <script type="text/javascript">
+        function makeDefaultCategory() {
+            for (var i = 1; i < 7; i++) {
+                var cs = document.getElementById("big_category_" + i).style;
+                cs.backgroundColor = '#f9f7f4';
+                cs.color = "#000000";
+                document.getElementById('small_category'+i).style.display = 'none';
+            }
+        }
+
+        function selectBigCategory(index) {
+            makeDefaultCategory();
+            var selected = document.getElementById('big_category_' + index);
+            selected.style.backgroundColor = '#f60024';
+            selected.style.color = '#ffffff';
+            document.getElementById('small_category' + index).style.display = 'block';
+        }
+    </script>
 </head>
 
-<body>
+<body onload="selectBigCategory(1)">
   <section id="search_bar">
       <p>
         <button class="search_bar_button" id="logo_icon" onclick="location.href='home.html'"><img src="picture/whitelogo.png"  width="60%"></button>
@@ -21,19 +40,66 @@
   <p style="padding:2%;"></p>
 
   <section id="category_section">
-    <div id="big_category">
-      <button class="big_category_button" id="big_category_1"> 목욕/세정제 </button>
-      <button class="big_category_button" > 미용/관리 </button>
-      <button class="big_category_button" > 건강(영양제) </button>
-      <button class="big_category_button" > 건강(의약품) </button>
-      <button class="big_category_button" > 고양이모래 </button>
-      <button class="big_category_button" > 기타 </button>
-    </div>
-    <div id="small_category">
-      <button class="small_category_button" id="small_category_1"> 샴푸 </button>
-      <button class="small_category_button"> 린스 </button>
-      <button class="small_category_button"> 탈취제 </button>
-    </div>
+      <div id="big_category">
+          <button class="big_category_button" id="big_category_1" onclick="selectBigCategory(1)"> 목욕/세정제 </button>
+          <button class="big_category_button" id="big_category_2" onclick="selectBigCategory(2)"> 미용/관리 </button>
+          <button class="big_category_button" id="big_category_3" onclick="selectBigCategory(3)"> 건강(영양제) </button>
+          <button class="big_category_button" id="big_category_4" onclick="selectBigCategory(4)"> 건강(의약품) </button>
+          <button class="big_category_button" id="big_category_5" onclick="selectBigCategory(5)"> 고양이모래 </button>
+          <button class="big_category_button" id="big_category_6" onclick="selectBigCategory(6)"> 기타 </button>
+      </div>
+      <div class="small_category" id="small_category1">
+          <button class="small_category_button" id="small_category_1"> 샴푸 </button>
+          <button class="small_category_button"> 린스 </button>
+          <button class="small_category_button"> 물티슈/클리너 </button>
+          <button class="small_category_button"> 기타 </button>
+      </div>
+      <div class="small_category" id="small_category2">
+          <button class="small_category_button" id="small_category_1"> 에센스/향수 </button>
+          <button class="small_category_button"> 모발관리제 </button>
+          <button class="small_category_button"> 염색 </button>
+          <button class="small_category_button"> 기타 </button>
+      </div>
+      <div class="small_category" id="small_category3">
+          <button class="small_category_button" id="small_category_1"> 종합영양제 </button>
+          <button class="small_category_button"> 치아/구강 </button>
+          <button class="small_category_button"> 피부/털 </button>
+          <button class="small_category_button"> 신장/요로 </button>
+          <button class="small_category_button"> 심장/심신안정 </button>
+          <button class="small_category_button"> 유산균/장/소취 </button>
+          <button class="small_category_button"> 소화계통 </button>
+          <button class="small_category_button"> 뼈/관절/칼슘 </button>
+          <button class="small_category_button"> 눈/귀 </button>
+          <button class="small_category_button"> 면역증강/스트레스 </button>
+          <button class="small_category_button"> 엘라이신/호흡기 </button>
+          <button class="small_category_button"> 해충방지 </button>
+          <button class="small_category_button"> 기타 </button>
+      </div>
+      <div class="small_category" id="small_category4">
+          <button class="small_category_button" id="small_category_1"> 의약부외품 </button>
+          <button class="small_category_button"> 치아/구강 </button>
+          <button class="small_category_button"> 피부/털 </button>
+          <button class="small_category_button"> 신장/요로 </button>
+          <button class="small_category_button"> 심장/심신안정 </button>
+          <button class="small_category_button"> 유산균/장/소취 </button>
+          <button class="small_category_button"> 소화계통 </button>
+          <button class="small_category_button"> 뼈/관절/칼슘 </button>
+          <button class="small_category_button"> 눈/귀 </button>
+          <button class="small_category_button"> 면역증강/스트레스 </button>
+          <button class="small_category_button"> 엘라이신/호흡기 </button>
+          <button class="small_category_button"> 해충방지 </button>
+          <button class="small_category_button"> 기타 </button>
+      </div>
+      <div class="small_category" id="small_category5">
+          <button class="small_category_button" id="small_category_1"> 응고형 벤토나이트 </button>
+          <button class="small_category_button">응고형 천연</button>
+          <button class="small_category_button"> 흡수형 실리카겔</button>
+          <button class="small_category_button">흡수형 천연 </button>
+          <button class="small_category_button">모래탈취제/소독/살균 </button>
+          <button class="small_category_button"> 기타 </button>
+      </div>
+      <div class="small_category" id="small_category6">
+      </div>
   </section>
 <p padding="5%"></p>
   <section align="right">

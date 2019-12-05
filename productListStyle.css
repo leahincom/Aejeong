@@ -103,18 +103,27 @@ body{					/*��ü�� �����*/
 	width: 16.6%;
 	font-size: 80%;
 }
-#big_category_1 {					/*���õ� ū ī�װ���*/
+#selected_big_category {					/*���õ� ū ī�װ���*/
 	background-color: #f60024;
 	color:#ffffff;
 }
-
-#small_category {						/*����ī�װ���*/
-	border: 1px solid;
-	border-color: #f60024;
-	padding:1%;
+#unSelected_big_category {
+    background-color: #f9f7f4;
+    color: black;
 }
+
+.small_category { /*����ī�װ���*/
+    border: 1px solid;
+    border-color: #f60024;
+    padding: 1%;
+    display: none;
+}
+#small_category1{
+    display:block;
+}
+
 .small_category_button {
-	background-color:#ffffff;
+    background-color: #ffffff;
 }
 #small_category_1 {
 	color: #f60024;
