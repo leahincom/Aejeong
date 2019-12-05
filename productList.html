@@ -14,7 +14,12 @@
                 document.getElementById('small_category'+i).style.display = 'none';
             }
         }
-
+        function startCategory() {
+            selectBigCategory(1);
+            var read = location.href.split("?");
+            var init_category = read[1];
+            selectBigCategory(init_category);
+        }
         function selectBigCategory(index) {
             makeDefaultCategory();
             var selected = document.getElementById('big_category_' + index);
@@ -25,7 +30,7 @@
     </script>
 </head>
 
-<body onload="selectBigCategory(1)">
+<body onload="startCategory()">
   <section id="search_bar">
       <p>
         <button class="search_bar_button" id="logo_icon" onclick="location.href='home.html'"><img src="picture/whitelogo.png"  width="60%"></button>
