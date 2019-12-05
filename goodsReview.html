@@ -1,3 +1,4 @@
+<<<<<<< HEAD:goodsReview.html
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,3 +97,110 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="goodsReviewStyle.css">
+<title>애정 : 제품 리뷰</title>
+<script language="javascript">
+function showPopup() { window.open("08_2_popup.html", "a", "width=400, height=300, left=100, top=50"); }
+</script>
+</head>
+
+<body>
+  <section id="back_bar">    <!--윗배너-->
+    <button id="back_icon" onclick="location.href='goodsInfo.html'"><img src="picture/back_button.png" id="backimg"></button>
+    <label id="explain_label"><b>리뷰 전체보기</b></label>
+    <button class="search_bar_button" id="login_button" onclick="location.href='login.html'"><b>로그인</b></button>
+  </section>
+
+<p class="noneline_for_space"></p>   <!--배너와 section 구분-->
+
+<section> <!--윗부분 정보 섹션. 나에 대한 정보 + 제품 정보 표시-->
+  <article id="profile_article"><!--제품 div-->
+    <div>
+      <img src="picture/product1.jpg" id="productimg">
+      <p style="font-size:150%"><b>제품명</b></p>
+      <p style="font-size:80%">제품 구매날짜<p>
+    </div>
+  </article>
+</section>
+
+  <p class="noneline_for_space"></p>   <!--윗section과 아래 section 구분-->
+
+
+
+  <section class="reviewClass_section">
+    <article class="profile_article"> <!--내 정보 div-->
+      <img src="picture/basic_profile.png" class="profileimg">
+      <p class="nameP"><span id="nameSpan"><b>이화연</b></span> <span id="callSpan">님</span></p>
+    </article>
+
+    <article class="review_article">
+      <form method = "" action = ""> <!--text 자동 줄바꿈-->
+        <p class="ratingP">평점
+          <img src="picture/ystar.png" class="starimg">
+          <img src="picture/ystar.png" class="starimg">
+          <img src="picture/ystar.png" class="starimg">
+          <img src="picture/ystar.png" class="starimg">
+          <img src="picture/nstar.png" class="starimg">
+        </p>
+        <p class="proText">장점 <img src="picture/smile.png" class="faceimg"></p>
+        <input type="text" class="writing_text" value="괜찮아요">
+        <p class="conText">단점 <img src="picture/bad.png" class="faceimg"></p>
+        <input type="text" class="writing_text" value="냄새가 좀 구려요">
+        <p class="another">기타<img src="picture/soso.png" class="faceimg"></p>
+        <input type="text" class="writing_text" value="약간 고양이가 싫어하긴 함..">
+        <p class="another"> 사진</p>
+        <!--이미지 파일 넣기-->
+        <img src="picture/product1.jpg" class="productimages">
+      </form>
+    </article>
+  </section>
+
+
+<!--제품의 두번쨰 리뷰-->
+
+  <p class="noneline_for_space"></p>   <!--윗section과 아래 section 구분-->
+
+  <section class="reviewClass_section">
+    <article class="profile_article"> <!--내 정보 div-->
+      <img src="picture/basic_profile.png" class="profileimg">
+      <p class="nameP"><span id="nameSpan"><b>김호롤</b></span> <span id="callSpan">님</span></p>
+    </article>
+    <article class="review_article">
+      <form method = "" action = ""> <!--text 자동 줄바꿈-->
+        <p class="ratingP">평점
+          <img src="picture/ystar.png" class="starimg">
+          <img src="picture/ystar.png" class="starimg">
+          <img src="picture/ystar.png" class="starimg">
+          <img src="picture/nstar.png" class="starimg">
+          <img src="picture/nstar.png" class="starimg">
+        </p>
+        <p class="proText">장점 <img src="picture/smile.png" class="faceimg"></p>
+        <input type="text" class="writing_text" value="괜찮아요">
+        <p class="conText">단점 <img src="picture/bad.png" class="faceimg"></p>
+        <input type="text" class="writing_text" value="냄새가 좀 구려요">
+        <p class="another">기타<img src="picture/soso.png" class="faceimg"></p>
+        <input type="text" class="writing_text" value="약간 고양이가 싫어하긴 함..">
+        <p class="another"> 사진</p>
+        <!--이미지 파일 넣기-->
+        <img src="picture/product1.jpg" class="productimages">
+      </form>
+    </article>
+  </section>
+
+
+  <p class="noneline_for_space"></p>   <!--배너와 section 구분-->
+
+    <section id="bottom_bar">   <!--아래배너-->
+      <button class="bottom_bar_button" id="category_icon" onclick="location.href='productList.html'"><img src="picture/category_icon.png" id="categoryimg"></button>
+      <button class="bottom_bar_button" id="home_icon" onclick="location.href='home.html'"><img src="picture/home_icon.png" id="homeimg"></button>
+      <button class="bottom_bar_button" id="myPage_icon" onclick="showPopup();"><img src="picture/myPage_icon.png" id="myPageimg"></button>
+    </section>
+
+
+</body>
+</html>
+>>>>>>> 134c0817ee3f7d0286818ce7f71fdadf2af7005f:애정/front_ae/goodsReview.html
