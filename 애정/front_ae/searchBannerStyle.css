@@ -26,6 +26,7 @@ p, nav, table, section, null, input, img, td, button
     background-color: #ffffff;
     height:auto;
 }
+#whitelogo_id{width:60%;}
 #logo_icon {
     float: left;
 		background:#f60024;
@@ -41,6 +42,7 @@ p, nav, table, section, null, input, img, td, button
 	margin-top:0%;
 
 }
+#micro_id{width:45%;}
 #micro_icon{
   background-color:#f60024;
   padding-top:0.5%;

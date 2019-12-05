@@ -66,10 +66,18 @@ p, nav, table, section, null, input, img, td, button
   width: 70%;
 	margin-left:15%;
 }
+#pictureInfo{float:left;}
 #product1_id{ width:110%;}
+
 .explain_p{font-size:70%;}
 #explainName_p{font-size:130%;}
 .explain_span{margin-left:5%;}
+.explainAnimal_span{width:50%; background:#dddddd; margin-left:5%;}
+
+.border3P{padding-bottom:3%;}
+
+.barimg{width:3%;}
+
 #ingredient_button{
 	width:30%;
 	font-size: 60%;
@@ -77,10 +85,9 @@ p, nav, table, section, null, input, img, td, button
 	border:none;
 	margin-left:70%;
 }
-.border3P{padding-bottom:3%;}
-.barimg{width:3%;}
-#ingredient_p{font-size:80%; text-align:center;}
-#pictureInfo{float:left;}
+
+.ingredient_p{text-align:center;}
+
 .buttonimg{ width:100%; height:auto;}
 #heart_button{
 	border: 0px;
@@ -103,6 +110,7 @@ p, nav, table, section, null, input, img, td, button
   background-color:white;
 	float:left;
 }
+
 #review_section{
 	margin-left:5%;
 }
