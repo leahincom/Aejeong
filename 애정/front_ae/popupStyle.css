@@ -5,6 +5,9 @@ p, nav, table, section, null, input, img, td, button
   border-color:#f60024;
 }
 body{text-align:center;}
+
+#eximg{width:5%;}
+
 #border3p{padding-bottom:3%;}
 #loginbutton{ border-radius:10px;
 border: 3px #f60024 solid;
