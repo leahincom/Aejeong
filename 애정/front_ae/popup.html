@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href= "popupStyle.css"></head>
+<link rel="stylesheet" href= "popupStyle.css">
+<script language="javascript">
+function moveClose() {
+  opener.location.href="login.html";
+  self.close();
+}
+</script>
+</head>
 
 <body>
 
+로그인이 필요한 html입니다.
+<p id="border3p"></p>
+<form method="" action="">
+  <input type="button" value="로그인하기" onclick="moveClose();" id="loginbutton">
+</form>
 
 </body>
 </html>

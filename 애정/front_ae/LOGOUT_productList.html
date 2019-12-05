@@ -4,6 +4,10 @@
 <head>
     <title> 애정 : 제품 목록</title>
     <link rel="stylesheet" href="productListStyle.css">
+    <script type="text/javascript">
+        function showfilter() { window.open("filtering.html", "안내", "width=400, height=300, left=100, top=50"); }
+
+    </script>
 </head>
 
 <body>
@@ -40,7 +44,7 @@
 
     <p class="border1p"></p>
 
-      <button id="filter_button">
+      <button id="filter_button" onclick="showfilter();">
         <img src="picture/filter.png" id="filterimg">
       </button>
 
