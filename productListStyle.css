@@ -94,7 +94,7 @@ body{					/*��ü�� �����*/
 #big_category{					/*ū ī�װ���*/
 	overflow:hidden;
 }
-.big_category_button{
+#big_category button{
 	background-color: #f9f7f4;
 	margin: 0%;
 	padding-top: 1%;
@@ -103,14 +103,6 @@ body{					/*��ü�� �����*/
 	width: 16.6%;
 	font-size: 80%;
 }
-#selected_big_category {					/*���õ� ū ī�װ���*/
-	background-color: #f60024;
-	color:#ffffff;
-}
-#unSelected_big_category {
-    background-color: #f9f7f4;
-    color: black;
-}
 
 .small_category { /*����ī�װ���*/
     border: 1px solid;
@@ -118,16 +110,11 @@ body{					/*��ü�� �����*/
     padding: 1%;
     display: none;
 }
-#small_category1{
-    display:block;
-}
-
-.small_category_button {
+.small_category button {
     background-color: #ffffff;
 }
-#small_category_1 {
-	color: #f60024;
-}
+
+
 
 #filter_button{
 	border:none;
