@@ -4,7 +4,9 @@
     session_start();}
     $id=$_SESSION['UserID'];
     $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-    $Nickname=mysqli_query($db, "SELECT Nickname FROM Users WHERE UserID='$id'");
+    $rowNick=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
+    $row=mysqli_fetch_assoc($rowNick);
+    $Nickname=$rowNick['Nickname'];
     $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
     $row=mysqli_fetch_assoc($result);
 ?>
@@ -42,7 +44,7 @@
         <p class="noneline_for_space"></p>   <!-- 구분-->
         <input type="button" id="more_button" value="+ 더보기">
 
-        <!--javascript: 내용 접거나 펴기
+        <!--javascript: 내용 접거나 펴기-->
         <?php while($row=mysqli_fetch_assoc($result)) { ?>
       <p style="color:#6699ff;">장점 <img src="picture/smile.png" width="3%"></p>
       <?php echo $row['Adavantage']; ?>
