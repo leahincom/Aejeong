@@ -1,0 +1,84 @@
+<html>
+<head><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="filteringStyle.css">
+</head>
+
+<body>
+
+<p><header id = "myHeader"> <b>필터링</b> </header></p>
+<section id="mySection">
+<nav id="myNav">
+  <p><br></p>
+</nav>
+  <article class="myArticle">
+    <form method="" action="">
+      <p><br>&nbsp&nbsp<b>동물</b></p>
+      <p>&nbsp&nbsp<input type="checkbox" id="dog_checkbox" checked="checked"> <label>댕댕이</label></p>
+      <p>&nbsp&nbsp<input type="checkbox" id="cat_checkbox" checked="checked"> <label>애옹이</label></p>
+      <p>&nbsp&nbsp<input type="checkbox" id="restAnimal_checkbox" checked="checked"> <label>기타</label></p>
+    </form>
+    <br>
+  </article>
+
+  <article class="myArticle">
+    <form method="" action="">
+      <p><br>&nbsp&nbsp<b>정렬</b></p>
+      <p>&nbsp&nbsp<input type="radio" id="grading_radio" checked="checked"> <label>높은 평점순</label></p>
+      <p>&nbsp&nbsp<input type="radio" id="review_radio"> <label>리뷰 많은순</label></p>
+      <p>&nbsp&nbsp<input type="radio" id="high_radio"> <label>높은 가격순</label></p>
+      <p>&nbsp&nbsp<input type="radio" id="low_radio"> <label>낮은 가격순</label></p>
+    </form>
+    <br>
+  </article>
+
+  <article class="myArticle">
+    <form method="" action="">
+      <p><br>&nbsp&nbsp<b>평점</b></p>
+      <p>&nbsp&nbsp<input type="radio" id="four_radio" checked="checked"> <label>4점</label></p>
+      <p>&nbsp&nbsp<input type="radio" id="three_radio"> <label>3점</label></p>
+      <p>&nbsp&nbsp<input type="radio" id="two_radio"> <label>2점</label></p>
+      <p>&nbsp&nbsp<input type="radio" id="one_radio"> <label>1점</label></p>
+    </form>
+    <br>
+  </article>
+
+
+  <article class="myArticle">
+    <form method="" action="" class="customizing">
+      <p><br>&nbsp&nbsp<b>가격</b></p>
+      <p>&nbsp&nbsp&nbsp&nbsp<input type="range" value="0" min="0" max="500000" class="price_range"></p>
+      <p>&nbsp&nbsp<label>가격: </label></p>
+    </form>
+    <br>
+  </article>
+
+  <article class="myArticle">
+    <form method="" action="">
+      <p><br>&nbsp&nbsp<b>브랜드</b></p>
+      <p>&nbsp&nbsp<input type="checkbox" id="cj_checkbox" checked="checked"> <label>CJ</label></p>
+      <p>&nbsp&nbsp<input type="checkbox" id="echo_checkbox" checked="checked"> <label>에코띠끄</label></p>
+      <p>&nbsp&nbsp<input type="checkbox" id="whistle_checkbox" checked="checked"> <label>휘슬</label></p>
+      <p>&nbsp&nbsp<input type="checkbox" id="dogpensia_checkbox" checked="checked"> <label>도그펜시아</label></p>
+      <p>&nbsp&nbsp<input type="checkbox" id="dogpia_checkbox" checked="checked"> <label>도그피아</label></p>
+      <p>&nbsp&nbsp<input type="checkbox" id="restBrand_checkbox" checked="checked"> <label>기타</label> <input type="text" id="restBrand_text"></p>
+    </form>
+    <br>
+  </article>
+
+  <article class="myArticle">
+    <form method="" action="">
+      <p><br>&nbsp&nbsp<b>제외 성분</b></p>
+      <p>&nbsp&nbsp&nbsp&nbsp<input type="text" id="exclude_text"></p>
+      <br>
+    </form>
+  </article>
+
+  <div id="myDiv">
+    <form method="" action="">
+    <input type="button" id="filter_button" value="필터 적용">
+  </form>
+  <div>
+
+</section>
+</body>
+</html>
