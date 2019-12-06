@@ -7,7 +7,7 @@
 
 <body>
   <section id="back_bar">    <!--윗배너-->
-    <button id="back_icon" onclick="location.href='LOGOUT_goodsInfo.html'"><img src="picture/back_button.png" id="backimg"></button>
+    <button id="back_icon" onclick="location.href='goodsInfo.html'"><img src="picture/back_button.png" id="backimg"></button>
     <label id="explain_label"><b>리뷰 전체보기</b></label>
     <button class="search_bar_button" id="login_button"><b>로그아웃</b></button>
   </section>
@@ -17,8 +17,8 @@
   <article id="profile_article"><!--제품 div-->
     <div>
       <img src="picture/product1.jpg" id="productimg">
-      <p style="font-size:150%"><b>제품명</b></p>
-      <p style="font-size:80%">제품 구매날짜<p>
+      <p><span id="nameSpan"><b>제품명</b></span></p>
+      <p><span id="dateSpan">브랜드 / 용량</span></p>
     </div>
   </article>
 </section>
@@ -88,8 +88,8 @@
 
   <p class="noneline_for_space"></p>   <!--배너와 section 구분-->
   <section id="bottom_bar">   <!--아래배너-->
-    <button class="bottom_bar_button" id="category_icon" onclick="location.href='LOGOUT_productList.html'"><img src="picture/category_icon.png" id="categoryimg"></button>
-    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LOGOUT_home.html'"><img src="picture/home_icon.png" id="homeimg"></button>
+    <button class="bottom_bar_button" id="category_icon" onclick="location.href='productList.html'"><img src="picture/category_icon.png" id="categoryimg"></button>
+    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LOGINED_home.html'"><img src="picture/home_icon.png" id="homeimg"></button>
     <button class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.html'"><img src="picture/myPage_icon.png" id="myPageimg"></button>
   </section>
 </body>
