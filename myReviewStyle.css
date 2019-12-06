@@ -1,0 +1,131 @@
+/*~~~~~~~~~~~~~~~~~위아래 배너 ~~~~~~~~~~~~~~~~~~~~~*/
+
+p, nav, table, section, null, input, img, td, button
+
+*{
+	font-family: NanumSquare;
+    border-color:#f60024;
+}
+
+#backimg{ width:50%;}
+#back_bar {
+	top:0; left:0;
+  margin: 0; padding: 0;
+  width: 100%;
+  height: auto;
+  padding: 1%;
+  position: fixed;
+  text-align:center;
+  background: #f60024;
+}
+
+#back_icon {
+  float: left;
+  border: 0px;
+  width:10%;
+  height:auto;
+  background-color:#f60024;
+}
+
+#explain_label{
+	float: left;
+	padding-top: 1%;
+	color:white;
+	font-size:120%;
+}
+
+  #bottom_bar {
+    margin: 0px;
+    padding: 1%;
+    overflow: hidden;
+    border-top: 0.5px solid #999999;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  .bottom_bar_button {
+      border: 0px;
+      width:7%;
+      height:auto;
+      background-color:white;
+  }
+  #categoryimg{ width:100%;}
+  #category_icon {
+      float: left;
+      margin-left:5%;
+  }
+  #homeimg{width:160%;}
+  #myPageimg{width:110%;}
+  #myPage_icon {
+      float: right;
+      margin-right:5%;
+  }
+
+  .noneline_for_space{padding-bottom: 10%;}
+
+
+/*~~~~~~~~~~~~윗부분 제품 설명~~~~~~~~~~~~~~*/
+#productimg{float:left; width:65;}
+#info_div{
+  padding-top: 3%; padding-bottom:5%;margin-bottom:0;
+  text-align: left;
+  background-color: #ffffff;
+  width: 100%
+}
+#goodsInfo_article{padding:1%; margin-bottom:0; align:center;
+	border-top-left-radius:20px;
+	border-top-right-radius: 20px;}
+#writing_article{padding:1%; margin-bottom:0; align:center;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius: 20px;}
+#myreview_section article{
+	width:80%;
+	text-align:left; margin-bottom:0;
+	padding:5%;
+	border:#f60024 solid;
+	height:auto;}
+
+	#nameP{font-size:120%;}
+	#dateP{font-size:80%;}
+
+	.starimg{width:3%;}
+	.faceimg{width:3%;}
+
+
+/*~~~~~~~~~~~~~~~~중간내용~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+  .writing_text{
+    border: 1px solid gray; border-radius: 10px;
+    height: 100px; width: 70%;
+    margin-bottom: 5px; margin-left: 5%; margin-bottom: 3%;
+    word-wrap;break-word;
+    line-height: 10px;
+    text-overflow:ellipsis; overflow:hidden;
+  }
+
+
+
+.proText{color:#6699ff;}
+.conText{color:#ff3366;}
+.another{color:#888888;}
+.pictureimg{width:7%;padding-left:5%;}
+
+  #more_button{
+    border:1px solid white; background-color:#ffffff;
+    cursor: pointer; color:#888888;
+  }
+
+  #edit_button{
+  border:5px solid #ffffff;
+  cursor: pointer;
+  border-radius: 50px; width: 20%;
+  float:right;
+  background-color:#f60024;
+	color:white;
+	font-size:100%;
+	padding:1%;
+  }

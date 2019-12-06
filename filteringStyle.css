@@ -1,0 +1,66 @@
+/*.은 class, #이 id*/
+/*range 가격 디자인 고치고 / header이랑 nav 간격 없애기*/
+
+*{
+	font-family: NanumSquare;
+    border-color:#f60024;
+}
+body{
+  font-family: NanumSquare;
+  font-size: 110%;
+}
+
+#myNav{width:80%; background-color:#f9f7f4;}
+#myHeader{
+  float:center; line-height: 200%;
+  text-align: center; color: #f60024; background-color: #ffffff; width: 80%; height: 8%;
+  font-family: 12롯데마트드림Bold; font-size: 130%; border-top-right-radius: 20px;
+}
+
+#mySection{
+  background-color:#f9f7f4; width: 80%; float:center;
+}
+
+.myArticle{
+  background-color:#ffffff; border-radius:15px; width:65%; height: auto; margin-bottom: 5%; margin-left:7%
+}
+
+/*#price_range{}*/
+
+input[type=range] {
+    width: 70%;
+}
+.customizing input[type=range] {
+    -webkit-appearance: none;
+}
+
+.customizing input[type=range]::-webkit-slider-runnable-track {
+    width: 50%;
+    height: 4px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #2497E3;
+}
+.customizing input[type=range]::-webkit-slider-thumb {
+  width: 10px;
+  background: url("down_arrow.png") no-repeat;
+
+  height: 15px;
+  cursor: pointer;
+  margin-top: -5px; /*chrome의 경우 margin-top값을 부여해야합니다.*/
+  -webkit-appearance: none;
+
+}
+.customizing input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #2497E3; /*네모버튼에 포커스를 줬을때 뒤에 라인(ㅡ)의 효과*/
+}
+
+
+
+
+#restBrand_text{border: 1px solid gray; border-radius: 20px; height: 5%; width: 50%;}
+#exclude_text{border: 1px solid gray; border-radius: 20px; height: 5%; width: 50%;}
+#myDiv{float:center;text-align:center;}
+#filter_button{
+  border:none; background-color:#f60024; cursor: pointer;border-radius: 40px; color:white; font-size:100%;
+  font-color:#ffffff;width: 60%; height: 7%; margin-bottom: 15px;float:center; text-align:center;}
