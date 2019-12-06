@@ -89,6 +89,8 @@ p, nav, table, section, null, input, img, td, button
 	border:#f60024 solid;
 	height:auto;}
 
+#exlabel{width:10%; border:#ff0000;}
+
 	#nameP{font-size:120%;}
 	#dateP{font-size:80%;}
 
@@ -114,10 +116,7 @@ p, nav, table, section, null, input, img, td, button
 .another{color:#888888;}
 .pictureimg{width:7%;padding-left:5%;}
 
-  #more_button{
-    border:1px solid white; background-color:#ffffff;
-    cursor: pointer; color:#888888;
-  }
+
 
   #edit_button{
   border:5px solid #ffffff;
