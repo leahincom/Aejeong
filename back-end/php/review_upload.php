@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <?php  if (session_status() == PHP_SESSION_NONE) {
     session_start();}
     $id=$_SESSION['UserID'];
     $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-    $result=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$UserID'");
+    $result=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
     $row=mysqli_fetch_assoc($result);
 ?>
 <head>
@@ -19,7 +19,9 @@ $Date = $_POST['Date'];
 $Advantage = $_POST['Advantage'];
 $Weakness  = $_POST['Weakness'];
 $Etc = $_POST['Etc'];
-		$db=new mysqli('localhost', 'aejeong', 'aejeong123', 'aejeong');
+while()
+$Picture = $_POST['Picture'];
+
 		if(mysqli_connect_errno()){
 			echo '<p>Error: Could not connect to database.<br/>
 				Please try again later.</p>';

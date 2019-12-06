@@ -4,7 +4,7 @@
     session_start();}
     $id=$_SESSION['UserID'];
     $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-    $Nickname=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$UserID'");
+    $Nickname=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
     $ItemName=mysqli_query($db, "SELECT ItemName FROM Reviews WHERE Nickname='$Nickname'");
     $result=mysqli_query($db, "SELECT * FROM Reviews WHERE ItemName='$ItemName'");
     $row=mysqli_fetch_assoc($result);

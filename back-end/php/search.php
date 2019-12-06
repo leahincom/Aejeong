@@ -6,11 +6,11 @@ $db=mysqli_connect('localhost', 'root', 'skwjdgus', 'aejeong');
 if(mysqli_connect_errno()){
   echo '<p>Error: Could not connect to database. <br/>Please try again later.</p>';
   exit;
-$sql = "SELECT * FROM Items WHERE ItemName = 'search_text' OR BrandName = 'search_text'";
+  }
+$search_text = $_POST['search_text'];
+$sql = "SELECT * FROM Items WHERE ItemName = '$search_text' OR BrandName = '$search_text'";
 $result = mysqli_query($db, $sql);
 $row = mysqli_fetch_array($result);
-$search_text = $_POST['search_text'];
-}
 ?>
 
 <head>
