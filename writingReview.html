@@ -3,6 +3,18 @@
 <head><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="writingReviewStyle.css">
 <title>애정 : 리뷰 쓰기</title>
+<script type="text/javascript">
+
+function typed()
+{
+      if(event.keyCode < 48 ||event.keyCode > 53){
+          alert("0~5사이의 숫자로 입력해주세요");
+          document.getElementById('rating_text').value = 5;
+
+        }
+      }
+</script>
+
 </head>
 
 <body>
@@ -26,8 +38,10 @@
     <article id="review_article">
       <form method = "" action = ""> <!--text 자동 줄바꿈-->
         <p id="ratingP">평점
-          <input type="text" id="rating_text"> <b><span id="ratingSpan">/5</span></b>
+          <input type="text" maxlength="1" id="rating_text" onkeypress="typed();"> <b><span id="ratingSpan">/5</span></b>
         </p>
+      </form>
+      <form method="" action="">
         <p class="proText">장점 <img src="picture/smile.png" class="faceimg"></p>
         <input type="text" class="writing_text">
         <p class="conText">단점 <img src="picture/bad.png" class="faceimg"></p>

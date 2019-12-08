@@ -27,40 +27,38 @@ body{
 
 /*#price_range{}*/
 
-input[type=range] {
-    width: 70%;
-}
-.customizing input[type=range] {
-    -webkit-appearance: none;
-}
-
-.customizing input[type=range]::-webkit-slider-runnable-track {
-    width: 50%;
-    height: 4px;
-    cursor: pointer;
-    animate: 0.2s;
-    background: #2497E3;
-}
-.customizing input[type=range]::-webkit-slider-thumb {
-  width: 10px;
-  background: url("down_arrow.png") no-repeat;
-
-  height: 15px;
-  cursor: pointer;
-  margin-top: -5px; /*chrome의 경우 margin-top값을 부여해야합니다.*/
-  -webkit-appearance: none;
-
-}
-.customizing input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #2497E3; /*네모버튼에 포커스를 줬을때 뒤에 라인(ㅡ)의 효과*/
-}
-
-
 
 
 #restBrand_text{border: 1px solid gray; border-radius: 20px; height: 5%; width: 50%;}
-#exclude_text{border: 1px solid gray; border-radius: 20px; height: 5%; width: 50%;}
 #myDiv{float:center;text-align:center;}
 #filter_button{
   border:none; background-color:#f60024; cursor: pointer;border-radius: 40px; color:white; font-size:100%;
   font-color:#ffffff;width: 60%; height: 7%; margin-bottom: 15px;float:center; text-align:center;}
+
+
+
+
+
+	input[type=range]::-webkit-slider-thumb {
+	    -webkit-appearance: none;
+	    border: none;
+	    background-image: url('donw_arrow.png') no-repeat;
+	}
+
+	input[type=range]::-webkit-slider-runnable-track {
+	  width: 80%; height: 4px;
+	  cursor: pointer;
+	  background: #f60024;
+	  border-radius: 20px;
+	}
+#priceRange{width:60%; margin-left:3%;}
+
+/*~~~~~~~~~*/
+#exclude_text{border: 1px solid gray; border-radius: 20px; height: 5%; width: 50%; padding-left:3%;
+margin-left:3%;}
+
+#addingButton{width:20%;
+	margin-left:3%;
+background:#ffffff;
+border-radius:10px;
+border: #f60024 solid;}
