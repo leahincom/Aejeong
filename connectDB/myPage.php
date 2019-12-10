@@ -81,12 +81,10 @@
         
     </section>
 
-
-    #아래 바
-    <section id="bottom_bar">
-    <button class="bottom_bar_button" id="category_icon" onclick="location.href='LOGOUT_productList.html'"><img src="picture/category_icon.png"  width="100%"></button>
-    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LoginHome.php'"><img src="picture/home_icon.png" width="160%"></button>
-    <button class="bottom_bar_button" id="myPage_icon" onclick="location.href='myPage.php'"><img src="picture/myPage_icon.png" width="110%"></button>
-    </section>
+<section id="bottom_bar">   <!--아래배너-->
+    <button class="bottom_bar_button" id="category_icon" onclick="location.href='LOGOUT_productList.html'"><img src="picture/category_icon.png" id="categoryimg"></button>
+    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LoginHome.php'"><img src="picture/home_icon.png" id="homeimg"></button>
+    <button class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.php'"><img src="picture/myPage_icon.png" id="myPageimg"></button>
+  </section>
 </body>
 </html>
