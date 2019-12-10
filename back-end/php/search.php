@@ -9,8 +9,10 @@ if(mysqli_connect_errno()){
   }
 $search_text = $_POST['search_text'];
 $sql = "SELECT * FROM Items WHERE ItemName = '$search_text' OR BrandName = '$search_text'";
-$result = mysqli_query($db, $sql);
-$row = mysqli_fetch_array($result);
+$result=mysqli_query($db, $sql);
+$row=mysqli_fetch_assoc($result);
+$Nickname=$row['Nickname'];
+$result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
 ?>
 
 <head>
@@ -25,10 +27,9 @@ $row = mysqli_fetch_array($result);
         <wrapper>
           <form method="post" action="search.php">
           <input type="text" id="search_text" name="search_text">
-          <button type="button" class="search_bar_button" id="micro_icon"><img src="picture/micro.png" width="45%"></button>
-          </form>
-                    <button type="button" class="search_bar_button" id="login_button"onclick="location.href='login.html'"><b>로그인</b></button>
-        </wrapper>
+          <button type="submit" class="search_bar_button" id="micro_icon"><img src="picture/micro.png" width="45%"></button>
+          <button type="button" id="login_button" onclick="location.href='loginPage.php'"><b>로그인</b></button>
+          </form>        </wrapper>
       </p>
   </section>
 
