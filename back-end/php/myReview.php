@@ -6,7 +6,7 @@
     $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
     $rowNick=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
     $row=mysqli_fetch_assoc($rowNick);
-    $Nickname=$rowNick['Nickname'];
+    $Nickname=$row['Nickname'];
     $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
     $row=mysqli_fetch_assoc($result);
 ?>

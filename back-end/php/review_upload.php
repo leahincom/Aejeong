@@ -15,11 +15,12 @@
 	<?php
 $Nickname = $row['Nickname'];
 $ItemName = $_POST['ItemName'];
+$Rating = $_POST['Rating'];
 $Date = $_POST['Date'];
 $Advantage = $_POST['Advantage'];
 $Weakness  = $_POST['Weakness'];
 $Etc = $_POST['Etc'];
-while()
+// while()
 $Picture = $_POST['Picture'];
 
 		if(mysqli_connect_errno()){

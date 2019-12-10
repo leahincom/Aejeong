@@ -3,9 +3,11 @@
     session_start();}
     $id=$_SESSION['UserID'];
     $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-    $Nickname=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
-    $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
-    $row=mysqli_fetch_assoc($result);
+    $rowNick=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
+$row=mysqli_fetch_assoc($rowNick);
+$Nickname=$row['Nickname'];
+$result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
+$row=mysqli_fetch_assoc($result);
 ?>
 <html>
 <head><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -3,9 +3,11 @@
     session_start();}
     $id=$_SESSION['UserID'];
     $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-    $Nickname=mysqli_query($db, "SELECT Nickname FROM Users WHERE UserID='$id'");
-    $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
-    $row=mysqli_fetch_assoc($result);
+    $rowNick=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
+$row=mysqli_fetch_assoc($rowNick);
+$Nickname=$row['Nickname'];
+$result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
+$row=mysqli_fetch_assoc($result);
 ?>
 <html>
 <head><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +35,7 @@
     </article>
     <article id="review_article">
         <p style="padding-right: 1%;">평점
-          <input type="text" id="rating_text"> <b><font size="5%">/5</font></b>
+          <input type="text" id="rating_text" name="Rating"> <b><font size="5%">/5</font></b>
         </p>
         <p style="color:#6699ff;">장점 <img src="picture/smile.png" width="3%"></p>
         <input type="text" class="writing_text" name="Advantage">
@@ -43,7 +45,7 @@
         <input type="text" class="writing_text" name="Etc">
         <p style="color:#888888;"> 사진 추가</p>
         <input type="button" id="addPicture_button" value="+" name="Picture">
-        // javascript 사진 추가 기능
+        <!-- javascript 사진 추가 기능-->
     </article>
 
     <p class="noneline_for_space"></p>   <!--아래section과 아래 banner 구분-->

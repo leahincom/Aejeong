@@ -24,10 +24,10 @@ $row = mysqli_fetch_array($result);
         <button class="search_bar_button" id="logo_icon" onclick="location.href='home.html'"><img src="picture/whitelogo.png"  width="60%"></button>
         <wrapper>
           <form method="post" action="search.php">
-          <input type="text" id="search_text">
-          <button class="search_bar_button" id="micro_icon" name="search_text"><img src="picture/micro.png" width="45%"></button>
-          <button class="search_bar_button" id="login_button"onclick="location.href='login.html'"><b>로그인</b></button>
-        </form>
+          <input type="text" id="search_text" name="search_text">
+          <button type="button" class="search_bar_button" id="micro_icon"><img src="picture/micro.png" width="45%"></button>
+          </form>
+                    <button type="button" class="search_bar_button" id="login_button"onclick="location.href='login.html'"><b>로그인</b></button>
         </wrapper>
       </p>
   </section>
