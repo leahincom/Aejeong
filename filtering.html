@@ -5,6 +5,7 @@
 <script type="text/javascript">
 
 
+
 function add()
 {
   var a=document.getElementById('exclude_text').value;
@@ -13,6 +14,7 @@ var newtext = document.createTextNode(a);
 bt.appendChild(newtext);
 var para = document.getElementById("p1");
 para.appendChild(bt);
+bt.addEventListener('click', function(event){para.removeChild(bt);});
 
 bt.style.background="#ffffff";
 bt.style.border="none";
