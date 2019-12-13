@@ -117,7 +117,7 @@
 				$state=1;
 			}
 			if($state==1){
-				echo "<script>alert('성공적으로 변경되었습니다.'); location.replace('LoginHome.php'); </script>";
+				echo "<script>alert('성공적으로 변경되었습니다.'); location.replace('myPage.php'); </script>";
 				exit();
 			}
 			else {

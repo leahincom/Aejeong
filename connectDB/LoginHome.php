@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="homeStyle.css?ver=1">
     <script type="text/javascript">
         function sendTest(index) {
-            location.href = "LOGOUT_productList.html?" + index;
+            location.href = "productList.php?" + index;
         }
     </script>
 </head>
@@ -22,9 +22,11 @@
       <p>
         <button class="search_bar_button" id="logo_icon" onclick="location.href='LoginHome.php'"><img src="picture/whitelogo.png"  width="60%"></button>
         <wrapper>
-          <input type="text" id="search_text">
-          <button class="search_bar_button" id="micro_icon"><img src="picture/micro.png" width="45%"></button>
-	  <button class="search_bar_button" id="login_button" onclick="location.href='Logout.php'"><b>로그아웃</b></button>
+          <form method="post" action="search.php">
+          <input type="text" id="search_text" name="search_text">
+          <button type="submit" class="search_bar_button" id="micro_icon"><img src="picture/micro.png" width="45%"></button>
+          <button type="button" id="login_button" onclick="location.href='Logout.php'"><b>로그아웃</b></button>
+          </form>
         </wrapper>
       </p>
   </section>
@@ -83,9 +85,9 @@
   </section>
 
   <section id="bottom_bar">   <!--아래배너-->
-    <button class="bottom_bar_button" id="category_icon" onclick="location.href='LOGOUT_productList.html'"><img src="picture/category_icon.png" id="categoryimg"></button>
-    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LoginHome.php'"><img src="picture/home_icon.png" id="homeimg"></button>
-    <button class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.php'"><img src="picture/myPage_icon.png" id="myPageimg"></button>
+    <button class="bottom_bar_button" id="category_icon" onclick="location.href='productList.php'"><img src="picture/category_icon.png"  height="35" width="35"></button>
+    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LoginHome.php'"><img src="picture/home_icon.png"  height="35" width="70" ></button>
+    <button class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.php'"><img src="picture/myPage_icon.png"  height="35" width="35" ></button>
   </section>
 
 </body>

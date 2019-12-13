@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <?php  if (session_status() == PHP_SESSION_NONE) {
     session_start();}
     $id=$_SESSION['UserID'];
@@ -17,7 +17,7 @@ $row=mysqli_fetch_assoc($result);
 
 <body>
   <section id="back_bar">
-      <button id="back_icon" onclick="location.href='LOGOUT_goodsInfo.html'"><img src="picture/back_button.png" width="50%"></button>
+      <button id="back_icon"><img src="picture/back_button.png" width="50%" onclick="history.back(-1);"></button>
       <label id="explain_label"><b>리뷰 쓰기</b></label>
   </section>
 
@@ -56,10 +56,10 @@ $row=mysqli_fetch_assoc($result);
 
   <p class="noneline_for_space"></p>   <!--아래section과 아래 banner 구분-->
 
-  <section id="bottom_bar">
-    <button class="bottom_bar_button" id="category_icon" onclick="location.href='LOGOUT_productList.html'"><img src="picture/category_icon.png"  width="100%"></button>
-    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LOGOUT_home.html'"><img src="picture/home_icon.png" width="160%"></button>
-    <button class="bottom_bar_button" id="myPage_icon" onclick="location.href='myPage.html'"><img src="picture/myPage_icon.png" width="110%"></button>
+  <section id="bottom_bar">   <!--아래배너-->
+    <button class="bottom_bar_button" id="category_icon" onclick="location.href='LOGOUT_productList.html'"><img src="picture/category_icon.png"  height="35" width="35"></button>
+    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LoginHome.php'"><img src="picture/home_icon.png"  height="35" width="70" ></button>
+    <button class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.php'"><img src="picture/myPage_icon.png"  height="35" width="35" ></button>
   </section>
 
 </body>

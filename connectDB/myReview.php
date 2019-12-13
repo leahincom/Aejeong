@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <?php  if (session_status() == PHP_SESSION_NONE) {
     session_start();}
@@ -17,7 +17,7 @@
 
 <body>
   <section id="back_bar">
-    <button id="back_icon" onclick="location.href='myPage.html'"><img src="picture/back_button.png" width="50%"></button>
+    <button id="back_icon"><img src="picture/back_button.png" width="50%" onclick="history.back(-1);"></button>
     <label id="explain_label"><b>내가 쓴 리뷰</b></label>
   </section>
   <p class="noneline_for_space"></p>
@@ -56,17 +56,17 @@
       <img src="picture/product2.png" width="7%" style="padding-left:5%;">
 -->
 
-      <a href="edit_review.php"> <button id="edit_button"><b>편집</b></button>
+      <a href="edit_review.php"> <button id="edit_button"><b>편집</b></button></a>
       <p class="noneline_for_space"></p>
     </article>
   </section>
 
   <p class="noneline_for_space"></p>
 
-  <section id="bottom_bar">
-    <button class="bottom_bar_button" id="category_icon" onclick="location.href='LOGOUT_productList.html'"><img src="picture/category_icon.png"  width="100%"></button>
-    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LOGOUT_home.html'"><img src="picture/home_icon.png" width="160%"></button>
-    <button class="bottom_bar_button" id="myPage_icon" onclick="location.href='myPage.html'"><img src="picture/myPage_icon.png" width="110%"></button>
+  <section id="bottom_bar">   <!--아래배너-->
+    <button type="button" class="bottom_bar_button" id="category_icon" onclick="location.href='LOGOUT_productList.html'"><img src="picture/category_icon.png"  height="35" width="35"></button>
+    <button type="button" class="bottom_bar_button" id="home_icon" onclick="location.href='LoginHome.php'"><img src="picture/home_icon.png"  height="35" width="70" ></button>
+    <button type="button" class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.php'"><img src="picture/myPage_icon.png"  height="35" width="35" ></button>
   </section>
 
 </body>
