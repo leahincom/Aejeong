@@ -7,7 +7,7 @@ soup = BeautifulSoup(response.content, 'html.parser', from_encoding='utf-8')
 
 page_list = soup.findAll("a", {"class": {'number'}})
 
-for page_number in range(0, len(page_list)+1):
+for page_number in range(1, len(page_list)+1):
     URL = 'http://www.catpre.com/shop/goods/goods_post.php?goodsno=24978&page=' + str(page_number)
     response = requests.get(URL)
     soup = BeautifulSoup(response.content, 'html.parser', from_encoding='utf-8')
