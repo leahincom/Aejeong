@@ -1,0 +1,39 @@
+p, nav, table, section, null, input, img, td, button
+
+  *{
+  	font-family: NanumSquare;
+      border-color:#f60024;
+  }
+
+  #bottom_bar {
+    margin: 0px;
+    padding: 1%;
+    overflow: hidden;
+    border-top: 0.5px solid #999999;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  .bottom_bar_button {
+      border: 0px;
+      width:7%;
+      height:auto;
+      background-color:white;
+  }
+  #categoryimg{ width:100%;}
+  #category_icon {
+      float: left;
+      margin-left:5%;
+  }
+  #homeimg{width:160%;}
+  #myPageimg{width:110%;}
+  #myPage_icon {
+      float: right;
+      margin-right:5%;
+  }
+
+  .noneline_for_space{padding-bottom: 10%;}
