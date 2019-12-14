@@ -28,7 +28,6 @@ PetSort CHAR(50) NOT NULL,
 Picture CHAR(255) NOT NULL,
 ComponentsName CHAR(30) NOT NULL,
 Nickname CHAR(50) NOT NULL,
-BrandName CHAR(23) NOT NULL,
 PRIMARY KEY (ItemName, Picture, ComponentsName, Nickname),
 FOREIGN KEY (ComponentsName) REFERENCES Components(ComponentsName),
 FOREIGN KEY (Nickname) REFERENCES Users(Nickname)
