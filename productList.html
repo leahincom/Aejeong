@@ -7,13 +7,14 @@
     <script type="text/javascript">
         function showfilter() { window.open("filtering.html", "안내", "width=700, height=400, left=100, top=50"); }
 
-                        function startCategory() {
-                            selectBigCategory(1);
-                            for(var i=1; i<7; i++){
-                                selectSmallCategory(i,1);
-                            }
-                            var read = location.href.split("?");
+        function startCategory() {
+            selectBigCategory(1);
+            for (var i = 1; i < 7; i++) {
+                selectSmallCategory(i, 1);
+            } 
+            var read = location.href.split("?");
                             var init_category = read[1];
+                            
                             if (init_category != null) {
                                 selectBigCategory(init_category);
                             }
@@ -39,12 +40,12 @@
                                     if (small != null) {
                                         small.style.color = '#000000';
                                     }
-                            }
+                                }
                         }
                         function selectSmallCategory(big, small) {
                             clearSmallCategory(big);
-                            var selected = document.getElementById('small_category' + big+small);
-                            selected.style.color='#f60024';
+                            var selected = document.getElementById('small_category' + big + small);
+                            selected.style.color = '#f60024';
                         }
     </script>
 </head>
@@ -124,6 +125,7 @@
                 <button id="small_category56" onclick="selectSmallCategory(5,6)"> 기타 </button>
             </div>
             <div class="small_category" id="small_category6">
+                <button id="small_category61" onclick="selectSmallCategory(t,1)"> 기타 </button>
             </div>
         </section>
 
