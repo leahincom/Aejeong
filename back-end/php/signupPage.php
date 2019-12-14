@@ -3,13 +3,13 @@
 
 <head>
     <title>애정 : 회원가입</title>
-    <link rel="stylesheet" href="login_signup_Style.css">
+    <link rel="stylesheet" href="login_signup_Style.css?after">
 </head>
 
 
 <body>
     <section id="logo_section">
-        <img id="logo_img" src="picture\logo2.jpg">
+        <img id="logo_img" src="picture\whitelogo.png">
     </section>
     <section>
         <h1>회원가입</h1>
@@ -17,12 +17,10 @@
         <p>
             아이디
             <input class="id_nick_input" type="text" name="id" id="id">
-            <button type="submit">중복확인</button>
         </p>
         <p>
             닉네임
             <input class="id_nick_input" type="text" name="nick">
-            <button type="submit">중복확인</button>
         </p>
 	
         <p>

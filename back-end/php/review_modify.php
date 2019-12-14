@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <?php  if (session_status() == PHP_SESSION_NONE) {
     session_start();}
     $id=$_SESSION['UserID'];
-    $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
+    $db=mysqli_connect('10.200.38.43', '1111', '1234', 'aejeong');
     $rowNick=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
 $row=mysqli_fetch_assoc($rowNick);
 $Nickname=$row['Nickname'];
@@ -21,13 +21,13 @@ $row=mysqli_fetch_assoc($result);
 		}
 
 		$Nickname = $row['Nickname'];
-		$ItemName = $row['ItemName'];
-		$Date = $row['Date'];
+		$ItemName = $_GET['item'];
+		$Date = date("Y-n-j");
+		$Rating = (float)($_POST['Rating']);
 		$Advantage = $_POST['Advantage'];
 		$Weakness  = $_POST['Weakness'];
 		$Etc = $_POST['Etc'];
 
-		$db=mysqli_connect('localhost', 'root', 'skwjdgus', 'aejeong');
 		if(mysqli_connect_errno()){
 			echo "<p>Error: Could not connect to database. <br/>Please try again later.</p>";
 			exit();

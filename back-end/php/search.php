@@ -1,18 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <?php
-$db=mysqli_connect('localhost', 'root', 'skwjdgus', 'aejeong');
+$db=mysqli_connect('10.200.38.43', '1111', '1234', 'aejeong');
 if(mysqli_connect_errno()){
   echo '<p>Error: Could not connect to database. <br/>Please try again later.</p>';
   exit;
   }
 $search_text = $_POST['search_text'];
-$sql = "SELECT * FROM Items WHERE ItemName = '$search_text' OR BrandName = '$search_text'";
-$result=mysqli_query($db, $sql);
-$row=mysqli_fetch_assoc($result);
-$Nickname=$row['Nickname'];
-$result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
+$sql = "SELECT * FROM Items WHERE ItemName = '$search_text'";
+$result=mysqli_query($db,$sql);
+$sql1 = "SELECT * FROM reviews WHERE ItemName = '$search_text'";
+$result1=mysqli_query($db,$sql1);
+$num=0;
+$sum=0;
 ?>
 
 <head>
@@ -50,20 +51,27 @@ $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
   <p style="padding:5%;"></p>
   <?php while($row=mysqli_fetch_assoc($result)) { ?>
   <section align="center">
-    <button class="rankingButton" onclick="location.href='goodsInfo.html'">
+    <button class="rankingButton" onclick="location.href='goodsInfo.php?item=<?php echo $row['Picture'];?>'">
       <div class="buttonDiv">
         <p class="numbP" id="firstP"></p>
-        <?php echo $row['Picture']; ?>
+        <img src="<?php echo $row['Picture']; ?>">
         <wrapper class="goodsInfoWrapper">
           <p class="nameP">  <?php echo $row['ItemName']; ?> </p>
-          <p class="infoP"><span class="brandSpan"> <?php echo $row['BrandName']; ?> </span> / <span class="priceSpan"> <?php echo $row['Price']; ?> </span></p>
+          <p class="infoP"><span class="brandSpan"> </span> / <span class="priceSpan"> <?php echo $row['Price']; ?> </span></p>
         </wrapper>
-        <p> 평점: <?php echo $row['Adavantage']; } ?> </p>
+        <p> 평점: <?php while($row1=mysqli_fetch_assoc($result1)) {
+	 $sum=$sum+$row1['Rating'];
+	 $num=$num+1; }
+	 if ($num==0) {
+			echo "0"; }
+		else{
+	 	$avg=$sum/$num;
+	 	echo $avg;} ?> </p>
       </div>
       <hr class="rankingHr"></hr>
     </button>
   </section>
-
+  <?php } ?>
 
   <p style="padding:5%;"></p>
 

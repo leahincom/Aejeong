@@ -3,18 +3,22 @@
 <?php  if (session_status() == PHP_SESSION_NONE) {
     session_start();}
     $id=$_SESSION['UserID'];
-    $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
+    $db=mysqli_connect('10.200.38.43', '1111', '1234', 'aejeong');
     $result=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
     $row=mysqli_fetch_assoc($result);
 ?>
 
 <head>
     <title> 애정 : 개인정보 수정</title>
-    <link rel="stylesheet" href="login_signup_Style.css">
+    <link rel="stylesheet" href="login_signup_Style.css?after">
 </head>
 
 
 <body>
+  <section id="back_bar"> <!--윗배너 생성-->
+      <button id="back_icon" onclick="location.href='myPage.php'"><img src="picture/back_button.png" width="50%"></button>
+      <label id="explain_label"><b>개인정보 수정</b></label>
+  </section>
     <section>
 	<form name="edit" action="info_modify.php" method="post">  
         <h1>개인정보 수정</h1>
@@ -24,7 +28,6 @@
         <p>
             닉네임
             <input class="id_nick_input" type="text" id="nick" name="nick" value="<?php echo $row['Nickname']; ?>">
-            <button>중복확인</button>
         </p>
         <p>
             <button id="password_change_button">비밀번호 수정</button>
@@ -36,7 +39,7 @@
             </p>
             <p>
                 비밀번호 확인
-                <input id="passwordCheck_change_input" type="password">
+                <input id="passwordCheck_change_input" type="password" name="passwordCheck">
             </p>
         </article>
         <p>

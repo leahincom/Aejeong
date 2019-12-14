@@ -23,9 +23,10 @@
 		$etc1Name=$_POST['etc1_name'];
 		$etc1=(int)($_POST['etc1']);
 		$etc2Name=".";
+		$etc2Name=$_POST['etc2_name'];
 		$etc2=(int)($_POST['etc2']);
 
-		$db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
+		$db=mysqli_connect('10.200.38.43', '1111', '1234', 'aejeong');
 		if(mysqli_connect_errno()){
 			echo "<p>Error: Could not connect to database. <br/>Please try again later.</p>";
 			exit();
@@ -95,9 +96,9 @@
 				mysqli_query($db,"UPDATE Users SET Email='$email' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET Dog='$dog' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET Cat='$cat' WHERE UserID='$id'");
-				mysqli_query($db,"UPDATE Users SET etx1_name='$etc1Name' WHERE UserID='$id'");
+				mysqli_query($db,"UPDATE Users SET etc1_name='$etc1Name' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET etc1='$etc1' WHERE UserID='$id'");
-				mysqli_query($db,"UPDATE Users SET etx2_name='$etc2Name' WHERE UserID='$id'");
+				mysqli_query($db,"UPDATE Users SET etc2_name='$etc2Name' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET etc2='$etc2' WHERE UserID='$id'");
 				$state=1;
 			}
@@ -109,14 +110,14 @@
 				mysqli_query($db,"UPDATE Users SET Email='$email' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET Dog='$dog' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET Cat='$cat' WHERE UserID='$id'");
-				mysqli_query($db,"UPDATE Users SET etx1_name='$etc1Name' WHERE UserID='$id'");
+				mysqli_query($db,"UPDATE Users SET etc1_name='$etc1Name' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET etc1='$etc1' WHERE UserID='$id'");
-				mysqli_query($db,"UPDATE Users SET etx2_name='$etc2Name' WHERE UserID='$id'");
+				mysqli_query($db,"UPDATE Users SET etc2_name='$etc2Name' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET etc2='$etc2' WHERE UserID='$id'");
 				$state=1;
 			}
 			if($state==1){
-				echo "<script>alert('성공적으로 변경되었습니다.'); location.replace('LoginHome.php'); </script>";
+				echo "<script>alert('성공적으로 변경되었습니다.'); location.replace('myPage.php'); </script>";
 				exit();
 			}
 			else {

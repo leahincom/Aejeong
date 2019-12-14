@@ -2,9 +2,11 @@
 <?php  if (session_status() == PHP_SESSION_NONE) {
     session_start();}
     $id=$_SESSION['UserID'];
-    $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-    $result=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
+    $item=$_GET['item'];
+    $db=mysqli_connect('10.200.38.43', '1111', '1234', 'aejeong');
+    $result=mysqli_query($db, "SELECT * FROM items WHERE Picture='$item'");
     $row=mysqli_fetch_assoc($result);
+    $name=$row['ItemName'];
 ?>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -53,22 +55,30 @@
 
   <section id="information_section">   <!--제품 정보란 (베이지색 칸 내부)-->
     <div id="pictureInfo">  <!--제품 사진-->
-      <img src="picture/product1.jpg" width="110%">
+      <img src="<?php echo $row['Picture']; ?>" width="110%">
     </div>
     <div id="explain">
-      <p style= "font-size:70%"><span width="50%" style="background:#dddddd; margin-left:5%;">강아지용</span></p>
-      <p style="font-size:130%;"><span style="margin-left:5%;"><b>참! 순한 안약</b></span></p>
-      <p style="font-size:70%;"><span style="margin-left:5%;">브랜드: 멍토피아</span></p>
-      <p style="font-size:70%;"><span style="margin-left:5%;">용량: 30ml</span></p>
-      <p style="font-size:70%;"><span style="margin-left:5%;">가격: 7400원</span></p>
+      <p style= "font-size:70%"><span width="50%" style="background:#dddddd; margin-left:5%;"><?php echo $row['PetSort']; ?>용</span></p>
+      <p style="font-size:130%;"><span style="margin-left:5%;"><b><?php echo $row['ItemName']; ?></b></span></p>
+      <br> <br> <br>
+      <p style="font-size:70%;"><span style="margin-left:5%;">가격: <?php echo $row['Price']; ?></span></p>
     </div>
     <div>
       <p>
-        <img src="picture/ystar.png" width="5%">
-        <img src="picture/ystar.png" width="5%">
-        <img src="picture/ystar.png" width="5%">
-        <img src="picture/nstar.png" width="5%">
-        <img src="picture/nstar.png" width="5%">
+        <?php 
+		$sql1 = "SELECT * FROM reviews WHERE ItemName = '$name'";
+		$result1=mysqli_query($db,$sql1);
+		$num=0;
+		$sum=0;
+		while($row1=mysqli_fetch_assoc($result1)) {
+	 		$sum=$sum+$row1['Rating'];
+			 $num=$num+1; }
+		if ($num==0) {
+			echo "평점: 0.0"; }
+		else{
+	 	$avg=$sum/$num;
+	 	echo "평점: ".$avg;}
+	  ?>
       </p>
     </div>
 
@@ -100,16 +110,21 @@
   <br>
 
   <section>
-    <button type="button" id="heart_button" onclick="heartClick()"><img id="heart_img" src="picture/heart1.png"  width="100%" height="auto"></button>
-    <button id="review_button" onclick="location.href='goodsReview.php'"><img src="picture/review.png" width="100%" height="auto"></button>
-    <button id="writing_button"><img src="picture/writing.png" width="100%" height="auto" onclick="location.href='writingReview.php'" ></button>
+    <button type="button" id="heart_button" onclick="heartClick();"><img id="heart_img" src="picture/heart1.png"  width="100%" height="auto"></button>
+    <button id="review_button" onclick="location.href='goodsReview.php?item=<?php echo $row['Picture'];?>'"><img src="picture/review.png" width="100%" height="auto"></button>
+    <button id="writing_button" onclick="location.href='writingReview.php?item=<?php echo $row['Picture'];?>'"><img src="picture/writing.png" width="100%" height="auto" ></button>
   </section>
 
   <p style="padding-bottom:5%;"></p>
+  <?php 
+    $item=$row['ItemName'];
+    $result=mysqli_query($db, "SELECT * FROM reviews WHERE ItemName='$item'");
+    $row=mysqli_fetch_assoc($result);
+   ?>
 
   <section id="review_section">
-    <p class="review_p"><b>ghkdus133</b> 그냥 그래요. 무난</p>
-    <p class="review_p"><b>김호롤1로</b> 괜찮은듯? 눈이 반짝반짝</p>
+    <p class="review_p"><b><?php echo $row['Nickname']; ?></b> <?php echo $row['Advantage']; $row=mysqli_fetch_assoc($result); ?></p>
+    <p class="review_p"><b><?php echo $row['Nickname']; ?></b> <?php echo $row['Advantage']; ?></p>
   </section>
 
 

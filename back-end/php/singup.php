@@ -7,7 +7,6 @@
 
 <body>
 	<?php
-		setsebool httpd_can_network_connect=1
 		$id=$_POST['id'];
 		$nick=$_POST['nick'];
 		$password=$_POST['password'];
@@ -22,10 +21,11 @@
 		$etc1Name=$_POST['etc1_name'];
 		$etc1=(int)($_POST['etc1']);
 		$etc2Name=".";
+		$etc2Name=$_POST['etc2_name'];
 		$etc2=(int)($_POST['etc2']);
+		
 
-
-		$db=new mysqli('localhost', 'root', 'skwjdgus', 'aejeong');
+		$db=mysqli_connect('10.200.38.43', '1111', '1234', 'aejeong');
 		if(mysqli_connect_errno()){
 			echo '<p>Error: Could not connect to database. <br/>Please try again later.</p>';
 			exit;
@@ -52,7 +52,7 @@
 		$check_nick="SELECT * FROM Users WHERE Nickname='$nick'";
 		$result_nick=$db->query($check_nick);
 		$row=mysqli_fetch_assoc($result_nick);
-
+		
 		if($result_nick->num_rows==1){
 			echo "<script>alert('중복된 닉네임입니다.');history.back(-1);</script>";
 			exit;
@@ -88,11 +88,11 @@
 			exit;
 
 		}
-
-		$sql="INSERT INTO Users(UserID, Nickname, Password, Birth, Gender, PhoneNumber, Email, Dog, Cat, etc1,etc2 ,etx1_name,etx2_name) VALUES ('$id', '$nick', '$password', '$birth','$gender', '$phone','$email', '$dog', '$cat', '$etc1', '$etc2', '$etc1Name', '$etc2Name')";
+		
+		$sql="INSERT INTO Users(UserID, Nickname, Password, Birth, Gender, PhoneNumber, Email, Dog, Cat, etc1,etc2 ,etc1_name,etc2_name) VALUES ('$id', '$nick', '$password', '$birth','$gender', '$phone','$email', '$dog', '$cat', '$etc1', '$etc2', '$etc1Name', '$etc2Name')";
 
 		if(mysqli_query($db, $sql)){
-			echo "<script>alert('회원가입에 성공하였습니다.'); location.replace('home.html'); </script>";
+			echo "<script>alert('회원가입에 성공하였습니다.'); location.replace('LoginPage.php'); </script>";
 			exit;
 
 		}
@@ -103,4 +103,4 @@
 		}
 	?>
 </body>
-</html>
+</html> 

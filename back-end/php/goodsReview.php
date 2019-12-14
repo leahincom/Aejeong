@@ -1,16 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <?php  if (session_status() == PHP_SESSION_NONE) {
   session_start();}
   $id=$_SESSION['UserID'];
   $item=$_GET['item'];
-  $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
+  $db=mysqli_connect('10.200.38.43', '1111', '1234', 'aejeong');
   if(!isset($_GET['Rating'])) {
     $result=mysqli_query($db, "SELECT * FROM items WHERE Picture='$item'");
+    
   }
-  else {
+  else if(isset($_GET['Rating'])){
     $Rating=$_GET['Rating'];
-    $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= $Rating OR Rating < $Rating");
+    $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Rating like '%$Rating%' ");
   }
   $row=mysqli_fetch_assoc($result);
   ?>
@@ -47,7 +48,6 @@
       <div id="goods_div">
         <img src="<?php echo $item; ?>" align="left">
         <p style="font-size:150%"><b><?php echo $row['ItemName']; ?></b></p>
-        <p style="font-size:80%"><?php echo $row['Date']; ?></p>
       </div>
     </article>
   </section>
@@ -62,13 +62,13 @@
       </wrapper>
       <wrapper id="filterButton" name="filtered">
         별점 필터링
-        <select id="rateFilter" onchange="rateFilter(this)">
-          <option value="0"> 0 </option>
-          <option value="1"> 1 </option>
-          <option value="2"> 2 </option>
-          <option value="3"> 3 </option>
-          <option value="4"> 4 </option>
-          <option value="5"> 5 </option>
+        <select id="rateFilter" onchange="location.href=this.value">
+          <option value="goodsReview.php?item=<?php echo $row['Picture'];?>&Rating=0"> 0 </option>
+          <option value="goodsReview.php?item=<?php echo $row['Picture'];?>&Rating=1"> 1 </option>
+          <option value="goodsReview.php?item=<?php echo $row['Picture'];?>&Rating=2"> 2 </option>
+          <option value="goodsReview.php?item=<?php echo $row['Picture'];?>&Rating=3"> 3 </option>
+          <option value="goodsReview.php?item=<?php echo $row['Picture'];?>&Rating=4"> 4 </option>
+          <option value="goodsReview.php?item=<?php echo $row['Picture'];?>&Rating=5"> 5 </option>
         </select>
         정렬순
         <select id="sorting">
@@ -101,12 +101,7 @@
           <input type="text" class="writing_text" value="<?php echo $row['Weakness']; ?>">
           <p style="color:#888888;">기타<img src="picture/soso.png" width="3%"></p>
           <input type="text" class="writing_text" value="<?php echo $row['Etc']; ?>">
-          <p style="color:#888888;"> 사진</p>
-          <?php
-          while($pic=mysqli_fetch_assoc(mysqli_query($db, "SELECT Picture FROM Reviews WHERE Nickname='$Nickname'"))) {
-            echo $row['Picture'];
-          }
-          ?>
+          
         </article>
       <?php } ?>
     </section>
