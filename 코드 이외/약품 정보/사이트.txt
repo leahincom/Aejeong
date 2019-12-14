@@ -16,6 +16,10 @@ https://www.foodsafetykorea.go.kr/apiMain.do
 - 원료별정보 : https://www.foodsafetykorea.go.kr/portal/board/board.do
 
 
+외국 동물 과련 정보 - 구체적으론 모르겠음
+https://www.fda.gov/animal-veterinary
+
+
 <표시할 정보>
 DUR 성분 여부 - DUR 유형 - 주의사항내용
 https://nedrug.mfds.go.kr/pbp/CCBAJ01/getList?totalPages=308&page=8&limit=10&sort=typeCode&sortOrder=false&durSeq=&searchYn=&searchTypeCode=&searchName=
@@ -32,5 +36,28 @@ https://medi.qia.go.kr:9443/herbmed/
 <의약품 상호작용>
 https://nedrug.mfds.go.kr/bbs/13?totalPages=2&page=2&searchYn=&title=
 
-<구조도>
-- 
+
+<책>
+- 동물용 의약품 실전 복약지도 - 중앙도서관 5층 일반자료실
+<<<<구조>>>>
+1. DUR 개수 - 자세히 보기 : DUR 종류(각 성분따라)
+2. 주의사항 개수 - 자세히보기 : 각 성분따라
+ - 약물이상반응 : 사용 중 햇빛 장기간 노출 금지/뇨또는변 색깔변화가능/위장질환
+(대처법 및 주의점 같이?)
+- 오남용 우려 : 조루증 치료제, 발기부전치료제, 단백동화호르몬제제, 비만치료제
+- 상호작용
+ 알코올 :  포수클로랄, 쿠아네티딘, 메트로니다졸, ,,,
+ 아스피린 : 
+제산제
+스타틴제제
+항히스카민제
+---
+뮤코다당단백
+인삼/홍삼
+오메가-3 지방산
+홍국
+감마리놀렌산
+알로에
+프로바이오틱스
+
+ 
