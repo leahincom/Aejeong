@@ -1,0 +1,36 @@
+한국동물약품기술연구원 kahpri - 검사항목
+http://kahpri.or.kr/?MenuCode=0250
+
+
+동물용의약품관리시스템
+http://medi.qia.go.kr/homep/standard/standard_list.jsp#
+- 모든 성분 정보 있음(단 동물에게 미치는 영향은 발견 못함)
+- 제품별 정보는 있음(포함된 성분도 있음)
+
+
+식품의약품안전처/식품안전나라/데이터활용서비스
+https://www.foodsafetykorea.go.kr/apiMain.do
+- 동물용의약품 sheet
+- 건강기능식품 DB등
+- 식품안전나라에 사실상 식품에 대한 모든 정보
+- 원료별정보 : https://www.foodsafetykorea.go.kr/portal/board/board.do
+
+
+<표시할 정보>
+DUR 성분 여부 - DUR 유형 - 주의사항내용
+https://nedrug.mfds.go.kr/pbp/CCBAJ01/getList?totalPages=308&page=8&limit=10&sort=typeCode&sortOrder=false&durSeq=&searchYn=&searchTypeCode=&searchName=
+- DUR  유형 (병용금기, 연령금기, 임부금기, 노인주의, 용량주의, 투여기간주의, 효능군중복주의, 첨가제주의)
+- 사람기준 but 정보 깔끔, 엑셀 받기 가능
+
+기타 약품 api https://nedrug.mfds.go.kr/pbp/CCBGA01/getList?totalPages=4&page=4&limit=10&sort=&sortOrder=&searchYn=&infoName=&infoType=
+<다른 파트>
+화장품원료성분 종료 https://nedrug.mfds.go.kr/pbp/CCBDE01
+- 구체적 정보 없음. 표준명만
+
+<천연동물약품>
+https://medi.qia.go.kr:9443/herbmed/
+<의약품 상호작용>
+https://nedrug.mfds.go.kr/bbs/13?totalPages=2&page=2&searchYn=&title=
+
+<구조도>
+- 
