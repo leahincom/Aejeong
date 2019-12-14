@@ -5,12 +5,12 @@
   $id=$_SESSION['UserID'];
   $item=$_GET['item'];
   $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-  $Rating=$_GET['Rating'];
   if(!isset($_GET['Rating'])) {
     $result=mysqli_query($db, "SELECT * FROM items WHERE Picture='$item'");
   }
   else {
-    $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Rating like '%$Rating%'");
+    $Rating=$_GET['Rating'];
+    $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= $Rating OR Rating < $Rating");
   }
   $row=mysqli_fetch_assoc($result);
   ?>
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="goodsReviewStyle.css">
     <title>애정 : 제품 리뷰</title>
     <script type="text/javascript">
-    function rateFilter(){
+    function rateFilter(e){
       var rate = document.getElementById("rateFilter");
       var selectValue = rate.options[rate.selectedIndex].value;
       if(selectValue==0) { location.href = 'goodsReview.php?Rating=0'; }
@@ -62,7 +62,7 @@
       </wrapper>
       <wrapper id="filterButton" name="filtered">
         별점 필터링
-        <select id="rateFilter" onchange="rateFilter()">
+        <select id="rateFilter" onchange="rateFilter(this)">
           <option value="0"> 0 </option>
           <option value="1"> 1 </option>
           <option value="2"> 2 </option>
