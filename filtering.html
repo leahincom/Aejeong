@@ -1,6 +1,29 @@
 <html>
 <head><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="filteringStyle.css">
+
+<script type="text/javascript">
+
+
+
+function add()
+{
+  var a=document.getElementById('exclude_text').value;
+var bt=document.createElement('button');
+var newtext = document.createTextNode(a);
+bt.appendChild(newtext);
+var para = document.getElementById("p1");
+para.appendChild(bt);
+bt.addEventListener('click', function(event){para.removeChild(bt);});
+
+bt.style.background="#ffffff";
+bt.style.border="none";
+bt.style.padding="1%";
+bt.style.font="NanumSquare";
+}
+
+
+</script>
 </head>
 
 <body>
@@ -23,10 +46,10 @@
   <article class="myArticle">
     <form method="" action="">
       <p><br>&nbsp&nbsp<b>정렬</b></p>
-      <p>&nbsp&nbsp<input type="radio" id="grading_radio" checked="checked"> <label>높은 평점순</label></p>
-      <p>&nbsp&nbsp<input type="radio" id="review_radio"> <label>리뷰 많은순</label></p>
-      <p>&nbsp&nbsp<input type="radio" id="high_radio"> <label>높은 가격순</label></p>
-      <p>&nbsp&nbsp<input type="radio" id="low_radio"> <label>낮은 가격순</label></p>
+      <p>&nbsp&nbsp<input type="radio" name="jeong" id="grading_radio" checked="checked"> <label>높은 평점순</label></p>
+      <p>&nbsp&nbsp<input type="radio" name="jeong" id="review_radio"> <label>리뷰 많은순</label></p>
+      <p>&nbsp&nbsp<input type="radio" name="jeong" id="low_radio"> <label>낮은 가격순</label></p>
+      <p>&nbsp&nbsp<input type="radio" name="jeong" id="high_radio"> <label>높은 가격순</label></p>
     </form>
     <br>
   </article>
@@ -34,10 +57,11 @@
   <article class="myArticle">
     <form method="" action="">
       <p><br>&nbsp&nbsp<b>평점</b></p>
-      <p>&nbsp&nbsp<input type="radio" id="four_radio" checked="checked"> <label>4점</label></p>
-      <p>&nbsp&nbsp<input type="radio" id="three_radio"> <label>3점</label></p>
-      <p>&nbsp&nbsp<input type="radio" id="two_radio"> <label>2점</label></p>
-      <p>&nbsp&nbsp<input type="radio" id="one_radio"> <label>1점</label></p>
+      <p>&nbsp&nbsp<input type="radio" name="peung" id="five_radio" checked="checked"> <label>5점</label></p>
+      <p>&nbsp&nbsp<input type="radio" name="peung" id="four_radio"> <label>4점</label></p>
+      <p>&nbsp&nbsp<input type="radio" name="peung" id="three_radio"> <label>3점</label></p>
+      <p>&nbsp&nbsp<input type="radio" name="peung" id="two_radio"> <label>2점</label></p>
+      <p>&nbsp&nbsp<input type="radio" name="peung" id="one_radio"> <label>1점</label></p>
     </form>
     <br>
   </article>
@@ -46,31 +70,27 @@
   <article class="myArticle">
     <form method="" action="" class="customizing">
       <p><br>&nbsp&nbsp<b>가격</b></p>
-      <p>&nbsp&nbsp&nbsp&nbsp<input type="range" value="0" min="0" max="500000" class="price_range"></p>
-      <p>&nbsp&nbsp<label>가격: </label></p>
+        <form>
+            <div>
+                <input type="range" name="points" min="0" max="500000" step="1000" value="500000"
+                id="priceRange" oninput="document.getElementById('value1').innerHTML=this.value;">
+                <p>&nbsp&nbsp 가격: 0 원 ~<span id="value1"></span> 원</p>
+
+            </div>
+        </form>
     </form>
+
     <br>
   </article>
 
-  <article class="myArticle">
-    <form method="" action="">
-      <p><br>&nbsp&nbsp<b>브랜드</b></p>
-      <p>&nbsp&nbsp<input type="checkbox" id="cj_checkbox" checked="checked"> <label>CJ</label></p>
-      <p>&nbsp&nbsp<input type="checkbox" id="echo_checkbox" checked="checked"> <label>에코띠끄</label></p>
-      <p>&nbsp&nbsp<input type="checkbox" id="whistle_checkbox" checked="checked"> <label>휘슬</label></p>
-      <p>&nbsp&nbsp<input type="checkbox" id="dogpensia_checkbox" checked="checked"> <label>도그펜시아</label></p>
-      <p>&nbsp&nbsp<input type="checkbox" id="dogpia_checkbox" checked="checked"> <label>도그피아</label></p>
-      <p>&nbsp&nbsp<input type="checkbox" id="restBrand_checkbox" checked="checked"> <label>기타</label> <input type="text" id="restBrand_text"></p>
-    </form>
-    <br>
-  </article>
 
   <article class="myArticle">
-    <form method="" action="">
-      <p><br>&nbsp&nbsp<b>제외 성분</b></p>
-      <p>&nbsp&nbsp&nbsp&nbsp<input type="text" id="exclude_text"></p>
-      <br>
-    </form>
+    <p id="p1"><b>제외 성분</b><br /></p>
+    <input type="text" name="exclude_text" id="exclude_text">
+    <br />
+    <br></br>
+    <button onclick="add();" id="addingButton">추가하기.</button>
+    <br></br>
   </article>
 
   <div id="myDiv">

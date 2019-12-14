@@ -1,74 +1,25 @@
-<<<<<<< HEAD:writingReview.html
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="writingReviewStyle.css">
 <title>애정 : 리뷰 쓰기</title>
+<script type="text/javascript">
+
+function typed()
+{
+      if(event.keyCode < 48 ||event.keyCode > 53){
+          alert("0~5사이의 숫자로 입력해주세요");
+          document.getElementById('rating_text').value = 5;
+
+        }
+      }
+</script>
+
 </head>
 
 <body>
   <section id="back_bar">
-      <button id="back_icon" onclick="location.href='LOGOUT_goodsInfo.html'"><img src="picture/back_button.png" width="50%"></button>
-      <label id="explain_label"><b>리뷰 쓰기</b></label>
-  </section>
-
-
-  <p class="noneline_for_space"></p>   <!--아래section과 아래 banner 구분-->
-
-  <section id="review_section"> <!--윗부분 정보 섹션. 나에 대한 정보 + 제품 정보 표시-->
-    <article id="profile_article"><!--제품 div-->
-      <div id="goods_div">
-        <img src="picture/product1.jpg" align="left">
-        <p style="font-size:150%"><b>제품명</b></p>
-        <p style="font-size:80%">제품 구매날짜</p>
-        <p class="noneline_for_space"></p>   <!--아래section과 아래 banner 구분-->
-      </div>
-    </article>
-    <article id="review_article">
-      <form method = "" action = ""> <!--text 자동 줄바꿈-->
-        <p style="padding-right: 1%;">평점
-          <input type="text" id="rating_text"> <b><font size="5%">/5</font></b>
-        </p>
-        <p style="color:#6699ff;">장점 <img src="picture/smile.png" width="3%"></p>
-        <input type="text" class="writing_text">
-        <p style="color:#ff3366;">단점 <img src="picture/bad.png" width="3%"></p>
-        <input type="text" class="writing_text">
-        <p style="color:#888888;">기타<img src="picture/soso.png" width="3%"></p>
-        <input type="text" class="writing_text">
-        <p style="color:#888888;"> 사진 추가</p>
-        <input type="button" id="addPicture_button" value="+">
-      </form>
-    </article>
-
-    <p class="noneline_for_space"></p>   <!--아래section과 아래 banner 구분-->
-
-    <form action="" method="">     <!--밑 버튼 / 작성완료 작성취소-->
-      <input type="button" id="done_button" value="작성 완료">
-      <input type="button" id="yet_button" value="작성 취소">
-    </form>
-  </section>
-
-  <p class="noneline_for_space"></p>   <!--아래section과 아래 banner 구분-->
-
-  <section id="bottom_bar">
-    <button class="bottom_bar_button" id="category_icon" onclick="location.href='LOGOUT_productList.html'"><img src="picture/category_icon.png"  width="100%"></button>
-    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LOGOUT_home.html'"><img src="picture/home_icon.png" width="160%"></button>
-    <button class="bottom_bar_button" id="myPage_icon" onclick="location.href='myPage.html'"><img src="picture/myPage_icon.png" width="110%"></button>
-  </section>
-
-</body>
-</html>
-=======
-<!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="writingReviewStyle.css">
-<title>애정 : 리뷰 쓰기</title>
-</head>
-
-<body>
-  <section id="back_bar">
-      <button id="back_icon" onclick="location.href='LOGOUT_goodsInfo.html'"><img src="picture/back_button.png" id="backimg"></button>
+      <button id="back_icon" onclick="location.href='goodsInfo.html'"><img src="picture/back_button.png" id="backimg"></button>
       <label id="explain_label"><b>리뷰 쓰기</b></label>
   </section>
 
@@ -87,8 +38,10 @@
     <article id="review_article">
       <form method = "" action = ""> <!--text 자동 줄바꿈-->
         <p id="ratingP">평점
-          <input type="text" id="rating_text"> <b><span id="ratingSpan">/5</span></b>
+          <input type="text" maxlength="1" id="rating_text" onkeypress="typed();"> <b><span id="ratingSpan">/5</span></b>
         </p>
+      </form>
+      <form method="" action="">
         <p class="proText">장점 <img src="picture/smile.png" class="faceimg"></p>
         <input type="text" class="writing_text">
         <p class="conText">단점 <img src="picture/bad.png" class="faceimg"></p>
@@ -111,11 +64,10 @@
   <p class="noneline_for_space"></p>   <!--아래section과 아래 banner 구분-->
 
   <section id="bottom_bar">   <!--아래배너-->
-    <button class="bottom_bar_button" id="category_icon" onclick="location.href='LOGOUT_productList.html'"><img src="picture/category_icon.png" id="categoryimg"></button>
-    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LOGOUT_home.html'"><img src="picture/home_icon.png" id="homeimg"></button>
+    <button class="bottom_bar_button" id="category_icon" onclick="location.href='productList.html'"><img src="picture/category_icon.png" id="categoryimg"></button>
+    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LOGINED_home.html'"><img src="picture/home_icon.png" id="homeimg"></button>
     <button class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.html'"><img src="picture/myPage_icon.png" id="myPageimg"></button>
   </section>
 
 </body>
 </html>
->>>>>>> 134c0817ee3f7d0286818ce7f71fdadf2af7005f:애정/front_ae/writingReview.html

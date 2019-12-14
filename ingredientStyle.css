@@ -37,3 +37,4 @@ p, nav, table, section, null, input, img, td, button * {
   font-size:100%;
   color:gray;
 }
+.myDIV{padding-left:10%; padding-top:1%;}
