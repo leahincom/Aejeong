@@ -4,7 +4,11 @@
     $id=$_SESSION['UserID'];
     $category1=$_GET['category1'];
     $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-    $result=mysqli_query($db, "SELECT * FROM items WHERE category1='$category1'");
+    if(!isset($_GET['category2'])){
+    $result=mysqli_query($db, "SELECT * FROM items WHERE category1='$category1'");}
+    else if(isset($_GET['category2'])){
+    $category2=$_GET['category2'];
+    $result=mysqli_query($db, "SELECT * FROM items WHERE category2 like '%$category2%'");}
     $row=mysqli_fetch_assoc($result);
     $number=4;
 ?>
@@ -55,7 +59,14 @@
                             clearSmallCategory(big);
                             var selected = document.getElementById('small_category' + big+small);
                             selected.style.color='#f60024';
-                        }
+			    if(big==1 && small==1) { location.href = 'productList.php?category1=목욕/세정제&category2=샴푸'; }
+			    else if(big==1 && small==2) { location.href = 'productList.php?category1=목욕/세정제&category2=린스'; }                        
+ 			    else if(big==1 && small==3) { location.href = 'productList.php?category1=목욕/세정제&category2=클리너'; }
+			    else if(big==1 && small==4) { location.href = 'productList.php?category1=목욕/세정제&category2=기타'; }
+			    else if(big==2 && small==1) { location.href = 'productList.php?category1=미용&category2=에센스'; }
+			    else if(big==1 && small==4) { location.href = 'productList.php?category1=목욕/세정제&category2=기타'; }
+
+}
     </script>
 </head>
 
