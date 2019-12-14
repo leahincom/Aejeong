@@ -3,7 +3,7 @@
     session_start();}
     $id=$_SESSION['UserID'];
     $category1=$_GET['category1'];
-    $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
+    $db=mysqli_connect('10.200.38.43', '1111', '1234', 'aejeong');
     if(!isset($_GET['category2'])){
     $result=mysqli_query($db, "SELECT * FROM items WHERE category1='$category1'");}
     else if(isset($_GET['category2'])){
@@ -64,8 +64,29 @@
  			    else if(big==1 && small==3) { location.href = 'productList.php?category1=목욕/세정제&category2=클리너'; }
 			    else if(big==1 && small==4) { location.href = 'productList.php?category1=목욕/세정제&category2=기타'; }
 			    else if(big==2 && small==1) { location.href = 'productList.php?category1=미용&category2=에센스'; }
-			    else if(big==1 && small==4) { location.href = 'productList.php?category1=목욕/세정제&category2=기타'; }
-
+			    else if(big==2 && small==2) { location.href = 'productList.php?category1=미용&category2=모발관리'; }
+			    else if(big==2 && small==3) { location.href = 'productList.php?category1=미용&category2=염색'; }
+			    else if(big==2 && small==4) { location.href = 'productList.php?category1=미용&category2=기타'; }
+			    else if(big==3 && small==1) { location.href = 'productList.php?category1=건강&category2=종합영양'; }
+			     else if(big==4 && small==1) { location.href = 'productList.php?category1=건강&category2=의약부외품'; }
+			    else if((big==3 && small==2) || (big==4 && small==2)) { location.href = 'productList.php?category1=건강&category2=치아'; }
+			    else if(big==3 && small==3 || (big==4 && small==3)) { location.href = 'productList.php?category1=건강&category2=피부/털'; }
+			    else if(big==3 && small==4 || (big==4 && small==4)) { location.href = 'productList.php?category1=건강&category2=신장/요로'; }
+			    else if(big==3 && small==5 || (big==4 && small==5)) { location.href = 'productList.php?category1=건강&category2=심장/심신안정'; }
+			    else if(big==3 && small==6 || (big==4 && small==6)) { location.href = 'productList.php?category1=건강&category2=장'; }
+			    else if(big==3 && small==7 || (big==4 && small==7)) { location.href = 'productList.php?category1=건강&category2=소화계'; }
+			    else if(big==3 && small==8 || (big==4 && small==8)) { location.href = 'productList.php?category1=건강&category2=뼈/관절/칼슘'; }
+			    else if(big==3 && small==9 || (big==4 && small==9)) { location.href = 'productList.php?category1=건강&category2=눈/귀'; }
+			    else if(big==3 && small==10 || (big==4 && small==10)) { location.href = 'productList.php?category1=건강&category2=면역'; }
+			    else if(big==3 && small==11 || (big==4 && small==11)) { location.href = 'productList.php?category1=건강&category2=호흡기'; }
+			    else if(big==3 && small==12 || (big==4 && small==12)) { location.href = 'productList.php?category1=건강&category2=해충방지'; }
+			    else if(big==3 && small==13 || (big==4 && small==13)) { location.href = 'productList.php?category1=건강&category2=기타'; }
+			    else if(big==5 && small==1) { location.href = 'productList.php?category1=모래&category2=응고형'; }
+			    else if(big==5 && small==2) { location.href = 'productList.php?category1=모래&category2=응고형'; }
+			    else if(big==5 && small==3) { location.href = 'productList.php?category1=모래&category2=흡수형'; }
+			    else if(big==5 && small==4) { location.href = 'productList.php?category1=모래&category2=흡수형'; }
+			    else if(big==5 && small==5) { location.href = 'productList.php?category1=모래&category2=탈취제'; }
+			    else if(big==5 && small==6) { location.href = 'productList.php?category1=모래&category2=기타'; }
 }
     </script>
 </head>
@@ -154,8 +175,9 @@
 
       <p class="border3p"></p>
 
-
-
+<?php if($result->num_rows==0) { echo "상품을 찾을 수 없습니다!"; }
+      else {
+?>
   <section align="center">
     <button class="rankingButton"  onclick="location.href='goodsInfo.php?item=<?php echo $row['Picture'];?>'">
       <div class="buttonDiv">
@@ -164,11 +186,20 @@
           <p class="nameP"> <?php echo $row['ItemName']; ?> </p>
           <p class="infoP"> <?php echo $row['Price']; ?> </p>
         <p>
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/nstar.png" class="starimg">
+          <?php $ItemName=$row['ItemName'];
+		$sql1 = "SELECT * FROM reviews WHERE ItemName = '$ItemName'";
+		$result1=mysqli_query($db,$sql1);
+		$num=0;
+		$sum=0;
+		while($row1=mysqli_fetch_assoc($result1)) {
+	 		$sum=$sum+$row1['Rating'];
+			 $num=$num+1; }
+		if ($num==0) {
+			echo "평점: 0.0"; }
+		else{
+	 	$avg=$sum/$num;
+	 	echo "평점".$avg;}
+	  ?>
         </p>
       </div>
       <hr class="rankingHr"></hr>
@@ -184,11 +215,20 @@
           <p class="nameP"><?php echo $row['ItemName']; ?></p>
           <p class="infoP"><?php echo $row['Price']; ?> </p>
         <p>
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/nstar.png" class="starimg">
+         <?php $ItemName=$row['ItemName'];
+		$sql1 = "SELECT * FROM reviews WHERE ItemName = '$ItemName'";
+		$result1=mysqli_query($db,$sql1);
+		$num=0;
+		$sum=0;
+		while($row1=mysqli_fetch_assoc($result1)) {
+	 		$sum=$sum+$row1['Rating'];
+			 $num=$num+1; }
+		if ($num==0) {
+			echo "평점: 0.0"; }
+		else{
+	 	$avg=$sum/$num;
+	 	echo "평점".$avg;}
+	  ?>
         </p>
       </div>
       <hr class="rankingHr"></hr>
@@ -205,11 +245,20 @@
           <p class="nameP"><?php echo $row['ItemName']; ?></p>
           <p class="infoP"><?php echo $row['Price']; ?></p>
         <p>
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/nstar.png" class="starimg">
+          <?php $ItemName=$row['ItemName'];
+		$sql1 = "SELECT * FROM reviews WHERE ItemName = '$ItemName'";
+		$result1=mysqli_query($db,$sql1);
+		$num=0;
+		$sum=0;
+		while($row1=mysqli_fetch_assoc($result1)) {
+	 		$sum=$sum+$row1['Rating'];
+			 $num=$num+1; }
+		if ($num==0) {
+			echo "평점: 0.0"; }
+		else{
+	 	$avg=$sum/$num;
+	 	echo "평점".$avg;}
+	  ?>
         </p>
       </div>
       <hr class="rankingHr"></hr>
@@ -226,16 +275,26 @@
           <p class="nameP"><?php echo $row['ItemName']; ?></p>
           <p class="infoP"><?php echo $row['Price']; ?></p>
         <p>
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/ystar.png" class="starimg">
-          <img src="picture/nstar.png" class="starimg">
+          <?php $ItemName=$row['ItemName'];
+		$sql1 = "SELECT * FROM reviews WHERE ItemName = '$ItemName'";
+		$result1=mysqli_query($db,$sql1);
+		$num=0;
+		$sum=0;
+		while($row1=mysqli_fetch_assoc($result1)) {
+	 		$sum=$sum+$row1['Rating'];
+			 $num=$num+1; }
+		if ($num==0) {
+			echo "평점: 0.0"; }
+		else{
+	 	$avg=$sum/$num;
+	 	echo "평점: ".$avg;}
+	  ?>
         </p>
       </div>
       <hr class="rankingHr"></hr>
     </button>
   </section>
+  <?php } ?>
   <?php } ?>
    <p class="noneline_for_space"></p>
   <section id="bottom_bar">   <!--아래배너-->

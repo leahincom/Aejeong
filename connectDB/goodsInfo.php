@@ -3,7 +3,7 @@
     session_start();}
     $id=$_SESSION['UserID'];
     $item=$_GET['item'];
-    $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
+    $db=mysqli_connect('10.200.38.43', '1111', '1234', 'aejeong');
     $result=mysqli_query($db, "SELECT * FROM items WHERE Picture='$item'");
     $row=mysqli_fetch_assoc($result);
     $name=$row['ItemName'];
@@ -65,11 +65,20 @@
     </div>
     <div>
       <p>
-        <img src="picture/ystar.png" width="5%">
-        <img src="picture/ystar.png" width="5%">
-        <img src="picture/ystar.png" width="5%">
-        <img src="picture/nstar.png" width="5%">
-        <img src="picture/nstar.png" width="5%">
+        <?php 
+		$sql1 = "SELECT * FROM reviews WHERE ItemName = '$name'";
+		$result1=mysqli_query($db,$sql1);
+		$num=0;
+		$sum=0;
+		while($row1=mysqli_fetch_assoc($result1)) {
+	 		$sum=$sum+$row1['Rating'];
+			 $num=$num+1; }
+		if ($num==0) {
+			echo "평점: 0.0"; }
+		else{
+	 	$avg=$sum/$num;
+	 	echo "평점: ".$avg;}
+	  ?>
       </p>
     </div>
 
@@ -103,7 +112,7 @@
   <section>
     <button type="button" id="heart_button" onclick="heartClick();"><img id="heart_img" src="picture/heart1.png"  width="100%" height="auto"></button>
     <button id="review_button" onclick="location.href='goodsReview.php?item=<?php echo $row['Picture'];?>'"><img src="picture/review.png" width="100%" height="auto"></button>
-    <button id="writing_button"><img src="picture/writing.png" width="100%" height="auto" onclick="location.href='writingReview.php'" ></button>
+    <button id="writing_button" onclick="location.href='writingReview.php?item=<?php echo $row['Picture'];?>'"><img src="picture/writing.png" width="100%" height="auto" ></button>
   </section>
 
   <p style="padding-bottom:5%;"></p>

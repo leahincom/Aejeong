@@ -2,12 +2,11 @@
 <?php  if (session_status() == PHP_SESSION_NONE) {
     session_start();}
     $id=$_SESSION['UserID'];
-    $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-    $rowNick=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
-$row=mysqli_fetch_assoc($rowNick);
-$Nickname=$row['Nickname'];
-$result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
-$row=mysqli_fetch_assoc($result);
+    $item=$_GET['item'];
+    $db=mysqli_connect('10.200.38.43', '1111', '1234', 'aejeong');
+    $result=mysqli_query($db, "SELECT * FROM items WHERE Picture='$item'");
+    $row=mysqli_fetch_assoc($result);
+    $itemname=$row['ItemName'];
 ?>
 <html>
 <head><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,13 +22,13 @@ $row=mysqli_fetch_assoc($result);
 
   <p class="noneline_for_space"></p>   <!--아래section과 아래 banner 구분-->
 
-  <form action = "review_upload.php" method = "post">
+  <form action = "review_upload.php?item=<?php echo $row['ItemName'];?>" method = "post">
   <section id="review_section"> <!--윗부분 정보 섹션. 나에 대한 정보 + 제품 정보 표시-->
     <article id="profile_article"><!--제품 div-->
       <div id="goods_div">
-        <img align="left"><?php echo $row['Picture']; ?>
+        <img align="left" src="<?php echo $row['Picture']; ?>">
         <p style="font-size:150%"><b><?php echo $row['ItemName']; ?></b></p>
-        <p style="font-size:80%"><?php echo $row['Date']; ?></p>
+        <p style="font-size:80%"><?php $today=date("Y년 n월 j일"); echo $today; ?></p>
         <p class="noneline_for_space"></p>   <!--아래section과 아래 banner 구분-->
       </div>
     </article>

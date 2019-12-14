@@ -26,7 +26,7 @@
 		$etc2Name=$_POST['etc2_name'];
 		$etc2=(int)($_POST['etc2']);
 
-		$db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
+		$db=mysqli_connect('10.200.38.43', '1111', '1234', 'aejeong');
 		if(mysqli_connect_errno()){
 			echo "<p>Error: Could not connect to database. <br/>Please try again later.</p>";
 			exit();
