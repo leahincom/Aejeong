@@ -1,36 +1,87 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <?php  if (session_status() == PHP_SESSION_NONE) {
   session_start();}
   $id=$_SESSION['UserID'];
   $item=$_GET['item'];
-  $db=mysqli_connect('10.200.38.43', '1111', '1234', 'aejeong');
-  if(!isset($_GET['Rating'])) {
-    $result=mysqli_query($db, "SELECT * FROM items WHERE Picture='$item'");
-    
-  }
-  else if(isset($_GET['Rating'])){
-    $Rating=$_GET['Rating'];
-    $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Rating like '%$Rating%' ");
-  }
-  $row=mysqli_fetch_assoc($result);
+  $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
   ?>
 
   <head><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="goodsReviewStyle.css">
     <title>애정 : 제품 리뷰</title>
     <script type="text/javascript">
-    function rateFilter(e){
-      var rate = document.getElementById("rateFilter");
-      var selectValue = rate.options[rate.selectedIndex].value;
-      if(selectValue==0) { location.href = 'goodsReview.php?Rating=0'; }
-      else if(selectValue==1) { location.href = 'goodsReview.php?Rating=1'; }
-      else if(selectValue==2) { location.href = 'goodsReview.php?Rating=2'; }
-      else if(selectValue==3) { location.href = 'goodsReview.php?Rating=3'; }
-      else if(selectValue==4) { location.href = 'goodsReview.php?Rating=4'; }
-      else if(selectValue==5) { location.href = 'goodsReview.php?Rating=5'; }
+    function rateFilter() {
+      var selectValue = document.getElementById("rateFilter").options[document.getElementById("rateFilter").selectedIndex].value;
+      if(selectedValue=="") {
+        <?php
+        $result=mysqli_query($db, "SELECT * FROM items WHERE Picture='$item'");
+        $row=mysqli_fetch_assoc($result);
+         ?>
+      }
+      else if(selectValue=="0") {
+        <?php
+        $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 0 AND Rating < 1")
+        $row = mysqli_fetch_assoc($ratingValue);
+         ?>
+       }
+      else if(selectValue=="1") {
+        <?php
+      $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 1 AND Rating < 2")
+      $row = mysqli_fetch_assoc($ratingValue);
+       ?>
+     }
+      else if(selectValue=="2") {
+        <?php
+        $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 2 AND Rating < 3")
+        $row = mysqli_fetch_assoc($ratingValue);
+         ?>
+        }
+      else if(selectValue=="3") { <?php
+      $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 3 AND Rating < 4")
+      $row = mysqli_fetch_assoc($ratingValue);
+       ?>
+      }
+      else if(selectValue=="4") {
+        <?php
+        $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 4 AND Rating < 5")
+        $row = mysqli_fetch_assoc($ratingValue);
+         ?>
+        }
+      else if(selectValue=="5") {
+        <?php
+        $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating = 5")
+        $row = mysqli_fetch_assoc($ratingValue);
+         ?> }
+
     }
-  }
+
+    function number_descending(a, b) { // 내림차순
+return b - a;
+}
+
+    function sorting(a, b) {
+      var reviews = document.getElementById("sorting");
+      var selectValue = rate.options[rate.selectedIndex].value;
+      if(selectValue=="new") {
+        <?php
+        $result=mysqli_query($db, "SELECT * FROM Reviews");
+        $row=mysqli_fetch_assoc($result);
+        var dateA = new Date(a[$row]).getTime();
+        var dateB = new Date(b[$row]).getTime();
+        return dateA < dateB ? 1 : -1;
+      ?>
+    }
+      else if (selectValue=="rates") {
+        <?php
+        $result=mysqli_query($db, "SELECT * FROM Reviews");
+        while($row=mysqli_fetch_assoc($result)) {
+          $rate=$row['Rating'];
+
+        }
+      ?>
+      }
+    }
   </script>
 </head>
 
@@ -48,6 +99,7 @@
       <div id="goods_div">
         <img src="<?php echo $item; ?>" align="left">
         <p style="font-size:150%"><b><?php echo $row['ItemName']; ?></b></p>
+        <p style="font-size:80%"><?php echo $row['Date']; ?></p>
       </div>
     </article>
   </section>
@@ -57,23 +109,26 @@
   <section id="reviewSearch">  <!--윗배너-->
     <p>
       <wrapper>
-        <input type="text" id="searchText" value="찾고 싶은 리뷰를 검색하세요.">
-        <button class="searchButton" id="microIcon"><img src="picture/mi.png" id="microId"></button>
+        <form method="POST" action="reviewSearch.php">
+        <input type="text" id="searchText" value="찾고 싶은 리뷰를 검색하세요." name="searchText">
+        <button type="submit" class="searchButton" id="microIcon"><img src="picture/mi.png" id="microId"></button>
+      </form>
       </wrapper>
       <wrapper id="filterButton" name="filtered">
         별점 필터링
-        <select id="rateFilter" onchange="location.href=this.value">
-          <option value="goodsReview.php?item=<?php echo $row['Picture'];?>&Rating=0"> 0 </option>
-          <option value="goodsReview.php?item=<?php echo $row['Picture'];?>&Rating=1"> 1 </option>
-          <option value="goodsReview.php?item=<?php echo $row['Picture'];?>&Rating=2"> 2 </option>
-          <option value="goodsReview.php?item=<?php echo $row['Picture'];?>&Rating=3"> 3 </option>
-          <option value="goodsReview.php?item=<?php echo $row['Picture'];?>&Rating=4"> 4 </option>
-          <option value="goodsReview.php?item=<?php echo $row['Picture'];?>&Rating=5"> 5 </option>
+        <select id="rateFilter" name="rateFilter" onchange="rateFilter();">
+          <option value="" selected disabled>별점</option>
+          <option value="0"> 0 </option>
+          <option value="1"> 1 </option>
+          <option value="2"> 2 </option>
+          <option value="3"> 3 </option>
+          <option value="4"> 4 </option>
+          <option value="5"> 5 </option>
         </select>
         정렬순
-        <select id="sorting">
-          <option> 최신순 </option>
-          <option> 별점순 </option>
+        <select id="sorting" name="sorting" onchange="sorting();">
+          <option value="new"> 최신순 </option>
+          <option value="rates"> 별점순 </option>
         </select></wrapper>
       </p>
     </section>
@@ -81,9 +136,6 @@
 
     <p class="noneline_for_space"></p>   <!--윗section과 아래 section 구분-->
 
-    <?php
-    $item=$row['ItemName'];
-    $result=mysqli_query($db, "SELECT * FROM reviews WHERE ItemName='$item'"); ?>
     <section class="reviewClass_section">
       <?php while($row=mysqli_fetch_assoc($result)) { ?>
         <article class="profile_article" align="left"> <!--내 정보 div-->
@@ -96,12 +148,13 @@
           <p style="padding-right: 1%;"><?php echo $row['Rating']; ?>
           </p>
           <p style="color:#6699ff;">장점 <img src="picture/smile.png" width="3%"></p>
-          <input type="text" class="writing_text" value="<?php echo $row['Advantage']; ?>">
+          <?php echo $row['Advantage']; ?>
+          ---------------------------------------------
           <p style="color:#ff3366;">단점 <img src="picture/bad.png" width="3%"></p>
-          <input type="text" class="writing_text" value="<?php echo $row['Weakness']; ?>">
+          <?php echo $row['Weakness']; ?>
+          ---------------------------------------------
           <p style="color:#888888;">기타<img src="picture/soso.png" width="3%"></p>
-          <input type="text" class="writing_text" value="<?php echo $row['Etc']; ?>">
-          
+          <?php echo $row['Etc']; ?>
         </article>
       <?php } ?>
     </section>
