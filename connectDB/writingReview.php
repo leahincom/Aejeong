@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <?php  if (session_status() == PHP_SESSION_NONE) {
     session_start();}
     $id=$_SESSION['UserID'];
@@ -17,7 +17,7 @@ $row=mysqli_fetch_assoc($result);
 
 <body>
   <section id="back_bar">
-      <button id="back_icon" onclick="location.href='LOGOUT_goodsInfo.html'"><img src="picture/back_button.png" width="50%"></button>
+      <button id="back_icon" onclick="history.back(-1);"><img src="picture/back_button.png" width="50%"></button>
       <label id="explain_label"><b>리뷰 쓰기</b></label>
   </section>
 

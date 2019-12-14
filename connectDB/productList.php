@@ -2,9 +2,11 @@
 <?php  if (session_status() == PHP_SESSION_NONE) {
     session_start();}
     $id=$_SESSION['UserID'];
+    $category1=$_GET['category1'];
     $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-    $result=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
+    $result=mysqli_query($db, "SELECT * FROM items WHERE category1='$category1'");
     $row=mysqli_fetch_assoc($result);
+    $number=4;
 ?>
 <html>
 
@@ -144,12 +146,12 @@
 
 
   <section align="center">
-    <button class="rankingButton"  onclick="location.href='goodsInfo.html'">
+    <button class="rankingButton"  onclick="location.href='goodsInfo.php?item=<?php echo $row['Picture'];?>'">
       <div class="buttonDiv">
         <p class="numbP" id="firstP">1</p>
-        <img src="picture/product2.png" class="productimg">
-          <p class="nameP">제목명</p>
-          <p class="infoP">브랜드 / 가격</p>
+        <img src="<?php echo $row['Picture']; ?>" class="productimg">
+          <p class="nameP"> <?php echo $row['ItemName']; ?> </p>
+          <p class="infoP"> <?php echo $row['Price']; ?> </p>
         <p>
           <img src="picture/ystar.png" class="starimg">
           <img src="picture/ystar.png" class="starimg">
@@ -162,14 +164,14 @@
     </button>
   </section>
 
-
+  <?php $row=mysqli_fetch_assoc($result); ?>
   <section align="center">
-    <button class="rankingButton"  onclick="location.href='goodsInfo.html'">
+    <button class="rankingButton"  onclick="location.href='goodsInfo.php?item=<?php echo $row['Picture'];?>'">
       <div class="buttonDiv">
         <p class="numbP" id="secondP">2</p>
-        <img src="picture/product2.png" class="productimg">
-          <p class="nameP">제목명</p>
-          <p class="infoP">브랜드 / 가격</p>
+        <img src="<?php echo $row['Picture']; ?>" class="productimg">
+          <p class="nameP"><?php echo $row['ItemName']; ?></p>
+          <p class="infoP"><?php echo $row['Price']; ?> </p>
         <p>
           <img src="picture/ystar.png" class="starimg">
           <img src="picture/ystar.png" class="starimg">
@@ -183,14 +185,14 @@
   </section>
 
 
-
+  <?php $row=mysqli_fetch_assoc($result); ?>
   <section align="center">
-    <button class="rankingButton"  onclick="location.href='goodsInfo.html'">
+    <button class="rankingButton"  onclick="location.href='goodsInfo.php?item=<?php echo $row['Picture'];?>'">
       <div class="buttonDiv">
         <p class="numbP" id="thirdP">3</p>
-        <img src="picture/product2.png" class="productimg">
-          <p class="nameP">제목명</p>
-          <p class="infoP">브랜드 / 가격</p>
+        <img src="<?php echo $row['Picture']; ?>" class="productimg">
+          <p class="nameP"><?php echo $row['ItemName']; ?></p>
+          <p class="infoP"><?php echo $row['Price']; ?></p>
         <p>
           <img src="picture/ystar.png" class="starimg">
           <img src="picture/ystar.png" class="starimg">
@@ -203,14 +205,15 @@
     </button>
   </section>
 
-
+  <?php $row=mysqli_fetch_assoc($result); 
+   while($row=mysqli_fetch_assoc($result)){ ?>
   <section align="center">
-    <button class="rankingButton"  onclick="location.href='goodsInfo.html'">
+    <button class="rankingButton"  onclick="location.href='goodsInfo.php?item=<?php echo $row['Picture'];?>'">
       <div class="buttonDiv">
-        <p class="numbP">4</p>
-        <img src="picture/product2.png" class="productimg">
-          <p class="nameP">제목명</p>
-          <p class="infoP">브랜드 / 가격</p>
+        <p class="numbP"> <?php echo $number; $number=$number+1; ?> </p>
+        <img src="<?php echo $row['Picture']; ?>" class="productimg">
+          <p class="nameP"><?php echo $row['ItemName']; ?></p>
+          <p class="infoP"><?php echo $row['Price']; ?></p>
         <p>
           <img src="picture/ystar.png" class="starimg">
           <img src="picture/ystar.png" class="starimg">
@@ -222,7 +225,7 @@
       <hr class="rankingHr"></hr>
     </button>
   </section>
-
+  <?php } ?>
    <p class="noneline_for_space"></p>
   <section id="bottom_bar">   <!--아래배너-->
     <button class="bottom_bar_button" id="category_icon" onclick="location.href='productList.php'"><img src="picture/category_icon.png"  height="35" width="35"></button>
