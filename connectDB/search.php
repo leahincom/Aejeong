@@ -10,9 +10,10 @@ if(mysqli_connect_errno()){
 $search_text = $_POST['search_text'];
 $sql = "SELECT * FROM Items WHERE ItemName = '$search_text'";
 $result=mysqli_query($db,$sql);
-$row=mysqli_fetch_array($result);
-$Nickname=$row['Nickname'];
-$result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
+$sql1 = "SELECT * FROM reviews WHERE ItemName = '$search_text'";
+$result1=mysqli_query($db,$sql);
+$num=0;
+$sum=0;
 ?>
 
 <head>
@@ -53,12 +54,16 @@ $result=mysqli_query($db, "SELECT * FROM Reviews WHERE Nickname='$Nickname'");
     <button class="rankingButton" onclick="location.href='goodsInfo.html'">
       <div class="buttonDiv">
         <p class="numbP" id="firstP"></p>
-        <?php echo $row['Picture']; ?>
+        <img src="<?php echo $row['Picture']; ?>">
         <wrapper class="goodsInfoWrapper">
           <p class="nameP">  <?php echo $row['ItemName']; ?> </p>
-          <p class="infoP"><span class="brandSpan"> <?php echo $row['BrandName']; ?> </span> / <span class="priceSpan"> <?php echo $row['Price']; ?> </span></p>
+          <p class="infoP"><span class="brandSpan"> </span> / <span class="priceSpan"> <?php echo $row['Price']; ?> </span></p>
         </wrapper>
-        <p> 평점: <?php echo $row['Adavantage']; } ?> </p>
+        <p> 평점: <?php while($row1=mysqli_fetch_assoc($result1)) {
+	 $sum=$sum+$row1['Rating'];
+	 $num=$num+1; }
+	 $avg=$sum/$num;
+	 echo $avg; ?> </p>
       </div>
       <hr class="rankingHr"></hr>
     </button>
