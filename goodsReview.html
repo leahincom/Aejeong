@@ -11,7 +11,6 @@
     <label id="explain_label"><b>리뷰 전체보기</b></label>
     <button class="search_bar_button" id="login_button"><b>로그아웃</b></button>
   </section>
-
 <p class="noneline_for_space"></p>   <!--배너와 section 구분-->
 <section> <!--윗부분 정보 섹션. 나에 대한 정보 + 제품 정보 표시-->
   <article id="profile_article"><!--제품 div-->
@@ -22,8 +21,34 @@
     </div>
   </article>
 </section>
+<p class="noneline_for_space"></p>   <!--윗section과 아래 section 구분-->
 
-  <p class="noneline_for_space"></p>   <!--윗section과 아래 section 구분-->
+
+<section id="reviewSearch">  <!--윗배너-->
+    <p>
+      <wrapper>
+        <input type="text" id="searchText" value="찾고 싶은 리뷰를 검색하세요.">
+        <button class="searchButton" id="microIcon"><img src="picture/mi.png" id="microId"></button>
+      </wrapper>
+      <wrapper  id="ratingOption" >
+     별점 필터링
+      <select name="dog">
+          <option> 0 </option>
+          <option> 1 </option>
+          <option> 2 </option>
+          <option> 3 </option>
+          <option> 4 </option>
+          <option> 5 </option>
+      </select>
+      정렬순
+      <select name="dog">
+          <option> 최신순 </option>
+          <option> 별점순 </option>
+      </select></wrapper>
+  </p>
+</section>
+<p class="p3"></p>   <!--윗section과 아래 section 구분-->
+
 
   <section class="reviewClass_section">
     <article class="profile_article"> <!--내 정보 div-->
