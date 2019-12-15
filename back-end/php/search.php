@@ -8,9 +8,9 @@ if(mysqli_connect_errno()){
   exit;
 }
 $search_text = $_POST['search_text'];
-$sql = "SELECT * FROM Items WHERE ItemName = '$search_text'";
+$sql = "SELECT * FROM Items WHERE ItemName like '%$search_text%'";
 $result=mysqli_query($db,$sql);
-$sql1 = "SELECT * FROM reviews WHERE ItemName = '$search_text'";
+$sql1 = "SELECT * FROM reviews WHERE ItemName like '%$search_text%'";
 $result1=mysqli_query($db,$sql);
 $num=0;
 $sum=0;
