@@ -167,7 +167,6 @@ body{					/*��ü�� �����*/
     width: 8vh;
     height: 6vh;
 }
-
     #logo_icon img {
         width: 100%;
         height: 100%;
@@ -201,7 +200,7 @@ body{					/*��ü�� �����*/
     background-color: #f60024;
     color: #ffffff;
     border: none;
-    margin: 1vh 4vw 0vh 0vw;
-    font-size: 2.5vh;
+    margin: 0.5vh 4vw 0vh 0vw;
+    font-size: 2.1vh;
 }
 /*top bar end*/
