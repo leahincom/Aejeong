@@ -35,42 +35,6 @@ figure {
     margin: 10%;
 }
 
-
-#back_bar {
-	top:0; left:0;
-  margin: 0; padding: 0;
-  width: 100%;
-  height: auto;
-  padding: 1%;
-  position: fixed;
-  text-align:center;
-  background: #f60024;
-}
-
-#back_icon {
-  float: left;
-  border: 0px;
-  width:10%;
-  height:auto;
-  background-color:#f60024;
-}
-
-#explain_label{
-	float: left;
-	padding-top: 1%;
-	color:white;
-	font-size:120%;
-}
-
-#revise_button{
-  background-color:#f60024;
-  padding-top:1%;
-  color:white;
-  font-size:120%;
-  float:right;
-  margin-right:5%;
-}
-
 #user_info_section {
     margin: 0%;
     margin-top: 10%;
@@ -182,12 +146,14 @@ figure {
     margin-right:5%;
 }
 
+
+/*top bar*/
 #back_bar {
 	top:0; left:0;
-  margin: 0; padding: 0;
+  margin: 0;
+  padding:0%;
   width: 100%;
-  height: auto;
-  padding: 1%;
+  height: 9%;
   position: fixed;
   text-align:center;
   background: #f60024;
@@ -196,25 +162,32 @@ figure {
 #back_icon {
   float: left;
   border: 0px;
-  width:10%;
-  height:auto;
+  margin:0.5%;
+  width:2%;
+  height:80%;
   background-color:#f60024;
 }
-
+#back_icon img{
+    width:100%;
+    height:100%;
+}
 #explain_label{
 	float: left;
-	padding-top: 1%;
+    margin:0.5%;
+    margin-left:2%;
 	color:white;
 	font-size:120%;
 }
-#revise_button
-{
-  float:right;
-  margin-right:5%;
-  padding-top:1%;
-  color:white;
-  font-size:120%;
+#revise_button {
+    background-color: #f60024;
+    margin-right:3%;
+    color: white;
+    font-size: 100%;
+    float: right;
+    width:6%;
+    height:90%;
 }
+/*end of top bar*/
 
 /*�ٸ� ������*/
 /*���ƿ��� ��ǰ*/
