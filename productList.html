@@ -45,7 +45,9 @@
                         function selectSmallCategory(big, small) {
                             clearSmallCategory(big);
                             var selected = document.getElementById('small_category' + big + small);
-                            selected.style.color = '#f60024';
+                            if (selected != null) {
+                                selected.style.color = '#f60024';
+                            }
                         }
     </script>
 </head>
