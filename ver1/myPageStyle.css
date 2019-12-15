@@ -1,5 +1,6 @@
 section, a, figcaption, figure, article, img, button
 
+
 * {
     font-family: NanumSquare;
 }
@@ -33,42 +34,6 @@ figure {
     width: 70%;
     height: auto;
     margin: 10%;
-}
-
-
-#back_bar {
-	top:0; left:0;
-  margin: 0; padding: 0;
-  width: 100%;
-  height: auto;
-  padding: 1%;
-  position: fixed;
-  text-align:center;
-  background: #f60024;
-}
-
-#back_icon {
-  float: left;
-  border: 0px;
-  width:10%;
-  height:auto;
-  background-color:#f60024;
-}
-
-#explain_label{
-	float: left;
-	padding-top: 1%;
-	color:white;
-	font-size:120%;
-}
-
-#revise_button{
-  background-color:#f60024;
-  padding-top:1%;
-  color:white;
-  font-size:120%;
-  float:right;
-  margin-right:5%;
 }
 
 #user_info_section {
@@ -124,6 +89,7 @@ figure {
     width: 30%;
     border-radius: 0px 10px 0px 0px;
 }
+
 #myReview_section article {
     border: 1px solid;
     border-color: #f60024;
@@ -132,88 +98,29 @@ figure {
 #likeProduct_section { /*���ƿ��� ��ǰ, ������ ����*/
     margin-bottom: 20%;
 }
+
 #like_product_tag {
     background-color: #f60024;
     color: #ffffff;
     width: 30%;
     border-radius: 0px 10px 0px 0px;
 }
+
 #likeProduct_section article {
     border: 1px solid;
     border-color: #f60024;
 }
+
 .like_product_button {
     width: 20%;
     height: auto;
     overflow: hidden;
-    margin:4%;
+    margin: 4%;
 }
+
 .like_product_img {
     width: 100%;
     height: auto;
-}
-
-
-#bottom_bar {
-  margin: 0px;
-  padding: 1%;
-  overflow: hidden;
-  border-top: 0.5px solid #999999;
-  border-bottom: 0px;
-  position: fixed;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  text-align: center;
-  background-color: #ffffff;
-}
-.bottom_bar_button {
-    border: 0px;
-    width:7%;
-    height:auto;
-    background-color:white;
-}
-#category_icon {
-    float: left;
-    margin-left:5%;
-}
-#myPage_icon {
-    float: right;
-    margin-right:5%;
-}
-
-#back_bar {
-	top:0; left:0;
-  margin: 0; padding: 0;
-  width: 100%;
-  height: auto;
-  padding: 1%;
-  position: fixed;
-  text-align:center;
-  background: #f60024;
-}
-
-#back_icon {
-  float: left;
-  border: 0px;
-  width:10%;
-  height:auto;
-  background-color:#f60024;
-}
-
-#explain_label{
-	float: left;
-	padding-top: 1%;
-	color:white;
-	font-size:120%;
-}
-#revise_button
-{
-  float:right;
-  margin-right:5%;
-  padding-top:1%;
-  color:white;
-  font-size:120%;
 }
 
 /*�ٸ� ������*/
@@ -227,15 +134,98 @@ h2 {
     margin-bottom: 20%;
 }
 
-    .like_product_article button {
-        float: left;
+.like_product_article button {
+    float: left;
+}
+
+.like_product_article div {
+    float: left;
+    margin-left: 4%;
+}
+
+.like_product_article h1 {
+    font-size: 90%;
+}
+
+
+
+/*bottom bar start*/
+#bottom_bar {
+    margin: 0px;
+    overflow: hidden;
+    border-top: 0.5px solid #999999;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 5vh;
+    padding: 3vh 2vw 2vh 2.5vw;
+}
+
+.bottom_bar_button {
+    width: 7vh;
+    height: 5vh;
+}
+
+    .bottom_bar_button img {
+        width: 100%;
+        height: 100%;
     }
 
-    .like_product_article div {
-        float: left;
-        margin-left: 4%;
+#category_icon {
+    float: left;
+    margin-left: 5vw;
+}
+
+#myPage_icon {
+    float: right;
+    margin-right: 10vw;
+}
+
+
+/*top bar*/
+#back_bar {
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    margin: 0;
+    position: fixed;
+    width: 100vw;
+    height: 5vh;
+    padding: 3vh 0 2vh 2.5vw;
+    background: #f60024;
+}
+
+#back_icon {
+    float: left;
+    border: 0px;
+    background-color: #f60024;
+    width: 4vh;
+    height: 4vh;
+    margin-right: 2vw;
+}
+
+    #back_icon img {
+        width: 100%;
+        height: 100%;
     }
 
-    .like_product_article h1 {
-        font-size: 90%;
-    }
+#explain_label {
+    float: left;
+    color: white;
+    font-size: 3.5vh;
+}
+
+#revise_button {
+    background-color: #f60024;
+    color: white;
+    height: 4vh;
+    font-size: 2vh;
+    float: right;
+    margin-right: 8vw;
+}
+/*end of top bar*/

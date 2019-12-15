@@ -14,7 +14,7 @@
 </head>
 <body>
     <section id="back_bar">
-    <button id="back_icon"><img src="picture/back_button.png" width="50%" onclick="history.back(-1);"></button>
+    <button id="back_icon"><img src="picture/back_button.png" onclick="history.back(-1);"></button>
     <label id="explain_label"><b>마이 페이지</b></label>
     <button id="revise_button" onclick="location.href='edit_myPage.php'">수정</button>
     </section>

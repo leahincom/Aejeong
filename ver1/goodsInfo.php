@@ -4,9 +4,17 @@
     $id=$_SESSION['UserID'];
     $item=$_GET['item'];
     $db=mysqli_connect('10.200.158.14:3306', '1111', '1234', 'aejeong');
+
+	$result=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
+	$row=mysqli_fetch_assoc($result);
+	$nick=$row['Nickname'];
+
     $result=mysqli_query($db, "SELECT * FROM items WHERE Picture='$item'");
     $row=mysqli_fetch_assoc($result);
     $name=$row['ItemName'];
+
+	$result2=$db->query("SELECT * FROM likes WHERE Nickname='$nick' AND ItemName='$name'");
+	$n=$result2->num_rows+1;
 ?>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -14,7 +22,7 @@
     <link rel="stylesheet" href="goodsInfoStyle.css">
     <title>애정 : 제품 상세 페이지</title>
     <script type="text/javascript" charset="urf-8">
-        var liked = 0;                                  //좋아요 선택 여부(나중에 데베 연결)
+        var liked =<?php echo "$result2->num_rows"; ?>;                                  //좋아요 선택 여부(나중에 데베 연결)
         function makeHeartImg() {                           //좋아요 여부 따라 Img 결정
             var heart_img = document.getElementById("heart_img");
             if (liked == 1) {
@@ -110,7 +118,7 @@
   <br>
 
   <section>
-    <button type="button" id="heart_button" onclick="heartClick();location.href='like.php?item=<?php echo $row['Picture'];?>'"><img id="heart_img" src="picture/heart1.png"  width="100%" height="auto"></button>
+    <button type="button" id="heart_button" onclick="heartClick();location.href='like.php?item=<?php echo $row['Picture'];?>'"><img id="heart_img" src="picture/heart<?php echo "$n"; ?>.png"  width="100%" height="auto"></button>
     <button id="review_button" onclick="location.href='goodsReview.php?item=<?php echo $row['Picture'];?>'"><img src="picture/review.png" width="100%" height="auto"></button>
     <button id="writing_button" onclick="location.href='writingReview.php?item=<?php echo $row['Picture'];?>'"><img src="picture/writing.png" width="100%" height="auto" ></button>
   </section>

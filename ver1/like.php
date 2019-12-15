@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title> Login </title>
+<title> Like </title>
 </head>
 
 <body>
@@ -18,21 +18,21 @@
 
 		$result1=mysqli_query($db, "SELECT * FROM items WHERE Picture='$item'");
 		$row1=mysqli_fetch_assoc($result1);
-    		$name=$row1['ItemName'];
+    	$name=$row1['ItemName'];
 
 		
-		$result2=$db->query("SELECT * FROM items WHERE Nickname='$nick' AND ItemName='$name'");
+		$result2=$db->query("SELECT * FROM likes WHERE Nickname='$nick' AND ItemName='$name'");
 		
 
-		if(!(isset($result2->num_rows))){
+		if($result2->num_rows==1){
 			$sql="DELETE FROM likes WHERE Nickname='$nick' AND ItemName='$name'"; 
 			mysqli_query($db, $sql);
-			echo "삭제되었습니다.";
 		} 
-		if(mysqli_query($db, "INSERT INTO likes(Nickname, ItemName, Picture) VALUES ('$nick' ,'$name' ,'$item')")){
-			echo "저장되었습니다.";
+		else{
+		 if(mysqli_query($db, "INSERT INTO likes(Nickname, ItemName, Picture) VALUES ('$nick' ,'$name' ,'$item')")){
+		 }
 		}
-		else{ echo $item.$nick."오류"; }
+		echo "<script> history.back(); </script>";
 	?>
 </body>
 </html> 

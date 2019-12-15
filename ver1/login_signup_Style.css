@@ -1,5 +1,6 @@
 section, p, body, button, img, h1, input, a
 
+
 * {
     border: 0px;
     font-family: NanumSquare;
@@ -9,34 +10,6 @@ body{                               /*������ �߾ӿ� ��Ÿ��
     margin-bottom:20%;
 	width:70%;
 }
-
-
-#back_bar {
-	top:0; left:0;
-  margin: 0; padding: 0;
-  width: 100%;
-  height: auto;
-  padding: 1%;
-  position: fixed;
-  text-align:center;
-  background: #f60024;
-}
-
-#back_icon {
-  float: left;
-  border: 0px;
-  width:10%;
-  height:auto;
-  background-color:#f60024;
-}
-
-#explain_label{
-	float: left;
-	padding-top: 1%;
-	color:white;
-	font-size:120%;
-}
-
 
 
 #logo_section {                      /*�ΰ�*/
@@ -70,13 +43,10 @@ input {                     /*���̵�, ���й�ȣ �Է� textfiel
     border-radius: 14px;
     border: 1px solid;
 }
-button {                    /*�α����ϱ�, �ߺ�Ȯ��, �����ϱ� ��ư*/
+button { /*�α����ϱ�, �ߺ�Ȯ��, �����ϱ� ��ư*/
     float: right;
-    font-size:75%;
-
-    margin-top:1%;
-    background-color:#ffffff;
-
+    font-size: 75%;
+    background-color: #ffffff;
 }
 
 
@@ -170,3 +140,38 @@ article{                    /*���� ����*/
 #passwordCheck_change_input{
     width:60%;
 }
+
+
+/*top bar*/
+#back_bar {
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    margin: 0;
+    position: fixed;
+    width: 100vw;
+    height: 5vh;
+    padding: 3vh 0 2vh 2.5vw;
+    background: #f60024;
+}
+
+#back_icon {
+    float: left;
+    border: 0px;
+    background-color: #f60024;
+    width: 5vh;
+    height: 5vh;
+    margin-right: 2vw;
+}
+
+    #back_icon img {
+        width: 100%;
+        height: 100%;
+    }
+
+#explain_label {
+    float: left;
+    color: white;
+    font-size: 3.5vh;
+}
+/*end of top bar*/

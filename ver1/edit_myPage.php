@@ -10,15 +10,16 @@
 
 <head>
     <title> 애정 : 개인정보 수정</title>
-    <link rel="stylesheet" href="login_signup_Style.css?after">
+    <link rel="stylesheet" href="login_signup_Style.css">
 </head>
 
 
 <body>
-  <section id="back_bar"> <!--윗배너 생성-->
-      <button id="back_icon" onclick="location.href='myPage.php'"><img src="picture/back_button.png" width="50%"></button>
-      <label id="explain_label"><b>개인정보 수정</b></label>
-  </section>
+	<section id="back_bar">
+		<button id="back_icon"><img src="picture/back_button.png" onclick="location.href='myPage.php'"></button>
+		<label id="explain_label"><b>개인정보 수정</b></label>
+    </section>
+  
     <section>
 	<form name="edit" action="info_modify.php" method="post">  
         <h1>개인정보 수정</h1>
