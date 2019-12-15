@@ -32,7 +32,7 @@
             }
             makeHeartImg();
         }
-        function showIn() { window.open("ingredient.html", "성분", "width=600, height=300, left=100, top=50"); }
+        function showIn() { window.open("ingredient.php?item=<?php echo $row['ItemName'];?>", "성분", "width=600, height=300, left=100, top=50"); }
 
     </script>
 </head>
@@ -65,7 +65,7 @@
     </div>
     <div>
       <p>
-        <?php 
+        <?php
 		$sql1 = "SELECT * FROM reviews WHERE ItemName = '$name'";
 		$result1=mysqli_query($db,$sql1);
 		$num=0;
@@ -84,7 +84,7 @@
 
     <p style="padding-bottom:3%;"></p>
 <p>
-  <button id="ingredient_button" onclick="showIn();">+ 성분 자세히 보기</button>
+  <button id="ingredient_button" name="ingredient" onclick="showIn();">+ 성분 자세히 보기</button>
 </p>
     <p align="center">  <!--제품 성분-->
       <img src="picture/bluebar.png" width="3%">
@@ -116,7 +116,7 @@
   </section>
 
   <p style="padding-bottom:5%;"></p>
-  <?php 
+  <?php
     $item=$row['ItemName'];
     $result=mysqli_query($db, "SELECT * FROM reviews WHERE ItemName='$item'");
     $row=mysqli_fetch_assoc($result);
