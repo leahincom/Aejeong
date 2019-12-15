@@ -15,6 +15,18 @@
 
 	$result2=$db->query("SELECT * FROM likes WHERE Nickname='$nick' AND ItemName='$name'");
 	$n=$result2->num_rows+1;
+
+  $compoResult=mysqli_query($db, "SELECT * FROM Components WHERE ItemName like '%$ItemName%'");
+    $firstGrade =mysqli_query($db, "SELECT * FROM Components WHERE ItemName like '%$ItemName%' AND ComponentGrade=0");
+   $secGrade =mysqli_query($db, "SELECT * FROM Components WHERE ItemName like '%$ItemName%' AND ComponentGrade=1");
+   $thirdGrade =mysqli_query($db, "SELECT * FROM Components WHERE ItemName like '%$ItemName%' AND ComponentGrade=2");
+  $fCount = $firstGrade->num_rows;
+  $sCount = $secGrade->num_rows;
+  $tCount = $thirdGrade->num_rows;
+  $total = $result->num_rows;
+  $fCount = (int)($fCount/$total * 100);
+  $sCount = (int)($sCount/$total * 100);
+  $tCount = (int)($tCount/$total * 100);
 ?>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>

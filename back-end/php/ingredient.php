@@ -72,7 +72,7 @@
             ?>
             <p class="nameP"><?php echo $row['ComponentsName'] ?></p>
           </button>
-          <div class="myDIV" style="display:none;"><?php echo $row['Characteristic'] ?></div>
+          <div class="myDIV" style="display:none;"><?php echo $row['Characteristic']; ?></div>
         <?php } ?>
   </div>
     </section>
