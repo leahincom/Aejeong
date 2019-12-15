@@ -22,62 +22,53 @@
       else if(selectValue=="0") {
         <?php
         $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 0 AND Rating < 1")
-        $row = mysqli_fetch_assoc($ratingValue);
+        $row = mysqli_fetch_assoc($result);
          ?>
        }
       else if(selectValue=="1") {
         <?php
       $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 1 AND Rating < 2")
-      $row = mysqli_fetch_assoc($ratingValue);
+      $row = mysqli_fetch_assoc($result);
        ?>
      }
       else if(selectValue=="2") {
         <?php
         $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 2 AND Rating < 3")
-        $row = mysqli_fetch_assoc($ratingValue);
+        $row = mysqli_fetch_assoc($result);
          ?>
         }
       else if(selectValue=="3") { <?php
       $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 3 AND Rating < 4")
-      $row = mysqli_fetch_assoc($ratingValue);
+      $row = mysqli_fetch_assoc($result);
        ?>
       }
       else if(selectValue=="4") {
         <?php
         $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 4 AND Rating < 5")
-        $row = mysqli_fetch_assoc($ratingValue);
+        $row = mysqli_fetch_assoc($result);
          ?>
         }
       else if(selectValue=="5") {
         <?php
         $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating = 5")
-        $row = mysqli_fetch_assoc($ratingValue);
+        $row = mysqli_fetch_assoc($result);
          ?> }
 
     }
 
-    function number_descending(a, b) { // 내림차순
-return b - a;
-}
+    function sorting() {
+      var selectValue = document.getElementById("sorting").options[document.getElementById("sorting").selectedIndex].value;
 
-    function sorting(a, b) {
-      var reviews = document.getElementById("sorting");
-      var selectValue = rate.options[rate.selectedIndex].value;
       if(selectValue=="new") {
         <?php
-        $result=mysqli_query($db, "SELECT * FROM Reviews");
+        $result=mysqli_query($db, "SELECT * FROM Reviews ORDER BY Date DESC");
         $row=mysqli_fetch_assoc($result);
-        var dateA = new Date(a[$row]).getTime();
-        var dateB = new Date(b[$row]).getTime();
-        return dateA < dateB ? 1 : -1;
       ?>
     }
       else if (selectValue=="rates") {
         <?php
-        $result=mysqli_query($db, "SELECT * FROM Reviews");
-        while($row=mysqli_fetch_assoc($result)) {
-          $rate=$row['Rating'];
-
+        $result=mysqli_query($db, "SELECT * FROM Reviews ORDER BY Rating DESC");
+        $row=mysqli_fetch_assoc($result);
         }
       ?>
       }
