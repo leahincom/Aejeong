@@ -5,11 +5,11 @@
   $id=$_SESSION['UserID'];
   $item=$_GET['item'];
   $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-  echo (    '<script language="javascript">
+  echo (    "<script language="javascript">
   function rateFilter() {
     var selectValue = document.getElementById("rateFilter").options[document.getElementById("rateFilter").selectedIndex].value;
     if(selectedValue=="") {
-      $result=mysqli_query($db, "SELECT * FROM items WHERE Picture='$item'");
+      $result=mysqli_query($db, "SELECT * FROM items WHERE Picture="$item"");
       $row=mysqli_fetch_assoc($result);
     }
     else if(selectValue=="0") {
@@ -51,7 +51,7 @@
       $row=mysqli_fetch_assoc($result);
   }
     }
-</script>');
+</script>");
   ?>
 
   <head><meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
