@@ -149,10 +149,8 @@
           </p>
           <p style="color:#6699ff;">장점 <img src="picture/smile.png" width="3%"></p>
           <?php echo $row['Advantage']; ?>
-          ---------------------------------------------
           <p style="color:#ff3366;">단점 <img src="picture/bad.png" width="3%"></p>
           <?php echo $row['Weakness']; ?>
-          ---------------------------------------------
           <p style="color:#888888;">기타<img src="picture/soso.png" width="3%"></p>
           <?php echo $row['Etc']; ?>
         </article>
