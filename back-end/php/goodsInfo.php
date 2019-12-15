@@ -3,7 +3,7 @@
     session_start();}
     $id=$_SESSION['UserID'];
     $item=$_GET['item'];
-    $db=mysqli_connect('10.200.38.43', '1111', '1234', 'aejeong');
+    $db=mysqli_connect('10.200.158.14:3306', '1111', '1234', 'aejeong');
     $result=mysqli_query($db, "SELECT * FROM items WHERE Picture='$item'");
     $row=mysqli_fetch_assoc($result);
     $name=$row['ItemName'];
@@ -32,7 +32,7 @@
             }
             makeHeartImg();
         }
-        function showIn() { window.open("ingredient.php?item=<?php echo $row['ItemName'];?>", "성분", "width=600, height=300, left=100, top=50"); }
+        function showIn() { window.open("ingredient.html", "성분", "width=600, height=300, left=100, top=50"); }
 
     </script>
 </head>
@@ -65,7 +65,7 @@
     </div>
     <div>
       <p>
-        <?php
+        <?php 
 		$sql1 = "SELECT * FROM reviews WHERE ItemName = '$name'";
 		$result1=mysqli_query($db,$sql1);
 		$num=0;
@@ -84,7 +84,7 @@
 
     <p style="padding-bottom:3%;"></p>
 <p>
-  <button id="ingredient_button" name="ingredient" onclick="showIn();">+ 성분 자세히 보기</button>
+  <button id="ingredient_button" onclick="showIn();">+ 성분 자세히 보기</button>
 </p>
     <p align="center">  <!--제품 성분-->
       <img src="picture/bluebar.png" width="3%">
@@ -110,13 +110,13 @@
   <br>
 
   <section>
-    <button type="button" id="heart_button" onclick="heartClick();"><img id="heart_img" src="picture/heart1.png"  width="100%" height="auto"></button>
+    <button type="button" id="heart_button" onclick="heartClick();location.href='like.php?item=<?php echo $row['Picture'];?>'"><img id="heart_img" src="picture/heart1.png"  width="100%" height="auto"></button>
     <button id="review_button" onclick="location.href='goodsReview.php?item=<?php echo $row['Picture'];?>'"><img src="picture/review.png" width="100%" height="auto"></button>
     <button id="writing_button" onclick="location.href='writingReview.php?item=<?php echo $row['Picture'];?>'"><img src="picture/writing.png" width="100%" height="auto" ></button>
   </section>
 
   <p style="padding-bottom:5%;"></p>
-  <?php
+  <?php 
     $item=$row['ItemName'];
     $result=mysqli_query($db, "SELECT * FROM reviews WHERE ItemName='$item'");
     $row=mysqli_fetch_assoc($result);
