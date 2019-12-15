@@ -12,27 +12,56 @@
     <title>애정 : 제품 리뷰</title>
     <script type="text/javascript">
     function rateFilter() {
-      var selectValue = document.getElementById("rateFilter").options[document.getElementById("rateFilter").selectedIndex].text;
+      var selectValue = document.getElementById("rateFilter").options[document.getElementById("rateFilter").selectedIndex].value;
       if(selectedValue=="") {
+        <?php
+        $result=mysqli_query($db, "SELECT * FROM items WHERE Picture='$item'");
+        $row=mysqli_fetch_assoc($result);
+         ?>
+        location.href = "goodsReview.php";
 
       }
       else if(selectValue=="0") {
-
+        <?php
+        $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 0 AND Rating < 1");
+        $row = mysqli_fetch_assoc($result);
+         ?>
+        location.href = "goodsReview.php?Rating=0";
        }
       else if(selectValue=="1") {
-
+        <?php
+      $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 1 AND Rating < 2");
+      $row = mysqli_fetch_assoc($result);
+       ?>
+        location.href = "goodsReview.php?Rating=1";
      }
       else if(selectValue=="2") {
-
+        <?php
+        $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 2 AND Rating < 3");
+        $row = mysqli_fetch_assoc($result);
+         ?>
+        location.href = "goodsReview.php?Rating=2";
         }
       else if(selectValue=="3") {
-
+        <?php
+        $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 3 AND Rating < 4");
+        $row = mysqli_fetch_assoc($result);
+         ?>
+        location.href = "goodsReview.php?Rating=3";
       }
       else if(selectValue=="4") {
-
+        <?php
+        $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 4 AND Rating < 5");
+        $row = mysqli_fetch_assoc($result);
+         ?>
+        location.href = "goodsReview.php?Rating=4";
         }
       else if(selectValue=="5") {
-
+        <?php
+        $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating = 5");
+        $row = mysqli_fetch_assoc($result);
+         ?>
+        location.href = "goodsReview.php?Rating=5";
        }
 
     }
@@ -87,42 +116,14 @@
       </wrapper>
       <wrapper id="filterButton" name="filtered">
         별점 필터링
-        <select id="rateFilter" name="rateFilter" onchange="location.href=this.value">
-          <option value='goodsReview.php' selected disabled>별점 <?php
-          $result=mysqli_query($db, "SELECT * FROM items WHERE Picture='$item'");
-          $row=mysqli_fetch_assoc($result);
-           ?>
-         </option>
-          <option value='goodsReview.php?Rating=0'> 0 <?php
-          $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 0 AND Rating < 1");
-          $row = mysqli_fetch_assoc($result);
-           ?>
-         </option>
-          <option value='goodsReview.php?Rating=1'> 1 <?php
-        $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 1 AND Rating < 2");
-        $row = mysqli_fetch_assoc($result);
-         ?>
-       </option>
-          <option value='goodsReview.php?Rating=2'> 2 <?php
-          $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 2 AND Rating < 3");
-          $row = mysqli_fetch_assoc($result);
-           ?>
-         </option>
-          <option value='goodsReview.php?Rating=3'> 3 <?php
-          $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 3 AND Rating < 4");
-          $row = mysqli_fetch_assoc($result);
-           ?>
-         </option>
-          <option value='goodsReview.php?Rating=4'> 4 <?php
-          $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 4 AND Rating < 5");
-          $row = mysqli_fetch_assoc($result);
-           ?>
-         </option>
-          <option value='goodsReview.php?Rating=5'> 5 <?php
-          $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating = 5");
-          $row = mysqli_fetch_assoc($result);
-           ?>
-         </option>
+        <select id="rateFilter" name="rateFilter" onchange="rateFilter();">
+          <option value='goodsReview.php' selected disabled>별점</option>
+          <option value='0'> 0 </option>
+          <option value='1'> 1 </option>
+          <option value='2'> 2 </option>
+          <option value='3'> 3 </option>
+          <option value='4'> 4 </option>
+          <option value='5'> 5 </option>
         </select>
         정렬순
         <select id="sorting" name="sorting" onchange="sorting();">
