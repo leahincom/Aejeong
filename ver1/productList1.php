@@ -94,9 +94,11 @@
       <p>
         <button class="search_bar_button" id="logo_icon" onclick="location.href='LOGINED_home.html'"><img src="picture/whitelogo.png"  id="whitelogo_id"></button>
         <wrapper>
+	  <form method="post" action="search.php">
           <input type="text" id="search_text">
-          <button class="search_bar_button" id="micro_icon"><img src="picture/micro.png" id="micro_id"></button>
-          <button class="search_bar_button" id="login_button"><b>로그아웃</b></button>
+          <button type="submit" class="search_bar_button" id="micro_icon"><img src="picture/micro.png" id="micro_id"></button>
+          <button type="button" class="search_bar_button" id="login_button"><b>로그아웃</b></button>
+	  </form>
         </wrapper>
       </p>
   </section>

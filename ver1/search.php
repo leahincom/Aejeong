@@ -8,10 +8,8 @@ if(mysqli_connect_errno()){
   exit;
   }
 $search_text = $_POST['search_text'];
-$sql = "SELECT * FROM Items WHERE ItemName = '$search_text'";
+$sql = "SELECT * FROM Items WHERE ItemName like '%$search_text%'";
 $result=mysqli_query($db,$sql);
-$sql1 = "SELECT * FROM reviews WHERE ItemName = '$search_text'";
-$result1=mysqli_query($db,$sql1);
 $num=0;
 $sum=0;
 ?>
@@ -49,7 +47,11 @@ $sum=0;
 
 
   <p style="padding:5%;"></p>
-  <?php while($row=mysqli_fetch_assoc($result)) { ?>
+  <?php while($row=mysqli_fetch_assoc($result)) {
+  $name=$row['ItemName']; 
+  $sql1 = "SELECT * FROM reviews WHERE ItemName='$name'";
+  $result1=mysqli_query($db,$sql1); 
+  ?>
   <section align="center">
     <button class="rankingButton" onclick="location.href='goodsInfo.php?item=<?php echo $row['Picture'];?>'">
       <div class="buttonDiv">

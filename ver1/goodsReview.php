@@ -9,13 +9,12 @@
   $row1=mysqli_fetch_assoc($result1);
   $name=$row1['ItemName'];
   if (isset($_GET['Rating'])){
-  	  $rating=$_GET['Rating'];
-	  $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating like '%$rating%'");
-      $row = mysqli_fetch_assoc($result);
+  	  $rating0=$_GET['Rating'];
+	  $rating1=$rating0+1;
+	  $result = mysqli_query($db, "SELECT * FROM Reviews WHERE CAST(Rating AS DECIMAL(5,1)) >= '$rating0'  AND CAST(Rating AS DECIMAL(5,1)) < '$rating1' ORDER BY Date DESC");
   }
   else{
-      $result = mysqli_query($db, "SELECT * FROM Reviews WHERE ItemName='$name'");
-      $row = mysqli_fetch_assoc($result);
+      $result = mysqli_query($db, "SELECT * FROM Reviews WHERE ItemName='$name' ORDER BY Date DESC");
   }
 
   ?>
@@ -41,21 +40,7 @@
       else if(selectValue=="5") {
        }
     }
-    function sorting() {
-      var selectValue = document.getElementById("sorting").options[document.getElementById("sorting").selectedIndex].value;
-      if(selectValue=="new") {
-        <?php
-        $result=mysqli_query($db, "SELECT * FROM Reviews ORDER BY Date DESC");
-        $row=mysqli_fetch_assoc($result);
-      ?>
-    }
-      else if (selectValue=="rates") {
-        <?php
-        $result=mysqli_query($db, "SELECT * FROM Reviews ORDER BY Rating DESC");
-        $row=mysqli_fetch_assoc($result);
-      ?>
-    }
-      }
+    
   </script>
 </head>
 
@@ -82,7 +67,7 @@
   <section id="reviewSearch">  <!--윗배너-->
     <p>
       <wrapper>
-        <form method="POST" action="reviewSearch.php">
+        <form method="POST" action="reviewSearch.php?item=<?php echo $item; ?>">
         <input type="text" id="searchText" value="찾고 싶은 리뷰를 검색하세요." name="searchText">
         <button type="submit" class="searchButton" id="microIcon"><img src="picture/mi.png" id="microId"></button>
       </form>
@@ -105,11 +90,7 @@
           <option value='goodsReview.php?item=<?php echo $_GET['item'];?>&Rating=5'> 5 
          </option>
         </select>
-        정렬순
-        <select id="sorting" name="sorting" onchange="sorting();">
-          <option value="new"> 최신순 </option>
-          <option value="rates"> 별점순 </option>
-        </select></wrapper>
+        </wrapper>
       </p>
     </section>
     <p class="p3"></p>   <!--윗section과 아래 section 구분-->
@@ -129,10 +110,8 @@
           </p>
           <p style="color:#6699ff;">장점 <img src="picture/smile.png" width="3%"></p>
           <?php echo $row['Advantage']; ?>
-          ---------------------------------------------
           <p style="color:#ff3366;">단점 <img src="picture/bad.png" width="3%"></p>
           <?php echo $row['Weakness']; ?>
-          ---------------------------------------------
           <p style="color:#888888;">기타<img src="picture/soso.png" width="3%"></p>
           <?php echo $row['Etc']; ?>
         </article>
