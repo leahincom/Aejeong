@@ -5,21 +5,17 @@
   $id=$_SESSION['UserID'];
   $ItemName=$_GET['item'];
   $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
-  $count = mysql_query("SELECT count(1) FROM table");
-  $sevRow = mysql_fetch_array($count);
-  $total = $sevRow[0];
-  $result=mysqli_query($db, "SELECT * FROM Components WHERE ItemName='$ItemName'");
-  $fCount = 0;
-  $sCount = 0;
-  $tCount = 0;
-  while($row = mysqli_fetch_assoc($result)) {
-    if($row['ComponentGrade'] == 0) $fCount += 1;
-    else if($row['ComponentGrade'] == 1) $sCount += 1;
-    else if($row['ComponentGrade'] == 2) $tCount += 1;
-  }
-  $fCount = $fCount/$total * 100;
-  $sCount = $sCount/$total * 100;
-  $tCount = $tCount/$total * 100;
+  $result=mysqli_query($db, "SELECT * FROM Components WHERE ItemName like '%$ItemName%'");
+    $firstGrade =mysqli_query($db, "SELECT * FROM Components WHERE ItemName like '%$ItemName%' AND ComponentGrade=0");
+   $secGrade =mysqli_query($db, "SELECT * FROM Components WHERE ItemName like '%$ItemName%' AND ComponentGrade=1");
+   $thirdGrade =mysqli_query($db, "SELECT * FROM Components WHERE ItemName like '%$ItemName%' AND ComponentGrade=2");
+  $fCount = $firstGrade->num_rows;
+  $sCount = $secGrade->num_rows;
+  $tCount = $thirdGrade->num_rows;
+  $total = $result->num_rows;
+  $fCount = (int)($fCount/$total * 100);
+  $sCount = (int)($sCount/$total * 100);
+  $tCount = (int)($tCount/$total * 100);
   ?>
 
   <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -40,16 +36,14 @@
 
       <div id="ingredient_bar">
         <p>  <!--제품 성분-->
-          <script language = "javascript">
-          <?php for(i=0; i<$fCount/10; i++) {
-            echo '<img src="picture/bluebar.png" class="barimg">';
-          } for(i=0; i<$fCount/10; i++) {
-            echo '<img src="picture/yellowbar.png" class="barimg">';
-          } for(i=0; i<$fCount/10; i++) {
-            echo '<img src="picture/redbar.png" class="barimg">';
+          <?php for($i=0; $i<$fCount/10; $i++) {
+            echo '<img src="picture/bluebar.png" class="barimg">'.' ';
+          } for($i=0; $i<$sCount/10; $i++) {
+            echo '<img src="picture/yellowbar.png" class="barimg">'.' ';
+          } for($i=0; $i<$tCount/10; $i++) {
+            echo '<img src="picture/redbar.png" class="barimg">'.' ';
           }
           ?>
-          </script>
         </p>
         <p>
           <br>
@@ -65,7 +59,7 @@
     <section>
       <div class="buttonDiv">
         <?php   while($row=mysqli_fetch_assoc($result)) { ?>
-          <button class="ingredientButton"  onclick="if(this.parentNode.getElementsByTagName('div')[0].style.display != ''){this.parentNode.getElementsByTagName('div')[0].style.display = '';this.value = '숨기기';}else{this.parentNode.getElementsByTagName('div')[0].style.display = 'none'; this.value = '더보기';}" >
+          <button type="button" class="ingredientButton"  onclick="if(this.parentNode.getElementsByTagName('div')[0].style.display != ''){this.parentNode.getElementsByTagName('div')[0].style.display = '';this.value = '숨기기';}else{this.parentNode.getElementsByTagName('div')[0].style.display = 'none'; this.value = '더보기';}" >
             <?php
             $grade=$row['ComponentGrade'];
             if($grade == 0) {
@@ -80,7 +74,7 @@
           </button>
           <div class="myDIV" style="display:none;"><?php echo $row['Characteristic'] ?></div>
         <?php } ?>
-      </div>
+  </div>
     </section>
     <hr>
 

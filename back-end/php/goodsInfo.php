@@ -95,23 +95,21 @@
   <button id="ingredient_button" onclick="showIn();">+ 성분 자세히 보기</button>
 </p>
     <p align="center">  <!--제품 성분-->
-      <img src="picture/bluebar.png" width="3%">
-      <img src="picture/bluebar.png" width="3%">
-      <img src="picture/bluebar.png" width="3%">
-      <img src="picture/bluebar.png" width="3%">
-      <img src="picture/bluebar.png" width="3%">
-      <img src="picture/bluebar.png" width="3%">
-      <img src="picture/yellowbar.png" width="3%">
-      <img src="picture/yellowbar.png" width="3%">
-      <img src="picture/redbar.png" width="3%">
-      <img src="picture/redbar.png" width="3%">
-    </p>
-    <p style="font-size:80%;" align="center">
-      <br>
-      <img src="picture/bluebar.png" width="2%">1등급: 60% &nbsp
-      <img src="picture/yellowbar.png" width="2%">2등급: 20% &nbsp
-      <img src="picture/redbar.png" width="2%">3등급: 20%
-    </p>
+        <?php for($i=0; $i<$fCount/10; $i++) {
+          echo '<img src="picture/bluebar.png" class="barimg">';
+        } for($i=0; $i<$sCount/10; $i++) {
+          echo '<img src="picture/yellowbar.png" class="barimg">';
+        } for($i=0; $i<$tCount/10; $i++) {
+          echo '<img src="picture/redbar.png" class="barimg">';
+        }
+        ?>
+      </p>
+      <p>
+        <br>
+        <img src="picture/bluebar.png" class="barimg">&nbsp1등급: <?php echo $fCount."%"?>&nbsp&nbsp&nbsp
+        <img src="picture/yellowbar.png" class="barimg">&nbsp2등급: <?php echo $sCount."%"?> &nbsp&nbsp&nbsp
+        <img src="picture/redbar.png" class="barimg">&nbsp3등급: <?php echo $tCount."%"?>
+      </p>
 
   </section>
 
