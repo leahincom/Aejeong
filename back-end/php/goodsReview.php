@@ -21,11 +21,7 @@
          location.href = "goodsReview.php";
       }
       else if(selectValue=="0") {
-        <?php
-        $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 0 AND Rating < 1");
-        $row = mysqli_fetch_assoc($result);
-         ?>
-         location.href = "goodsReview.php?Rating=0";
+
        }
       else if(selectValue=="1") {
         <?php
@@ -118,9 +114,12 @@
       </wrapper>
       <wrapper id="filterButton" name="filtered">
         별점 필터링
-        <select id="rateFilter" name="rateFilter" onchange="rateFilter();">
+        <select id="rateFilter" name="rateFilter" onchange="location.href=this.value">
           <option value="" selected disabled>별점</option>
-          <option value="0"> 0 </option>
+          <option value="0"> 0 <?php
+          $result = mysqli_query($db, "SELECT * FROM Reviews WHERE Rating >= 0 AND Rating < 1");
+          $row = mysqli_fetch_assoc($result);
+           ?> </option>
           <option value="1"> 1 </option>
           <option value="2"> 2 </option>
           <option value="3"> 3 </option>
