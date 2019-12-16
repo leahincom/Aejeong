@@ -10,7 +10,7 @@
 
 <head>
     <title> 애정 : 개인정보 수정</title>
-    <link rel="stylesheet" href="signupStyle.css">
+    <link rel="stylesheet" href="login_signup_Style.css">
 </head>
 
 
@@ -27,8 +27,7 @@
             아이디 &nbsp :&nbsp <?php echo "$id";?>
         </p>
         <p>
-            닉네임
-            <input class="id_nick_input" type="text" id="nick" name="nick" value="<?php echo $row['Nickname']; ?>">
+            닉네임 &nbsp :&nbsp <?php echo $row['Nickname']; ?>
         </p>
         <p>
             <button id="password_change_button">비밀번호 수정</button>
@@ -74,7 +73,6 @@
                 <p>
                     강아지
                     <select class="animal_count" name="dog" >
-						<option selected disabled> <?php echo $row['Dog']; ?> </option>
                         <option> 0 </option>
                         <option> 1 </option>
                         <option> 2 </option>
@@ -86,7 +84,6 @@
                 <p>
                     고양이
                     <select class="animal_count" name="cat">
-						<option selected disabled> <?php echo $row['Cat']; ?> </option>
                         <option> 0 </option>
                         <option> 1 </option>
                         <option> 2 </option>
@@ -96,9 +93,8 @@
                     마리
                 </p>
                 <p>
-                    <input class="other_animal_input" type="text" name="etc1_name" value="<?php echo $row['etc1_name']; ?>">
+                    <input class="other_animal_input" type="text" name="etc1_name" >
                     <select class="animal_count" name="etc1" >
-						<option selected disabled> <?php echo $row['etc1']; ?> </option>
                         <option> 0 </option>
                         <option> 1 </option>
                         <option> 2 </option>
@@ -108,9 +104,8 @@
                     마리
                 </p>
                 <p>
-                    <input class="other_animal_input" type="text" name="etc2_name" value="<?php echo $row['etc2_name']; ?>">
+                    <input class="other_animal_input" type="text" name="etc2_name" >
                     <select class="animal_count" name="etc2">
-						<option selected disabled> <?php echo $row['etc2']; ?> </option>
                         <option> 0 </option>
                         <option> 1 </option>
                         <option> 2 </option>
