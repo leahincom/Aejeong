@@ -12,4 +12,4 @@ but because we made branch individually, almost all of the files are shared.<br>
 You can check all the files in master branch.<br>
 -<br>
 Thanks for using our service, and all feedbacks are welcomed.<br>
-Please give us the contact by e-mail( <u>skwjdgus1003@ewhain.net</u> ).<br>
+Please give us the contact by e-mail.<br>
