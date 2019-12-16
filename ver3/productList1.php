@@ -28,7 +28,8 @@
 	else if($_GET['category1']==5 && $_GET['category2']==2){ $category1="모래"; $category2="응고형"; }
 	else if($_GET['category1']==5 && $_GET['category2']==3){ $category1="모래"; $category2="흡수형"; }
 	else if($_GET['category1']==5 && $_GET['category2']==4){ $category1="모래"; $category2="흡수형"; }
-	else if($_GET['category1']==5 && $_GET['category2']==5){ $category1="모래"; $category2="기타"; }
+	else if($_GET['category1']==5 && $_GET['category2']==5){ $category1="모래"; $category2="탈취"; }
+	else if($_GET['category1']==5 && $_GET['category2']==6){ $category1="모래"; $category2="기타"; }
 	else if($_GET['category1']==6 && $_GET['category2']==1){ $category1="기타"; $category2="기타"; }
     $db=mysqli_connect('172.30.1.53:3306', '1111', '1234', 'aejeong');
     $result=mysqli_query($db, "SELECT * FROM items WHERE category2 like '%$category2%'");
@@ -92,12 +93,12 @@
 <body  onload="startCategory()">
   <section id="search_bar">  <!--윗배너-->
       <p>
-        <button id="logo_icon" onclick="location.href='LOGINED_home.html'"><img src="picture/whitelogo.png"></button>
+        <button id="logo_icon" onclick="location.href='LoginHome.php'"><img src="picture/whitelogo.png"></button>
         <wrapper>
 	  <form method="post" action="search.php">
           <input type="text" id="search_text" name="search_text">
           <button type="submit" id="micro_icon"><img src="picture/micro.png" id="micro_id"></button>
-          <button type="button" id="login_button"><b>로그아웃</b></button>
+          <button type="button" id="login_button" onclick="location.href='Logout.php'"><b>로그아웃</b></button>
 	  </form>
         </wrapper>
       </p>
@@ -163,7 +164,7 @@
                 <button id="small_category53" onclick="location.href='productList1.php?category1=5&category2=3'"> 흡수형 실리카겔</button>
                 <button id="small_category54" onclick="location.href='productList1.php?category1=5&category2=4'">흡수형 천연 </button>
                 <button id="small_category55" onclick="location.href='productList1.php?category1=5&category2=5'">모래탈취제/소독/살균 </button>
-                <button id="small_category56" onclick="location.href='productList1.php?category1=54&category2=6'"> 기타 </button>
+                <button id="small_category56" onclick="location.href='productList1.php?category1=5&category2=6'"> 기타 </button>
             </div>
             <div class="small_category" id="small_category6">
                 <button id="small_category61" onclick="location.href='productList1.php?category1=6&category2=1'"> 기타 </button>
@@ -307,8 +308,8 @@
   <p class="noneline_for_space"></p>   <!--배너와 section 구분-->
   <section id="bottom_bar">   <!--아래배너-->
     <button class="bottom_bar_button" id="category_icon" onclick="location.href='productList1.php?category1=1&category2=1'"><img src="picture/category_icon.png" id="categoryimg"></button>
-    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LOGINED_home.html'"><img src="picture/home_icon.png" id="homeimg"></button>
-    <button class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.html'"><img src="picture/myPage_icon.png" id="myPageimg"></button>
+    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LoginHome.php'"><img src="picture/home_icon.png" id="homeimg"></button>
+    <button class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.php'"><img src="picture/myPage_icon.png" id="myPageimg"></button>
   </section>
 
 </body>

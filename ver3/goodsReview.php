@@ -25,7 +25,7 @@
 
 <body>
   <section id="back_bar">    <!--윗배너-->
-    <button id="back_icon" onclick="location.href='goodsInfo.html'"><img src="picture/back_button.png"></button>
+    <button id="back_icon" onclick="history.back(-1);"><img src="picture/back_button.png"></button>
     <label id="explain_label"><b>리뷰 전체보기</b></label>
     <button id="login_button" onclick="location.href='Logout.php'"><b>로그아웃</b></button>
   </section>
@@ -100,7 +100,7 @@
     <p class="noneline_for_space"></p>   <!--아래section과 아래 banner 구분-->
 
     <section id="bottom_bar">   <!--아래배너-->
-    <button class="bottom_bar_button" id="category_icon" onclick="location.href='productList.php'"><img src="picture/category_icon.png"></button>
+    <button class="bottom_bar_button" id="category_icon" onclick="location.href='productList1.php?category1=1&category2=1'"><img src="picture/category_icon.png"></button>
     <button class="bottom_bar_button" id="home_icon" onclick="location.href='LoginHome.php'"><img src="picture/home_icon.png" ></button>
     <button class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.php'"><img src="picture/myPage_icon.png"></button>
   </section>

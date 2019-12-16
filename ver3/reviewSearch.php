@@ -42,7 +42,7 @@ $result=mysqli_query($db,"SELECT * FROM Reviews WHERE ItemName='$name' AND ((Adv
 
   <body>
     <section id="back_bar">    <!--윗배너-->
-      <button id="back_icon" onclick="location.href='goodsInfo.html'"><img src="picture/back_button.png" width="50%"></button>
+      <button id="back_icon" onclick="history.back(-1);"><img src="picture/back_button.png" width="50%"></button>
       <label id="explain_label"><b>리뷰 전체보기</b></label>
       <button class="search_bar_button" id="login_button" onclick="location.href='Logout.php'"><b>로그아웃</b></button>
     </section>

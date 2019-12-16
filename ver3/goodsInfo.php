@@ -75,7 +75,7 @@
 
   <section id="search_bar">  <!--윗배너-->
       <p>
-         <button id="logo_icon" onclick="location.href='LOGINED_home.html'"><img src="picture/whitelogo.png"></button>
+         <button id="logo_icon" onclick="location.href='LoginHome.php'"><img src="picture/whitelogo.png"></button>
         <wrapper>
 	  <form method="post" action="search.php">
           <input type="text" id="search_text" name="search_text">
@@ -112,7 +112,7 @@
 			echo "평점: 0.0"; }
 		else{
 	 	$avg=$sum/$num;
-	 	echo "평점: ".$avg;}
+	 	echo "평점: ".round($avg,2);}
 	  ?>
       </p>
     </div>
@@ -166,8 +166,8 @@
 
   <section id="bottom_bar">   <!--아래배너-->
     <button class="bottom_bar_button" id="category_icon" onclick="location.href='productList1.php?category1=1&category2=1'"><img src="picture/category_icon.png" id="categoryimg"></button>
-    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LOGINED_home.html'"><img src="picture/home_icon.png" id="homeimg"></button>
-    <button class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.html'"><img src="picture/myPage_icon.png" id="myPageimg"></button>
+    <button class="bottom_bar_button" id="home_icon" onclick="location.href='LoginHome.php'"><img src="picture/home_icon.png" id="homeimg"></button>
+    <button class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.php'"><img src="picture/myPage_icon.png" id="myPageimg"></button>
   </section>
 
 </body>

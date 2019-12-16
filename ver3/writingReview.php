@@ -50,7 +50,7 @@
     <p class="noneline_for_space"></p>   <!--아래section과 아래 banner 구분-->
 
       <input type="submit" id="done_button" value="작성 완료">
-      <input type="button" id="yet_button" value="작성 취소" onclick="location.href='goodsInfo.html'">
+      <input type="button" id="yet_button" value="작성 취소" onclick="history.back(-1);">
   </section>
 </form>
 
@@ -58,7 +58,7 @@
   <p class="noneline_for_space"></p>   <!--아래section과 아래 banner 구분-->
 
   <section id="bottom_bar">   <!--아래배너-->
-    <button class="bottom_bar_button" id="category_icon" onclick="location.href='productList.php'"><img src="picture/category_icon.png"></button>
+    <button class="bottom_bar_button" id="category_icon" onclick="location.href='productList1.php?category1=1&category2=1'"><img src="picture/category_icon.png"></button>
     <button class="bottom_bar_button" id="home_icon" onclick="location.href='LoginHome.php'"><img src="picture/home_icon.png" ></button>
     <button class="bottom_bar_button" id="myPage_icon"onclick="location.href='myPage.php'"><img src="picture/myPage_icon.png"></button>
   </section>
