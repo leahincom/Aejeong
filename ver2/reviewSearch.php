@@ -2,7 +2,7 @@
 <html>
 
 <?php
-$db=mysqli_connect('192.168.0.17:3306', '1111', '1234', 'aejeong');
+$db=mysqli_connect('172.30.1.53:3306', '1111', '1234', 'aejeong');
 if(mysqli_connect_errno()){
   echo '<p>Error: Could not connect to database. <br/>Please try again later.</p>';
   exit;

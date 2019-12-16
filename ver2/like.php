@@ -11,7 +11,7 @@
     		session_start();}
     		$id=$_SESSION['UserID'];
 		$item=$_GET['item'];
-    	$db=mysqli_connect('192.168.0.17:3306', '1111', '1234', 'aejeong');
+    	$db=mysqli_connect('172.30.1.53:3306', '1111', '1234', 'aejeong');
 		$result=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
 		$row=mysqli_fetch_assoc($result);
 		$nick=$row['Nickname'];

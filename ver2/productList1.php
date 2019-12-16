@@ -30,7 +30,7 @@
 	else if($_GET['category1']==5 && $_GET['category2']==4){ $category1="모래"; $category2="흡수형"; }
 	else if($_GET['category1']==5 && $_GET['category2']==5){ $category1="모래"; $category2="기타"; }
 	else if($_GET['category1']==6 && $_GET['category2']==1){ $category1="기타"; $category2="기타"; }
-    $db=mysqli_connect('192.168.0.17:3306', '1111', '1234', 'aejeong');
+    $db=mysqli_connect('172.30.1.53:3306', '1111', '1234', 'aejeong');
     $result=mysqli_query($db, "SELECT * FROM items WHERE category2 like '%$category2%'");
     $row=mysqli_fetch_assoc($result);
     $number=4;

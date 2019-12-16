@@ -4,7 +4,7 @@
   session_start();}
   $id=$_SESSION['UserID'];
   $ItemName=$_GET['item'];
-  $db=mysqli_connect('localhost', 'aejeong', 'aejeong123', 'aejeong');
+  $db=mysqli_connect('172.30.1.53:3306', '1111', '1234', 'aejeong');
   $result=mysqli_query($db, "SELECT * FROM Components WHERE ItemName like '%$ItemName%'");
     $firstGrade =mysqli_query($db, "SELECT * FROM Components WHERE ItemName like '%$ItemName%' AND ComponentGrade=0");
    $secGrade =mysqli_query($db, "SELECT * FROM Components WHERE ItemName like '%$ItemName%' AND ComponentGrade=1");
