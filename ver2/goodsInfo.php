@@ -20,6 +20,9 @@
   $sCount = $secGrade->num_rows;
   $tCount = $thirdGrade->num_rows;
   $total = $compoResult->num_rows;
+  if($total==0){
+  	  $total=1;
+  }
   $fCount = (int)($fCount/$total * 100);
   $sCount = (int)($sCount/$total * 100);
   $tCount = (int)($tCount/$total * 100);
