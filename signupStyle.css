@@ -96,13 +96,20 @@ article{                    /*���� ����*/
     font-size:100%;
     padding:0%;
 }
+#password_change_shadow {
+    margin-left: 10%;
+    width: 90%;
+    color: #cfcfcf;
+    display:block;
+}
+#password_change_shadow input {
+    border-color: #cfcfcf;
+}
+
 #password_change_article{
     margin-left:10%;
     width:90%;
-    color:#cfcfcf;
-}
-#password_change_article input {
-    border-color: #cfcfcf;
+    display:none;
 }
 #password_change_input{
     width:70%;

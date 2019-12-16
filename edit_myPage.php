@@ -11,6 +11,23 @@
 <head>
     <title> 애정 : 개인정보 수정</title>
     <link rel="stylesheet" href="signupStyle.css">
+	<script type="text/javascript">
+		var flag=0;
+		function password_switch(){
+			var able = document.getElementById('password_change_article');
+			var disable = document.getElementById('password_change_shadow');
+			if(flag==0){
+				able.style.display = 'block';
+				disable.style.display ='none';
+				flag=1;
+			}else{
+				able.style.display = 'none';
+				disable.style.display ='block';
+				flag=0;
+			}
+			
+		}
+	</script>
 </head>
 
 
@@ -30,8 +47,18 @@
             닉네임 &nbsp :&nbsp <?php echo $row['Nickname']; ?>
         </p>
         <p>
-            <button type="button" id="password_change_button">비밀번호 수정</button>
+            <button type="button" id="password_change_button" onclick="password_switch()">비밀번호 수정</button>
         </p>
+		<article id="password_change_shadow">
+            <p>
+                비밀번호
+                <input id="password_change_input" type="password"id="password" disabled>
+            </p>
+            <p>
+                비밀번호 확인
+                <input id="passwordCheck_change_input" type="password" disabled>
+            </p>
+        </article>
         <article id="password_change_article">
             <p>
                 비밀번호
