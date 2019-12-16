@@ -1,0 +1,234 @@
+section, a, figcaption, figure, article, img, button
+
+
+* {
+    font-family: NanumSquare;
+}
+
+button {
+    border: 0px;
+    background: #ffffff;
+    padding: 0px;
+    margin: 0px;
+}
+
+section {
+    margin: 2%;
+    padding: 2%;
+}
+
+article {
+    overflow: hidden;
+    padding: 3%;
+}
+
+h1 {
+    font-size: 120%;
+    font-family: NanumGothic;
+}
+
+figure {
+    text-align: center;
+    float: left;
+    font-size: 90%;
+    width: 70%;
+    height: auto;
+    margin: 10%;
+}
+
+#user_info_section {
+    margin: 0%;
+    margin-top: 10%;
+    padding: 4%;
+    border-bottom: 5px solid;
+    border-color: #cdcdcd;
+}
+
+#profile_image {
+    float: left;
+    margin-top: 3%;
+    margin-right: 4%;
+    width: 30%;
+}
+
+#user_info {
+    float: left;
+    font-size: 100%;
+}
+
+#nickname_text {
+    font-size: 150%;
+}
+
+#recent_items_text {
+    float: left;
+}
+
+.recent_item_button {
+    float: left;
+    width: 13%;
+    height: 8%;
+    margin: 3%;
+    font-size: 60%;
+}
+
+.recent_item_image {
+    width: 100%;
+    height: 100%;
+}
+
+.more_link { /*���� �� ����, ���ƿ� �� ��ǰ ������*/
+    float: right;
+    text-decoration-line: none;
+    color: black;
+}
+
+#myReview_section button { /*���� �� ����*/
+    background-color: #f60024;
+    color: #ffffff;
+    width: 30%;
+    border-radius: 0px 10px 0px 0px;
+}
+
+#myReview_section article {
+    border: 1px solid;
+    border-color: #f60024;
+}
+
+#likeProduct_section { /*���ƿ��� ��ǰ, ������ ����*/
+    margin-bottom: 20%;
+}
+
+#like_product_tag {
+    background-color: #f60024;
+    color: #ffffff;
+    width: 30%;
+    border-radius: 0px 10px 0px 0px;
+}
+
+#likeProduct_section article {
+    border: 1px solid;
+    border-color: #f60024;
+}
+
+.like_product_button {
+    width: 20%;
+    height: auto;
+    overflow: hidden;
+    margin: 4%;
+}
+
+.like_product_img {
+    width: 100%;
+    height: auto;
+}
+
+/*�ٸ� ������*/
+/*���ƿ��� ��ǰ*/
+h2 {
+    margin: 4%;
+    margin-top: 15%;
+}
+
+#likeProduct_list_section article { /*���ƿ��� ��ǰ ����*/
+    margin-bottom: 20%;
+}
+
+.like_product_article button {
+    float: left;
+}
+
+.like_product_article div {
+    float: left;
+    margin-left: 4%;
+}
+
+.like_product_article h1 {
+    font-size: 90%;
+}
+
+
+
+/*bottom bar start*/
+#bottom_bar {
+    margin: 0px;
+    overflow: hidden;
+    border-top: 0.5px solid #999999;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 5vh;
+    padding: 3vh 2vw 2vh 2.5vw;
+}
+
+.bottom_bar_button {
+    border: 0px solid;
+    background-color: #ffffff;
+    width: 7vh;
+    height: 5vh;
+}
+
+    .bottom_bar_button img {
+        width: 100%;
+        height: 100%;
+    }
+
+#category_icon {
+    float: left;
+    margin-left: 5vw;
+}
+
+#myPage_icon {
+    float: right;
+    margin-right: 10vw;
+}
+/*bottom bar end*/
+
+
+/*top bar*/
+#back_bar {
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    margin: 0;
+    position: fixed;
+    width: 100vw;
+    height: 5vh;
+    padding: 3vh 0 2vh 2.5vw;
+    background: #f60024;
+}
+
+#back_icon {
+    float: left;
+    border: 0px;
+    background-color: #f60024;
+    width: 4vh;
+    height: 4vh;
+    margin-right: 2vw;
+}
+
+    #back_icon img {
+        width: 100%;
+        height: 100%;
+    }
+
+#explain_label {
+    float: left;
+    color: white;
+    font-size: 3.5vh;
+}
+
+#revise_button {
+    background-color: #f60024;
+    color: white;
+    height: 4vh;
+    font-size: 2vh;
+    float: right;
+    margin-right: 8vw;
+}
+/*end of top bar*/
