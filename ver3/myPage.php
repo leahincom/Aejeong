@@ -6,7 +6,6 @@
     $result=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
     $row=mysqli_fetch_assoc($result);
 	$Nickname=$row['Nickname'];
-
 ?>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>

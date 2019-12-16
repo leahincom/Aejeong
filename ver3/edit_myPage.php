@@ -74,7 +74,6 @@
                 <p>
                     강아지
                     <select class="animal_count" name="dog" >
-						<option selected disabled> <?php echo $row['Dog']; ?> </option>
                         <option> 0 </option>
                         <option> 1 </option>
                         <option> 2 </option>
@@ -86,7 +85,6 @@
                 <p>
                     고양이
                     <select class="animal_count" name="cat">
-						<option selected disabled> <?php echo $row['Cat']; ?> </option>
                         <option> 0 </option>
                         <option> 1 </option>
                         <option> 2 </option>
@@ -96,9 +94,8 @@
                     마리
                 </p>
                 <p>
-                    <input class="other_animal_input" type="text" name="etc1_name" value="<?php echo $row['etc1_name']; ?>">
+                    <input class="other_animal_input" type="text" name="etc1_name" >
                     <select class="animal_count" name="etc1" >
-						<option selected disabled> <?php echo $row['etc1']; ?> </option>
                         <option> 0 </option>
                         <option> 1 </option>
                         <option> 2 </option>
@@ -108,9 +105,8 @@
                     마리
                 </p>
                 <p>
-                    <input class="other_animal_input" type="text" name="etc2_name" value="<?php echo $row['etc2_name']; ?>">
+                    <input class="other_animal_input" type="text" name="etc2_name" >
                     <select class="animal_count" name="etc2">
-						<option selected disabled> <?php echo $row['etc2']; ?> </option>
                         <option> 0 </option>
                         <option> 1 </option>
                         <option> 2 </option>
