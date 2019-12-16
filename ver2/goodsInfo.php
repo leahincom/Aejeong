@@ -26,6 +26,24 @@
   $fCount = (int)($fCount/$total * 100);
   $sCount = (int)($sCount/$total * 100);
   $tCount = (int)($tCount/$total * 100);
+
+  $recent=mysqli_query($db, "SELECT * FROM recent WHERE Nickname='$nick'");
+  if ($recent->num_rows == 0){
+     mysqli_query($db, "INSERT INTO recent(Nickname, ItemName, Picture, number) VALUES ('$nick' ,'$name' ,'$item', 3)");
+  }
+  else if ($recent->num_rows == 1){
+     mysqli_query($db, "INSERT INTO recent(Nickname, ItemName, Picture, number) VALUES ('$nick' ,'$name' ,'$item', 2)");
+  }
+  else if ($recent->num_rows == 2){
+     mysqli_query($db, "INSERT INTO recent(Nickname, ItemName, Picture, number) VALUES ('$nick' ,'$name' ,'$item', 1)");
+  }
+  else if ($recent->num_rows == 3){
+	   mysqli_query($db, "DELETE FROM recent WHERE number='3'");
+	   mysqli_query($db, "UPDATE recent SET number='3' WHERE number='2'");
+	   mysqli_query($db, "UPDATE recent SET number='2' WHERE number='1'");
+	   mysqli_query($db, "INSERT INTO recent(Nickname, ItemName, Picture, number) VALUES ('$nick' ,'$name' ,'$item', 1)");
+  }
+
 ?>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -94,7 +112,7 @@
 			echo "평점: 0.0"; }
 		else{
 	 	$avg=$sum/$num;
-	 	echo "평점: ".$avg;}
+	 	echo "평점: ".round($avg, 2);}
 	  ?>
       </p>
     </div>

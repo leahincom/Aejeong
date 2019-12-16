@@ -63,7 +63,7 @@ $result=mysqli_query($db,$sql);
 			echo "0"; }
 		else{
 	 	$avg=$sum/$num;
-	 	echo $avg;} ?> </p>
+	 	echo round($avg,2);} ?> </p>
       </div>
       <hr class="rankingHr"></hr>
     </button>

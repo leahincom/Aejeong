@@ -35,18 +35,14 @@
 		
         <article>
       	  <p id="recent_items_text"> 최근 본 상품 </p>
-    	  <button class="recent_item_button" onclick="location.href='goodsInfo.html'">
-   	    <img src="picture\product2.png" class="recent_item_image">
-            <figcaption>바란스 하이포알러지 강아지 샴푸 503ml</figcaption>
+		  <?php $recent=mysqli_query($db, "SELECT * FROM recent WHERE Nickname='$Nickname' ORDER BY number*1");
+		    while($rowRecent=mysqli_fetch_assoc($recent)) {
+		  ?>
+    	  <button class="recent_item_button" onclick="location.href='goodsInfo.php?item=<?php echo $rowRecent['Picture'];?>'">
+   	    <img src="<?php echo $rowRecent['Picture']; ?>" class="recent_item_image">
+            <figcaption><?php echo $rowRecent['ItemName']; ?> </figcaption>
           </button>
-          <button class="recent_item_button" onclick="location.href='goodsInfo.html'">
-            <img src="picture\product1.jpg" class="recent_item_image">
-            <figcaption>Can-C Eye Drop 캔씨 백내장 강아지 안약 5ml 2개입</figcaption>
-          </button>
-          <button class="recent_item_button" onclick="location.href='goodsInfo.html'">
-            <img src="picture\product2.png" class="recent_item_image">
-            <figcaption>바란스 하이포알러지 강아지 샴푸 503ml</figcaption>
-          </button>
+		  <?php } ?>
         </article>
 
 

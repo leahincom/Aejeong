@@ -62,12 +62,14 @@
     <section>
       <div class="buttonDiv">
         <?php   $index = 0;
-		while($row=mysqli_fetch_assoc($result)) { ?>
-          <button type="button" class="ingredientButton"  
-			onclick="if(this.parentNode.getElementsByTagName('div')[<?php $index; ?>].style.display != ''){
-			this.parentNode.getElementsByTagName('div')[<?php $index; ?>].style.display = '';this.value = '숨기기';}
-			else{this.parentNode.getElementsByTagName('div')[<?php $index; ?>].style.display = 'none'; this.value = '더보기';}" >
-            <?php $index += 1;
+        while($row=mysqli_fetch_assoc($result)) { ?>
+          <button type="button" class="ingredientButton"  onclick="
+          if(this.parentNode.getElementsByTagName('div')[<?php echo $index ?>].style.display != '') {
+            this.parentNode.getElementsByTagName('div')[<?php echo $index ?>].style.display = '';
+            this.value = '숨기기'; }
+            else{this.parentNode.getElementsByTagName('div')[<?php echo $index ?>].style.display = 'none';
+            this.value = '더보기';}" >
+            <?php
             $grade=$row['ComponentGrade'];
             if($grade == 0) {
               echo '<img src="picture/in1.png" class="rankingimg">';
@@ -80,7 +82,7 @@
             <p class="nameP"><?php echo $row['ComponentsName'] ?></p>
           </button>
           <div class="myDIV" style="display:none;"><?php echo $row['Characteristic']; ?></div>
-        <?php } ?>
+        <?php $index += 1; } ?>
   </div>
     </section>
     <hr>
