@@ -1,0 +1,67 @@
+﻿section, p, body, button, img, h1, input, a
+
+
+* {
+    border: 0px;
+    font-family: NanumSquare;
+}
+body{                               /*������ �߾ӿ� ��Ÿ����*/
+    width:100vw;
+}
+
+
+#left_part {                      /*�ΰ�*/
+    text-align: center;
+    width:40vw;
+    float:left;
+
+}
+#logo_img{
+    width:15vw;
+    height:15vw;
+
+    margin: 30vh 5vw 30vh 0;
+}
+
+
+#right_part{
+    width:50vw;
+    float:right;
+    margin:10vh 10vw 10vh 0;
+}
+h1 { /*'�α���' ���� -- ������ ����*/
+    font-size: 200%;
+    margin-top: 15%;
+    color: #f60024;
+}
+p{                          /*���̵�, ���й�ȣ �� ����*/
+font-size:100%;
+}
+input {                     /*���̵�, ���й�ȣ �Է� textfield*/
+    margin-left: 2%;
+    padding: 1%;
+    padding-left:3%;
+    padding-right:3%;
+    height: 5%;
+    border-radius: 14px;
+    border: 1px solid;
+}
+button { /*�α����ϱ�, �ߺ�Ȯ��, �����ϱ� ��ư*/
+    float: right;
+    font-size: 75%;
+    background-color: #ffffff;
+}
+
+
+
+/*�α��� ������*/
+.login_input{
+    width:70%;
+}
+#singup_section { /*ȸ������ ��������*/
+    padding-top: 25%;
+    padding-bottom: 10%;
+}
+a {                         /*'���� ���̵��� �����Ű���?' ȸ������ ��ũ*/
+    color: #808080;
+}

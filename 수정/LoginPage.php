@@ -7,12 +7,13 @@
 <head>
     <meta charset="utf-8" />
     <title> 애정 : 로그인</title>
-    <link rel="stylesheet" href="login_signup_Style.css?after">
+    <link rel="stylesheet" href="loginStyle.css?after">
 </head>
 <body>
-    <section id="logo_section">
-        <img id="logo_img" src="picture/whitelogo.png">
-    </section>
+    <div id="left_part">
+        <img id="logo_img" src="picture/newLogo_red.png">
+    </div>
+	<div id="right_part">
     <section>
         <h1>로그인</h1>
         <article>
@@ -26,5 +27,6 @@
     <section id="singup_section">
         <a href="signupPage.php">아직 아이디가 없으신가요? </a>
     </section>
+	</div>
 </body>
 </html>

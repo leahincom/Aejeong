@@ -10,7 +10,7 @@
 
 <head>
     <title> 애정 : 개인정보 수정</title>
-    <link rel="stylesheet" href="login_signup_Style.css">
+    <link rel="stylesheet" href="signupStyle.css">
 </head>
 
 
@@ -66,7 +66,7 @@
         </p>
         <p>
             이메일
-            <input id="email_input" type="text" name="email" >
+            <input id="email_input" type="text" name="email" value="<?php echo $row['Email']; ?>" >
         </p>
         <article>
             <p id="animalType_text">동물 가족 :</p>
@@ -74,6 +74,7 @@
                 <p>
                     강아지
                     <select class="animal_count" name="dog" >
+						<option selected disabled> <?php echo $row['Dog']; ?> </option>
                         <option> 0 </option>
                         <option> 1 </option>
                         <option> 2 </option>
@@ -85,6 +86,7 @@
                 <p>
                     고양이
                     <select class="animal_count" name="cat">
+						<option selected disabled> <?php echo $row['Cat']; ?> </option>
                         <option> 0 </option>
                         <option> 1 </option>
                         <option> 2 </option>
@@ -94,8 +96,9 @@
                     마리
                 </p>
                 <p>
-                    <input class="other_animal_input" type="text" name="etc1_name">
-                    <select class="animal_count" name="etc1">
+                    <input class="other_animal_input" type="text" name="etc1_name" value="<?php echo $row['etc1_name']; ?>">
+                    <select class="animal_count" name="etc1" >
+						<option selected disabled> <?php echo $row['etc1']; ?> </option>
                         <option> 0 </option>
                         <option> 1 </option>
                         <option> 2 </option>
@@ -105,8 +108,9 @@
                     마리
                 </p>
                 <p>
-                    <input class="other_animal_input" type="text" name="etc2_name">
+                    <input class="other_animal_input" type="text" name="etc2_name" value="<?php echo $row['etc2_name']; ?>">
                     <select class="animal_count" name="etc2">
+						<option selected disabled> <?php echo $row['etc2']; ?> </option>
                         <option> 0 </option>
                         <option> 1 </option>
                         <option> 2 </option>
@@ -120,7 +124,7 @@
     </section>
     <section>
 	<button class="cancel_store_button" type="submit"> 저장 </button>
-	<button class="cancel_store_button"> 취소 </button> 
+	<button class="cancel_store_button" type="button" onclick="history.back(-1);"> 취소 </button> 
     </section>
     </form>
 </body>

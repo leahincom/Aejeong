@@ -6,29 +6,14 @@ section, p, body, button, img, h1, input, a
     font-family: NanumSquare;
 }
 body{                               /*������ �߾ӿ� ��Ÿ����*/
-    margin:auto;
-    margin-bottom:20%;
+    margin:0% auto 20% auto;
 	width:70%;
-}
-
-
-#logo_section {                      /*�ΰ�*/
-    margin: 20%;
-    margin-top: 30%;
-    text-align: center;
-    width:50%;
-    padding:3%;
-    background-color: #f60024;
-    border-radius:20px;
-}
-#logo_img{
-    width:50%;
 }
 
 
 h1 { /*'�α���' ���� -- ������ ����*/
     font-size: 200%;
-    margin-top: 25%;
+    margin-top: 15%;
     color: #f60024;
 }
 p{                          /*���̵�, ���й�ȣ �� ����*/
@@ -48,21 +33,6 @@ button { /*�α����ϱ�, �ߺ�Ȯ��, �����ϱ� ��
     font-size: 75%;
     background-color: #ffffff;
 }
-
-
-
-/*�α��� ������*/
-.login_input{
-    width:70%;
-}
-#singup_section { /*ȸ������ ��������*/
-    padding-top: 25%;
-    padding-bottom: 10%;
-}
-a {                         /*'���� ���̵��� �����Ű���?' ȸ������ ��ũ*/
-    color: #808080;
-}
-
 
 /*ȸ������ & �������� ����*/
 .id_nick_input{                 /*���̵�, �г��� �ؽ�Ʈ�ʵ�*/
