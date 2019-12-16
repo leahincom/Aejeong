@@ -1,4 +1,4 @@
-# AEJEONG :<br>,
+# AEJEONG :<br>
 <p style="font-size:20px"><b>analyzing animal product components web application </b></p><br>
 
 This is the project started from openSW lecture, and we are advancing the service continually.<br>
