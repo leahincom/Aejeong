@@ -1,5 +1,5 @@
 # 애정 : 사랑하는 반려동물의 용품에 대한 정확한 성분 정보를 제공하는 웹 어플리케이션<br>
-<b>(Aejeong : Web Application providing exact Components information of our be-loved pets' products)
+<b>(Aejeong : Web Application providing exact Components information of our be-loved pets' products)</b>
 <p style="font-size:20px"><b>analyzing animal product components web application </b></p><br>
 
 This is the project started from openSW lecture, and we are advancing the service continually.<br>
