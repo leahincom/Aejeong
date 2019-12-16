@@ -1,0 +1,147 @@
+section, p, body, button, img, h1, input, a
+
+
+* {
+    border: 0px;
+    font-family: NanumSquare;
+}
+body{                               /*������ �߾ӿ� ��Ÿ����*/
+    margin:0% auto 20% auto;
+	width:70%;
+}
+
+
+h1 { /*'�α���' ���� -- ������ ����*/
+    font-size: 200%;
+    margin-top: 15%;
+    color: #f60024;
+}
+p{                          /*���̵�, ���й�ȣ �� ����*/
+font-size:100%;
+}
+input {                     /*���̵�, ���й�ȣ �Է� textfield*/
+    margin-left: 2%;
+    padding: 1%;
+    padding-left:3%;
+    padding-right:3%;
+    height: 5%;
+    border-radius: 14px;
+    border: 1px solid;
+}
+button { /*�α����ϱ�, �ߺ�Ȯ��, �����ϱ� ��ư*/
+    float: right;
+    font-size: 75%;
+    background-color: #ffffff;
+}
+
+/*ȸ������ & �������� ����*/
+.id_nick_input{                 /*���̵�, �г��� �ؽ�Ʈ�ʵ�*/
+    width:58%;
+}
+#password_input{
+    width:73%;
+}
+#passwordCheck_input{           /*���й�ȣ Ȯ�� �ؽ�Ʈ�ʵ�*/
+    width:64%;
+}
+.date_inputtext{                /*�������� �ؽ�Ʈ�ʵ�*/
+    width:10%;
+    border-radius:0%;
+    text-align:right;
+}
+select{                         /*���� ����*/
+    width:12%;
+    padding-bottom:1%;
+}
+.callNum_input{             /*�޴��� ��ȣ �Է� �ؽ�Ʈ �ʵ�*/
+    width:10%;
+}
+#email_input{               /*email �Է¹ޱ�*/
+    width:77%;
+}
+
+article{                    /*���� ����*/
+    overflow:auto;
+}
+#animalType_text {
+    float: left;
+}
+#animalType_div{
+    float:left;
+}
+.animal_count{          /*�� �������� ����*/
+    width:30%;
+}
+.other_animal_input{        /*��Ÿ ���� ���� �Է� �ޱ�*/
+    width:20%;
+    border-radius:0%;
+}
+
+#signup_button {                /*'�����ϱ�' ��ư*/
+    font-size: 90%;
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+
+
+/*�������� ����*/
+.cancel_store_button {
+    margin: 3%;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    font-size: 100%;
+}
+#password_change_button{
+    float: none;
+    font-size:100%;
+    padding:0%;
+}
+#password_change_article{
+    margin-left:10%;
+    width:90%;
+    color:#cfcfcf;
+}
+#password_change_article input {
+    border-color: #cfcfcf;
+}
+#password_change_input{
+    width:70%;
+}
+#passwordCheck_change_input{
+    width:60%;
+}
+
+
+/*top bar*/
+#back_bar {
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    margin: 0;
+    position: fixed;
+    width: 100vw;
+    height: 5vh;
+    padding: 3vh 0 2vh 2.5vw;
+    background: #f60024;
+}
+
+#back_icon {
+    float: left;
+    border: 0px;
+    background-color: #f60024;
+    width: 5vh;
+    height: 5vh;
+    margin-right: 2vw;
+}
+
+    #back_icon img {
+        width: 100%;
+        height: 100%;
+    }
+
+#explain_label {
+    float: left;
+    color: white;
+    font-size: 3.5vh;
+}
+/*end of top bar*/
