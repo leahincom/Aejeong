@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -10,7 +10,6 @@
 		if (session_status() == PHP_SESSION_NONE) {	
 			session_start();
 		}
-
 		$nick=$_POST['nick'];
 		$password;
 		$passwordCheck;
@@ -25,19 +24,15 @@
 		$etc2Name=".";
 		$etc2Name=$_POST['etc2_name'];
 		$etc2=(int)($_POST['etc2']);
-
-		$db=mysqli_connect('172.30.1.53:3306', '1111', '1234', 'aejeong');
+		$db=mysqli_connect('10.200.38.43', '1111', '1234', 'aejeong');
 		if(mysqli_connect_errno()){
 			echo "<p>Error: Could not connect to database. <br/>Please try again later.</p>";
 			exit();
 		}
-
 		$id=$_SESSION['UserID'];
-
 		if(isset($_SESSION['UserID'])){
 			$result=mysqli_query($db, "SELECT * FROM Users WHERE UserID='$id'");
     			$row=mysqli_fetch_assoc($result);
-
 			$check_nick="SELECT * FROM Users WHERE Nickname='$nick'";
 			$result_nick=$db->query($check_nick);
 			$row1=mysqli_fetch_assoc($result_nick);
@@ -65,7 +60,6 @@
 					$password=md5($_POST['password']);
 				}
 			}
-
 			if(strlen($_POST['phone1'])!=4 || strlen($_POST['phone2'])!=4 ||!(is_numeric($_POST['phone1'])) ||!(is_numeric($_POST['phone2']))){
 				echo "<script>alert('전화번호를 다시 입력해주세요..');history.back(-1);</script>";
 				exit();
@@ -73,20 +67,17 @@
 			else{
 				$phone=(int)($_POST['phone1'].$_POST['phone2']);
 			}
-
 			$checkEmail=filter_var($email,FILTER_VALIDATE_EMAIL);
 			if($checkEmail!=true){
 			echo "<script>alert('이메일 주소를 다시 입력해 주세요.');history.back(-1);</script>";
 			exit();
 			}
-
 			if($nick==NULL || $birth==NULL || $phone==NULL || $email==NULL){
 			echo "<script>alert('빈칸을 모두 채워주세요.');history.back(-1);</script>";
 			exit();
 			}
 			
 		
-
 			if($state==0){
 				mysqli_query($db,"UPDATE Users SET Nickname='$nick' WHERE UserID='$id'");
 				mysqli_query($db,"UPDATE Users SET Password='$password' WHERE UserID='$id'");
@@ -126,7 +117,6 @@
 			}
 		}
 				
-
 	?>
 </body>
 
