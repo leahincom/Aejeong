@@ -8,8 +8,7 @@ Front-end team: YoonHa Jung, JaeWon Hong<br>
 Server team: JungHyun Lah, KyoungMin Lee <br><br>
 
 Each branch is made by each person,<br>
-but because we made branch individually, almost all of the files are shared.<br><br>
-
+but because we made branch individually, almost all of the files are shared.<br>
 You can check all the files in master branch.<br><br>
 
 Thanks for using our service, and all feedbacks are welcomed.<br>
