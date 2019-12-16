@@ -97,8 +97,6 @@
       <p style="font-size:130%;"><span style="margin-left:5%;"><b><?php echo $row['ItemName']; ?></b></span></p>
       <br> <br> <br>
       <p style="font-size:70%;"><span style="margin-left:5%;">가격: <?php echo $row['Price']; ?></span></p>
-    </div>
-    <div>
       <p>
         <?php
 		$sql1 = "SELECT * FROM reviews WHERE ItemName = '$name'";
@@ -133,9 +131,9 @@
       </p>
       <p align="center">
         <br>
-        <img src="picture/bluebar.png" class="barimg">&nbsp1등급: <?php echo $fCount."%"?>&nbsp&nbsp&nbsp
-        <img src="picture/yellowbar.png" class="barimg">&nbsp2등급: <?php echo $sCount."%"?> &nbsp&nbsp&nbsp
-        <img src="picture/redbar.png" class="barimg">&nbsp3등급: <?php echo $tCount."%"?>
+        <img src="picture/bluebar.png" class="barimg">&nbsp1~2등급: <?php echo $fCount."%"?>&nbsp&nbsp&nbsp
+        <img src="picture/yellowbar.png" class="barimg">&nbsp3~4등급: <?php echo $sCount."%"?> &nbsp&nbsp&nbsp
+        <img src="picture/redbar.png" class="barimg">&nbsp5~9등급: <?php echo $tCount."%"?>
       </p>
 
   </section>

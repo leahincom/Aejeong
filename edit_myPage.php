@@ -10,7 +10,7 @@
 
 <head>
     <title> 애정 : 개인정보 수정</title>
-    <link rel="stylesheet" href="login_signup_Style.css">
+    <link rel="stylesheet" href="signupStyle.css">
 </head>
 
 
@@ -30,7 +30,7 @@
             닉네임 &nbsp :&nbsp <?php echo $row['Nickname']; ?>
         </p>
         <p>
-            <button id="password_change_button">비밀번호 수정</button>
+            <button type="button" id="password_change_button">비밀번호 수정</button>
         </p>
         <article id="password_change_article">
             <p>

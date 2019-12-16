@@ -1,5 +1,4 @@
-p, nav, table, section, null, input, img, td, button
-
+p, nav, table, section, null, input, img, td, button, div, p, php
 
 *{
 	font-family: NanumSquare;
@@ -27,6 +26,9 @@ p, nav, table, section, null, input, img, td, button
 }
 
 #pictureInfo{float:left;}
+#exlaint{
+    float:left;
+}
 #heart_button{
 	border: 0px;
   width:5%;

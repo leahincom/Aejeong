@@ -50,9 +50,9 @@
         </p>
         <p>
           <br>
-          <img src="picture/bluebar.png" class="barimg">&nbsp1등급: <?php echo $fCount."%"?>&nbsp&nbsp&nbsp
-          <img src="picture/yellowbar.png" class="barimg">&nbsp2등급: <?php echo $sCount."%"?> &nbsp&nbsp&nbsp
-          <img src="picture/redbar.png" class="barimg">&nbsp3등급: <?php echo $tCount."%"?>
+          <img src="picture/bluebar.png" class="barimg">&nbsp1~2등급: <?php echo $fCount."%"?>&nbsp&nbsp&nbsp
+          <img src="picture/yellowbar.png" class="barimg">&nbsp3~4등급: <?php echo $sCount."%"?> &nbsp&nbsp&nbsp
+          <img src="picture/redbar.png" class="barimg">&nbsp5~9등급: <?php echo $tCount."%"?>
         </p>
       </div>
     </section>
