@@ -24,7 +24,7 @@
 		$result2=$db->query("SELECT * FROM likes WHERE Nickname='$nick' AND ItemName='$name'");
 		
 
-		if($result2->num_rows==1){
+		if(($result2->num_rows)>=1){
 			$sql="DELETE FROM likes WHERE Nickname='$nick' AND ItemName='$name'"; 
 			mysqli_query($db, $sql);
 		} 
