@@ -1,0 +1,155 @@
+p, nav, table, section, null, input, img, td, button
+
+
+* {
+    font-family: NanumSquare;
+    border-color: #f60024;
+}
+
+
+
+table {
+    padding: 10px;
+    overflow: hidden;
+    color: #f60024;
+    border: 2px solid;
+    margin: auto;
+    margin-bottom: 15%;
+    width: 85%;
+    height: 30%;
+    border-radius: 20px;
+}
+
+td {
+    text-align: center;
+}
+
+img {
+    border: 0px;
+}
+
+
+#app_info_section {
+    width: 60%;
+    margin: auto;
+    margin-top: 10%;
+    padding: 5%;
+    background-color: #f9f7f4;
+    border-radius: 10px;
+}
+
+#search {
+    width: 70%;
+    height: 4%;
+    padding: 2%;
+    border-radius: 100px;
+    font-size: 70%;
+    margin-top: 3%;
+    border: 2px solid;
+    border-color: #f60024;
+}
+
+
+#app_info {
+    width: 80%;
+    margin: 0 auto;
+    border: 3px;
+}
+
+
+.center_align_section {
+    text-align: center;
+}
+
+.category_images {
+    height: 30px;
+    width: 30px;
+}
+
+.img_button {
+    overflow: hidden;
+    border: 0px;
+    margin: 0px;
+    background-color: white;
+    font-size: 70%;
+}
+/*box-sizing:padding-box;*/
+
+
+/*bottom bar start*/
+#bottom_bar {
+    margin: 0px;
+    overflow: hidden;
+    border-top: 0.5px solid #999999;
+    border-bottom: 0px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 5vh;
+    padding: 3vh 2vw 2vh 2.5vw;
+}
+
+.bottom_bar_button {
+    border: 0px solid;
+    background-color: #ffffff;
+    width: 7vh;
+    height: 5vh;
+}
+
+    .bottom_bar_button img {
+        width: 100%;
+        height: 100%;
+    }
+
+#category_icon {
+    float: left;
+    margin-left: 5vw;
+}
+
+#myPage_icon {
+    float: right;
+    margin-right: 10vw;
+}
+/*bottom bar end*/
+
+/*top bar*/
+#search_bar {
+    overflow: hidden;
+    position: fixed;
+    background: #f60024;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0vh 1vw 6vh 0vw;
+    width: 100vw;
+    height: 4vh;
+}
+
+#logo_icon {
+    float: left;
+    background: #f60024;
+    border: 0px;
+    margin: 0vh 2vw 0vh 1vw;
+    padding-bottom: 1vh;
+    width: 8vh;
+    height: 6vh;
+}
+
+    #logo_icon img {
+        width: 100%;
+        height: 100%;
+    }
+
+#login_button {
+    float: right;
+    background-color: #f60024;
+    color: #ffffff;
+    border: none;
+    margin: 1vh 4vw 0vh 0vw;
+    font-size: 2.5vh;
+}
+/*top bar end*/
